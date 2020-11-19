@@ -1,0 +1,116 @@
+.experience {
+    text-align: center;
+    margin-bottom: 25vh;
+    margin-top: 25vh;
+
+    .experience-number {
+        display: block;
+        width: 100%;
+        font-size: 80px;
+        font-weight: 600;
+        line-height: 0;
+        opacity: 0.6;
+        transition: 1s;
+        transform: scale(0.4);
+
+        &.active {
+            transform: scale(1);
+        }
+
+        &.unactive {
+            transform: scale(0.9);
+        }
+
+        @media (min-width: 360px) and (orientation: portrait) {
+            font-size: 12rem;
+        }
+
+        @media (min-width: 411px) and (orientation: portrait) {
+            font-size: 14rem;
+        }
+
+        @media (min-width: 768px) and (orientation: portrait) {
+            font-size: 25rem;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 30rem;
+        }
+
+
+    }
+
+
+    .experience-h1 {
+        @include sectionProp();
+        font-size: 2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        min-width: 250px;
+        line-height: 10px;
+
+        @media (min-width: 319px) and (orientation: portrait) {
+            font-size: 2.2rem;
+        }
+
+        @media (min-width: 375px) and (orientation: portrait) {
+            font-size: 2.4rem;
+        }
+
+        @media (min-width: 411px) and (orientation: portrait) {
+            font-size: 2.6rem;
+        }
+
+        @media (min-width: 768px) and (orientation: portrait) {
+            font-size: 4rem;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 4.5rem;
+            letter-spacing: 2px;
+        }
+    }
+
+
+}
+
+.parallax-window {
+    min-height: 00px;
+    background: transparent;
+}
+
+.about-me {
+    font-family: $mainFont;
+    color: $mainFontColor;
+    width: 100%;
+    @include flex(column, center, center);
+    height: 120vh;
+
+    .background {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 110vh;
+        background-image: url('/html&components/img/aboutMe.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+        filter: blur(10px) contrast(1.1);
+        transition: 0.8s;
+    }
+
+    .active {
+        filter: blur(0px) contrast(1);
+    }
+
+    & .h1 {
+        @include h1Prop();
+        @include mediaQueriesH1();
+    }
+
+    & .text {
+        @include textProp();
+        @include mediaQueriesText();
+    }
+}

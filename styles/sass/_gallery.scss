@@ -1,0 +1,49 @@
+.gallery {
+    @include sectionProp();
+    flex-basis: 25%;
+
+    & .h1 {
+        @include h1Prop();
+        @include mediaQueriesH1();
+        margin-bottom: 50px;
+    }
+
+    .photos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        @include flex(column, center, center);
+        margin: 0 auto;
+
+        @media(min-width: 768px) {
+            @include flex(row, center, center);
+            flex-wrap: wrap;
+        }
+    }
+
+
+    .photos .glightbox img {
+        width: 100%;
+
+        // large mobile
+        @media (min-width: 768px) {
+            width: 38rem;
+        }
+
+        @media (min-width: 768px) and (orientation: portrait) {
+            width: 38rem;
+        }
+
+        @media (min-width: 1024px) and (orientation: portrait) {
+
+            width: 51rem;
+        }
+
+        @media (min-width: 1360px) {
+            width: 68rem;
+        }
+
+    }
+
+}

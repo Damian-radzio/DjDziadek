@@ -1,0 +1,241 @@
+.main-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('/html&components/img/DISCO.jpg');
+    background-position: center bottom;
+    background-repeat: repeat;
+    background-size: cover;
+
+    .components {
+        position: relative;
+        font-family: $mainFont, sans-serif;
+
+        .header {
+            position: fixed;
+            @include flex(row, space-between, center);
+            width: 100%;
+            height: 8vh;
+            transition: 1s 0.5s;
+
+
+
+            &.active {
+                background-color: rgba(0, 0, 0, 0.576);
+                z-index: 3;
+            }
+
+            @media (min-height:280px) and (orientation: landscape) {
+                @include flex(row, space-between, center);
+                height: 15vh;
+            }
+
+            .name {
+                text-transform: uppercase;
+                font-size: 3rem;
+                font-weight: 500;
+                color: $mainFontColor;
+                min-width: 200px;
+                transition: 0.5s 0.25s;
+                padding-left: 10px;
+
+                &.active {
+                    transform: scale(0.7);
+                }
+
+                // portrait
+                @media (min-width: 320px) and (orientation: portrait) {
+                    font-size: 3.5rem;
+                    padding-left: 25px;
+                }
+
+                @media (max-width: 360px) and (orientation: portrait) {
+                    left: 20px;
+                }
+
+                @media (max-width: 375px) and (orientation: portrait) {}
+
+                @media (min-width: 411px) and (orientation: portrait) {
+                    font-size: 4.5rem;
+                    padding-left: 35px;
+                    left: 30px;
+                }
+
+                @media (min-width: 768px) and (orientation: portrait) {
+                    font-size: 7.5rem;
+                    left: 50px;
+                    top: 25px;
+                    padding-left: 50px;
+                }
+
+                @media (min-width: 1024px) and (orientation: portrait) {
+                    font-size: 9.5rem;
+                    left: 70px;
+                    top: 30px;
+                    padding-left: 70px;
+                }
+
+                // landscape
+                @media (orientation: landscape) {
+                    padding-left: 60px;
+                }
+
+                @media (min-width: 1024px) and (orientation: landscape) {
+                    font-size: 8rem;
+                }
+
+
+            }
+        }
+
+        .about-intro {
+            @include flex(column, flex-start, flex-start);
+            position: relative;
+            left: 20px;
+            min-height: 300px;
+            top: 40vh;
+
+            @media (min-width: 320px) and (orientation: portrait) {
+                margin-left: 25px;
+            }
+
+            @media (min-width: 411px) and (orientation: portrait) {
+                margin-left: 35px;
+            }
+
+            // large mobile
+            @media (min-width: 768px) and (orientation: portrait) {
+                margin-left: 55px;
+            }
+
+            @media (min-width: 1024px) and (orientation: portrait) {
+                margin-left: 75px;
+            }
+
+            // landscape
+            @media (min-width: 1024px) and (orientation: landscape) {
+                margin-left: 45px;
+            }
+
+
+            .text-intro {
+                width: 50%;
+                color: $mainFontColor;
+                font-weight: 500;
+                font-size: 2.2rem;
+
+                @media (min-width: 320px) and (orientation: portrait) {
+                    font-size: 24px;
+                }
+
+                @media (min-width: 375px) and (orientation: portrait) {
+                    font-size: 2.7rem;
+                }
+
+                @media (min-width: 411px) and (min-height: 720px) {
+                    font-size: 3rem;
+                    font-size: 3 rem;
+
+                }
+
+                // large mobile
+                @media (min-width: 768px) and (orientation: portrait) {
+                    font-size: 4rem;
+                    width: 500px;
+                }
+
+                @media (min-width: 1024px) and (orientation: portrait) {
+                    font-size: 6rem;
+                    width: 600px;
+                }
+
+                // landscape
+                @media (min-width: 1024px) {
+                    font-size: 5rem;
+                    width: 80%;
+                }
+            }
+
+            .about-btn {
+                @include buttons();
+                margin-top: 20px;
+                opacity: 0;
+                transition: 0.4s;
+                color: black;
+                @include buttonsMedia();
+
+                &.visible {
+                    opacity: 1;
+                    color: white;
+                }
+
+                @media (min-width: 1024px) {
+
+                    // for bigger devices
+                    &:hover {
+                        color: black;
+                        border: 1px solid black;
+                        background-color: $mainFontColor;
+                    }
+
+                    width: 200px;
+                    height: 56px;
+                    border-radius: 30px;
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+
+    .icons {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 2vh;
+        width: 50%;
+        max-width: 600px;
+        min-width: 200px;
+
+        @media (min-width: 1024px) and (orientation: landscape) {
+            bottom: 3vh;
+        }
+
+        & li {
+            list-style: none;
+            @include flex(row, space-between, center);
+        }
+
+        & img {
+            width: 28px;
+
+
+            @media (min-width: 320px) and (orientation: portrait) {
+                width: 32px;
+            }
+
+            @media (min-width: 375px) and (orientation: portrait) {
+                width: 35px;
+            }
+
+            @media (min-width: 414px) and (min-height: 720px) {
+                width: 37px;
+            }
+
+            // large mobile
+            @media (min-width: 768px) and (orientation: portrait) {
+                width: 40px;
+            }
+
+            @media (min-width: 1024px) and (orientation: portrait) {
+                width: 50px;
+            }
+
+            @media (min-width: 1024px) and (orientation: landscape) {
+                width: 70px;
+            }
+        }
+    }
+}

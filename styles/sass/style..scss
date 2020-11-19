@@ -1,0 +1,53 @@
+@import './variables';
+@import './functions';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    position: relative;
+    z-index: -1;
+    letter-spacing: 0.8px;
+}
+
+
+
+// background and height of page
+.main {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.481) 0%, rgb(66, 8, 107) 11%, rgb(74, 15, 95) 11%, rgb(0, 0, 0) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.5578606442577031) 0%, rgba(19, 0, 0, 1) 18%, rgb(66, 15, 85) 51%, rgb(0, 0, 0) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 98vh, rgb(66, 9, 87) 41%, rgb(0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#1a1c61", GradientType=1);
+    width: 100%;
+    height: auto;
+    z-index: -10;
+    overflow: hidden;
+}
+
+
+
+
+@import './menu';
+// welcome section [styles]
+@import './mainHeader';
+// section about me [styles]
+@import './about-me';
+// section with offer  [styles]
+@import './offer';
+// section with photos gallery [styles]
+@import './gallery';
+// section with e-mail, phone number,and social media [styles]
+@import './contact';
+// footer [styles]
+@import './footer';
