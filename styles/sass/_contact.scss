@@ -1,224 +1,93 @@
 .contact {
     @include sectionProp();
-    width: 100%;
-    @include flex(column, flex-start, center);
-    position: relative;
+    font-family: $mainFont;
+    @include flex(column, center, center);
 
-
-    @media(min-width: 1024px) {
-        @include flex(row, center, center);
-        position: relative;
-        left: 50%;
-        transform: translateX(-40%);
-        margin-top: -200px;
-    }
-
-    .details {
-        @media(min-width: 1024px) {
-            @include flex(column, center, center);
-        }
-    }
-
-    & .h1 {
+    & .heading {
         @include h1Prop();
         @include mediaQueriesH1();
     }
 
-    & .number,
-    .e-mail {
-        width: 100%;
+    .info {
         text-align: center;
-        font-size: 1.5rem;
 
 
-        @media (min-width: 360px) and (orientation: portrait) {
-            font-size: 2rem;
-        }
+        & .number,
+        .email {
+            position: relative;
+            font-size: 1.5rem;
+            color: $mainFontColor;
 
-        @media (min-width: 411px) and (orientation: portrait) {
-            font-size: 2.2rem;
-        }
+            @media (min-width: 319px) and (orientation: portrait) {
+                font-size: 2.2rem;
+            }
 
-        // large mobile
-        @media (min-width: 768px) {
-            font-size: 3rem;
-        }
-
-        @media (min-width: 1024px) {
-            margin-top: 10px;
-            width: 150%;
-            font-size: 2.5rem;
-        }
-
-    }
-
-    & nav {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 20%;
-        margin-top: 15px;
-        min-width: 120px;
-
-        @media (min-width: 360px) and (orientation: portrait) {
-            width: 50%;
-        }
-
-        @media (min-width: 411px) and (orientation: portrait) {
-            width: 45%;
-        }
-
-        // large mobile
-
-        @media (min-width: 1024px) {
-            width: 60%;
-            left: 30%;
-        }
-
-
-        & li {
-            list-style: none;
-            @include flex(row, space-between, center);
-        }
-
-        & img {
-            width: 35px;
-
-            @media (min-width: 360px) and (orientation: portrait) {
-                width: 40px;
+            @media (min-width: 375px) and (orientation: portrait) {
+                font-size: 2.4rem;
             }
 
             @media (min-width: 411px) and (orientation: portrait) {
-                width: 45px;
-            }
-
-            // large mobile
-            @media (min-width: 768px) and (orientation: portrait) {
-                width: 50px;
-            }
-
-            @media (min-width: 1024px) {
-                width: 70px;
-            }
-        }
-    }
-
-    .email-message {
-        @include sectionProp();
-
-        & .h2 {
-            @include h1Prop();
-            text-transform: none;
-            font-size: 2.4rem;
-            font-weight: 400;
-
-            @media (min-width: 360px) and (orientation: portrait) {
                 font-size: 2.6rem;
             }
 
-            @media (min-width: 411px) and (orientation: portrait) {
-                height: 2.8rem;
-
-            }
-
-            // large mobile
             @media (min-width: 768px) and (orientation: portrait) {
-                font-size: 3rem;
-                margin-bottom: 30px;
+                font-size: 4rem;
             }
 
             @media (min-width: 1024px) {
-                margin-top: 200px;
-                font-size: 4rem;
-                margin-bottom: 50px;
+                font-size: 4.5rem;
+                letter-spacing: 0.2rem;
             }
         }
 
+
+
+        .icons {
+            img {
+                margin: 3%;
+                width: 3rem;
+
+                @media (min-width: 319px) and (orientation: portrait) {
+                    width: 2.2rem;
+                }
+
+                @media (min-width: 375px) and (orientation: portrait) {
+                    width: 3rem;
+                }
+
+                @media (min-width: 411px) and (orientation: portrait) {
+                    width: 3.2rem;
+                }
+
+                @media (min-width: 768px) and (orientation: portrait) {
+                    width: 6rem;
+                }
+
+                @media (min-width: 1024px) {
+                    width: 5rem;
+                    letter-spacing: 0.2rem;
+                }
+            }
+        }
     }
 
-    .form {
-        @include flex(column, center, center);
+    .mail-form {
+        @include sectionProp();
 
-        & .email-input,
-        .message {
-            font-family: $mainFont, sans-serif;
-            font-weight: 300;
-            border-style: none;
-            text-align: left;
-            padding: 3px;
-            min-width: 250px;
+        & .question {
+            @include h1Prop();
+            font-size: 2em;
+            text-transform: none;
         }
 
-        & .email-input {
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            height: 40px;
-            width: 250px;
-            @include mediaWidthForm();
-
-            @media (min-width: 360px) and (orientation: portrait) {
-                height: 50px;
-            }
-
-            @media (min-width: 411px) and (orientation: portrait) {
-                height: 60px;
-
-            }
-
-            // large mobile
-            @media (min-width: 768px) and (orientation: portrait) {
-                height: 80px;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
-                font-size: 3rem;
-            }
-
-            @media (min-width: 1024px) {
-                height: 100px;
-                width: 400px;
-            }
+        form {
+            @include flex(column, center, center);
         }
 
-        // clear textarea before user starts typing
-        & .message {
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            resize: none;
-            min-height: 120px;
-            min-width: 250px;
-            max-width: 450px;
-            color: rgba(0, 0, 0, 0.693);
-            min-width: 250px;
-            @include mediaWidthForm ();
-
-            @media (min-width: 360px) and (orientation: portrait) {
-                height: 140px;
-            }
-
-            @media (min-width: 411px) and (orientation: portrait) {
-                height: 160px;
-            }
-
-            // large mobile
-            @media (min-width: 768px) and (orientation: portrait) {
-                height: 180px;
-                border-bottom-left-radius: 20px;
-                border-bottom-right-radius: 20px;
-                font-size: 3rem;
-            }
-
-            @media (min-width: 1024px) {
-                height: 200px;
-                width: 400px;
-            }
-
+        .form-email {
+            position: relative;
+            background-color: transparent;
         }
 
-        & .send {
-            margin-top: 10px;
-            @include buttons();
-            margin-bottom: -100px;
-            @include buttonsMedia();
-        }
     }
 }

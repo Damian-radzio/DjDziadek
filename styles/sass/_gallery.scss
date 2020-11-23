@@ -5,7 +5,7 @@
     & .h1 {
         @include h1Prop();
         @include mediaQueriesH1();
-        margin-bottom: 50px;
+        margin-bottom: 5rem;
     }
 
     .photos {
@@ -15,16 +15,21 @@
         align-items: center;
         @include flex(column, center, center);
         margin: 0 auto;
+        transition: 0.5s;
 
         @media(min-width: 768px) {
             @include flex(row, center, center);
             flex-wrap: wrap;
         }
+
+
     }
 
 
     .photos .glightbox img {
         width: 100%;
+        transition: 0.5s;
+        opacity: 1;
 
         // large mobile
         @media (min-width: 768px) {
@@ -35,14 +40,16 @@
             width: 38rem;
         }
 
-        @media (min-width: 1024px) and (orientation: portrait) {
+        @media (min-width: 1024px) {
+            width: 70rem;
+            opacity: 0.6;
 
-            width: 51rem;
+            &:hover {
+                transform: scale(0.9);
+                opacity: 1;
+            }
         }
 
-        @media (min-width: 1360px) {
-            width: 68rem;
-        }
 
     }
 

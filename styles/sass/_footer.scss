@@ -4,27 +4,27 @@
     font-family: $mainFont;
     color: $mainFontColor;
     background-color: #000027;
-    padding: 5px 5px 5px 20px;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
     font-size: 1.3rem;
-    min-width: 250px;
+    min-width: 25rem;
 
     @media (min-width: 320px) and (orientation: portrait) {
-        height: 90px;
+        height: 9rem;
     }
 
     @media (min-width: 411px) and (orientation: portrait) {
-        height: 80px;
+        height: 8rem;
     }
 
     // large mobile
     @media (min-width: 768px) and (orientation: portrait) {
-        height: 100px;
+        height: 10rem;
         font-size: 1.8rem;
         align-items: center;
     }
 
     @media (min-width: 1024px) and (orientation: portrait) {
-        height: 110px;
+        height: 11rem;
         font-size: 2.2rem;
         align-items: center;
     }

@@ -2,7 +2,7 @@
     @include sectionProp();
     @include flex(column, center, center);
     width: 100%;
-    margin-top: 50px;
+    margin-top: 5rem;
 
     & .h1 {
         @include h1Prop;
@@ -16,7 +16,7 @@
 
         & .type {
             text-transform: uppercase;
-            margin-top: 30px;
+            margin-top: 3rem;
 
             @media (min-width: 768px) {
                 font-size: 2rem;
@@ -38,29 +38,68 @@
                 }
 
                 @media (min-width: 1240px) {
-                    width: 50%;
+                    width: 40%;
                 }
             }
         }
     }
 
     & .even {
+        transition: 1s 0.5s;
+        opacity: 0.1;
+
+        &.active {
+            opacity: 1
+        }
+
         @media (orientation: landscape) {
-            margin-left: 50%;
+            transition: 1s;
+            margin-left: 15%;
+
+            &.active {
+                transform: translateX(50%);
+            }
         }
 
         @media (min-width: 768px) {
-            margin-left: 50%;
+            transition: 1s;
+            margin-left: 15%;
+
+            &.active {
+                transform: translateX(50%);
+            }
+
         }
+
+
+
     }
 
     & .odd {
+        transition: 1s 0.5s;
+        opacity: 0.1;
+
+        &.active {
+            opacity: 1
+        }
+
         @media(orientation: landscape) {
-            margin-right: 50%;
+            transition: 1s;
+            margin-right: 15%;
+
+            &.active {
+                transform: translateX(-50%);
+            }
         }
 
         @media (min-width: 768px) {
-            margin-right: 50%;
+            transition: 1s;
+            margin-right: 15%;
+
+            &.active {
+                transform: translateX(-50%);
+            }
         }
+
     }
 }

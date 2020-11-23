@@ -5,17 +5,16 @@ const menuWrap = document.querySelector('.header');
 
 function MinimalizeMenuBar(){
   if(scrollY > 0){
+    menuWrap.classList.add('active');
     nameBar.classList.add('active')
     menuIcon.classList.add('active');
-    menuWrap.classList.add('active');
   }else{
+    menuWrap.classList.remove('active');
     nameBar.classList.remove('active');
     menuIcon.classList.remove('active');
-    menuWrap.classList.remove('active');
   }
 }
 window.addEventListener('scroll', MinimalizeMenuBar)
-
 
 // typing effect header 
 
@@ -84,7 +83,28 @@ const aboutMeBlur = () => {
 window.addEventListener('scroll', aboutMeBlur);
 
 
-
+const evenIconOffer = [...document.querySelectorAll('.types .even')];
+const oddIconOffer = [...document.querySelectorAll('.types .odd')];
+const sectionOffer = document.querySelector('.offer')
+let time = 300;
+const offerIconScrollAnimation = () => {
+  if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight / 1.2){
+    console.log('hier')
+    setInterval(() => {
+      oddIconOffer[0].classList.add('active');
+      setInterval(() => {
+        evenIconOffer[0].classList.add('active');
+        setInterval(() => {
+          oddIconOffer[1].classList.add('active');
+          setInterval(() => {
+            evenIconOffer[1].classList.add('active');
+          }, time);
+        }, time);
+      }, time);
+    }, time);
+    }
+}
+window.addEventListener('scroll', offerIconScrollAnimation)
 
 
 

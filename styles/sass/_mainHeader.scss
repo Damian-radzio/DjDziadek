@@ -18,29 +18,38 @@
             position: fixed;
             @include flex(row, space-between, center);
             width: 100%;
-            height: 8vh;
-            transition: 1s 0.5s;
-
-
-
+            height: 10vh;
+            transition: 1s;
+// testowe
             &.active {
-                background-color: rgba(0, 0, 0, 0.576);
                 z-index: 3;
+                height: 7vh;
+                // border-bottom-left-radius: 40px;
+                // border-bottom-right-radius: 40px;
+                background-color: rgba(0, 0, 0, 0.378);
+                // border-bottom: 2px solid white;
+
+                @media (min-width: 768px) {
+                    // border-bottom-left-radius: 00px;
+                    // border-bottom-right-radius: 00px;
+                    // border-bottom: none;
+                }
             }
 
             @media (min-height:280px) and (orientation: landscape) {
                 @include flex(row, space-between, center);
-                height: 15vh;
+                height: 10vh;
             }
+
 
             .name {
                 text-transform: uppercase;
                 font-size: 3rem;
                 font-weight: 500;
                 color: $mainFontColor;
-                min-width: 200px;
+                min-width: 20rem;
                 transition: 0.5s 0.25s;
-                padding-left: 10px;
+                padding-left: 1rem;
 
                 &.active {
                     transform: scale(0.7);
@@ -49,38 +58,37 @@
                 // portrait
                 @media (min-width: 320px) and (orientation: portrait) {
                     font-size: 3.5rem;
-                    padding-left: 25px;
+                    padding-left: 2.5rem;
                 }
 
                 @media (max-width: 360px) and (orientation: portrait) {
-                    left: 20px;
+                    left: 2rem;
                 }
 
-                @media (max-width: 375px) and (orientation: portrait) {}
 
                 @media (min-width: 411px) and (orientation: portrait) {
                     font-size: 4.5rem;
-                    padding-left: 35px;
-                    left: 30px;
+                    padding-left: 3rem;
+                    left: 3rem;
                 }
 
                 @media (min-width: 768px) and (orientation: portrait) {
                     font-size: 7.5rem;
-                    left: 50px;
-                    top: 25px;
-                    padding-left: 50px;
+                    left: 5rem;
+                    top: 2.5rem;
+                    padding-left: 5rem;
                 }
 
                 @media (min-width: 1024px) and (orientation: portrait) {
                     font-size: 9.5rem;
-                    left: 70px;
-                    top: 30px;
-                    padding-left: 70px;
+                    left: 7rem;
+                    top: 3rem;
+                    padding-left: 7rem;
                 }
 
                 // landscape
                 @media (orientation: landscape) {
-                    padding-left: 60px;
+                    padding-left: 6rem;
                 }
 
                 @media (min-width: 1024px) and (orientation: landscape) {
@@ -94,30 +102,30 @@
         .about-intro {
             @include flex(column, flex-start, flex-start);
             position: relative;
-            left: 20px;
-            min-height: 300px;
+            left: 2rem;
+            min-height: 30rem;
             top: 40vh;
 
             @media (min-width: 320px) and (orientation: portrait) {
-                margin-left: 25px;
+                margin-left: 2.5rem;
             }
 
             @media (min-width: 411px) and (orientation: portrait) {
-                margin-left: 35px;
+                margin-left: 3.5rem;
             }
 
             // large mobile
             @media (min-width: 768px) and (orientation: portrait) {
-                margin-left: 55px;
+                margin-left: 5.5rem;
             }
 
             @media (min-width: 1024px) and (orientation: portrait) {
-                margin-left: 75px;
+                margin-left: 7.5rem;
             }
 
             // landscape
             @media (min-width: 1024px) and (orientation: landscape) {
-                margin-left: 45px;
+                margin-left: 4.5rem;
             }
 
 
@@ -128,7 +136,7 @@
                 font-size: 2.2rem;
 
                 @media (min-width: 320px) and (orientation: portrait) {
-                    font-size: 24px;
+                    font-size: 2.4rem;
                 }
 
                 @media (min-width: 375px) and (orientation: portrait) {
@@ -137,19 +145,17 @@
 
                 @media (min-width: 411px) and (min-height: 720px) {
                     font-size: 3rem;
-                    font-size: 3 rem;
-
                 }
 
                 // large mobile
                 @media (min-width: 768px) and (orientation: portrait) {
                     font-size: 4rem;
-                    width: 500px;
+                    width: 50rem;
                 }
 
                 @media (min-width: 1024px) and (orientation: portrait) {
                     font-size: 6rem;
-                    width: 600px;
+                    width: 60rem;
                 }
 
                 // landscape
@@ -161,15 +167,17 @@
 
             .about-btn {
                 @include buttons();
-                margin-top: 20px;
+                @include buttonsMedia();
+                margin-top: 2rem;
                 opacity: 0;
                 transition: 0.4s;
                 color: black;
-                @include buttonsMedia();
 
                 &.visible {
                     opacity: 1;
+                    font-weight: 500;
                     color: white;
+                    cursor: pointer;
                 }
 
                 @media (min-width: 1024px) {
@@ -179,12 +187,13 @@
                         color: black;
                         border: 1px solid black;
                         background-color: $mainFontColor;
+                        transform: scale(1.1);
                     }
 
-                    width: 200px;
-                    height: 56px;
-                    border-radius: 30px;
-                    font-size: 35px;
+                    width: 20rem;
+                    height: 5.6rem;
+                    border-radius: 3.0rem;
+                    font-size: 3.5rem;
                 }
             }
         }
@@ -196,8 +205,8 @@
         transform: translateX(-50%);
         bottom: 2vh;
         width: 50%;
-        max-width: 600px;
-        min-width: 200px;
+        max-width: 60rem;
+        min-width: 20rem;
 
         @media (min-width: 1024px) and (orientation: landscape) {
             bottom: 3vh;
@@ -209,32 +218,32 @@
         }
 
         & img {
-            width: 28px;
+            width: 2.8rem;
 
 
             @media (min-width: 320px) and (orientation: portrait) {
-                width: 32px;
+                width: 3.2rem;
             }
 
             @media (min-width: 375px) and (orientation: portrait) {
-                width: 35px;
+                width: 3.5rem;
             }
 
             @media (min-width: 414px) and (min-height: 720px) {
-                width: 37px;
+                width: 3.7rem;
             }
 
             // large mobile
             @media (min-width: 768px) and (orientation: portrait) {
-                width: 40px;
+                width: 4.0rem;
             }
 
             @media (min-width: 1024px) and (orientation: portrait) {
-                width: 50px;
+                width: 5.0rem;
             }
 
             @media (min-width: 1024px) and (orientation: landscape) {
-                width: 70px;
+                width: 7.0rem;
             }
         }
     }
