@@ -19,21 +19,14 @@
             @include flex(row, space-between, center);
             width: 100%;
             height: 10vh;
+            min-height: 5rem;
             transition: 1s;
-// testowe
+
+            // testowe
             &.active {
                 z-index: 3;
                 height: 7vh;
-                // border-bottom-left-radius: 40px;
-                // border-bottom-right-radius: 40px;
                 background-color: rgba(0, 0, 0, 0.378);
-                // border-bottom: 2px solid white;
-
-                @media (min-width: 768px) {
-                    // border-bottom-left-radius: 00px;
-                    // border-bottom-right-radius: 00px;
-                    // border-bottom: none;
-                }
             }
 
             @media (min-height:280px) and (orientation: landscape) {
@@ -105,27 +98,29 @@
             left: 2rem;
             min-height: 30rem;
             top: 40vh;
-
+            
             @media (min-width: 320px) and (orientation: portrait) {
                 margin-left: 2.5rem;
             }
-
+            
             @media (min-width: 411px) and (orientation: portrait) {
                 margin-left: 3.5rem;
             }
-
+            
             // large mobile
             @media (min-width: 768px) and (orientation: portrait) {
                 margin-left: 5.5rem;
             }
-
+            
             @media (min-width: 1024px) and (orientation: portrait) {
-                margin-left: 7.5rem;
+                margin-left: 8rem;
+                width: 50%;
             }
-
+            
             // landscape
             @media (min-width: 1024px) and (orientation: landscape) {
-                margin-left: 4.5rem;
+                margin-left: 10rem;
+                width: 50%;
             }
 
 
@@ -134,34 +129,32 @@
                 color: $mainFontColor;
                 font-weight: 500;
                 font-size: 2.2rem;
-
+                
                 @media (min-width: 320px) and (orientation: portrait) {
                     font-size: 2.4rem;
                 }
-
+                
                 @media (min-width: 375px) and (orientation: portrait) {
                     font-size: 2.7rem;
                 }
-
+                
                 @media (min-width: 411px) and (min-height: 720px) {
                     font-size: 3rem;
                 }
-
+                
                 // large mobile
                 @media (min-width: 768px) and (orientation: portrait) {
                     font-size: 4rem;
                     width: 50rem;
                 }
-
-                @media (min-width: 1024px) and (orientation: portrait) {
-                    font-size: 6rem;
-                    width: 60rem;
-                }
-
-                // landscape
-                @media (min-width: 1024px) {
-                    font-size: 5rem;
+                @media (min-width: 1024px) and (orientation:portrait){
                     width: 80%;
+                    font-size: 7rem;
+                }
+                // landscape
+                @media (min-width: 1024px) and (orientation: landscape) {
+                    width: 100%;
+                    font-size: 6.5rem;
                 }
             }
 
@@ -189,11 +182,7 @@
                         background-color: $mainFontColor;
                         transform: scale(1.1);
                     }
-
-                    width: 20rem;
-                    height: 5.6rem;
-                    border-radius: 3.0rem;
-                    font-size: 3.5rem;
+                    border-radius: 30px;
                 }
             }
         }

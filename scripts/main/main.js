@@ -89,7 +89,6 @@ const sectionOffer = document.querySelector('.offer')
 let time = 300;
 const offerIconScrollAnimation = () => {
   if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight / 1.2){
-    console.log('hier')
     setInterval(() => {
       oddIconOffer[0].classList.add('active');
       setInterval(() => {
@@ -105,6 +104,17 @@ const offerIconScrollAnimation = () => {
     }
 }
 window.addEventListener('scroll', offerIconScrollAnimation)
+
+// button click animation
+const buttons = [...document.querySelectorAll('button')];
+const buttonClickAnimation = () => {
+  
+}
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', buttonClickAnimation)
+});
+
 
 
 

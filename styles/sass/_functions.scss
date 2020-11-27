@@ -47,8 +47,8 @@
         border: 1.3px solid $mainFontColor;
     }
 
-    @media (min-width: 1024px) and (orientation: portrait) {
-        font-size: 4.3rem;
+    @media (min-width: 1024px) {
+        font-size: 6rem;
         width: 29rem;
         height: 8.5rem;
     }

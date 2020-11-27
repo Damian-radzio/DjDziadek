@@ -41,7 +41,7 @@
         }
 
         @media (min-width: 1024px) {
-            width: 70rem;
+            width: 60rem;
             opacity: 0.6;
 
             &:hover {
@@ -50,7 +50,14 @@
             }
         }
 
-
+        @media (min-width: 1100px) {
+            width: 73rem;
+            opacity: 0.6;
+        }
+        @media (min-width: 1310px) {
+            width: 54rem;
+            opacity: 0.6;
+        }
     }
 
 }

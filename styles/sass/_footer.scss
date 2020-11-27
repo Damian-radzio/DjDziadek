@@ -3,7 +3,7 @@
     width: 100%;
     font-family: $mainFont;
     color: $mainFontColor;
-    background-color: #000027;
+    background-color: #24052F;
     padding: 0.5rem 0.5rem 0.5rem 2rem;
     font-size: 1.3rem;
     min-width: 25rem;
@@ -23,9 +23,16 @@
         align-items: center;
     }
 
-    @media (min-width: 1024px) and (orientation: portrait) {
-        height: 11rem;
+    @media (min-width: 1024px) {
+        height: 15rem;
         font-size: 2.2rem;
+        align-items: center;
+    }
+    @media(min-width: 1240px){
+        height: 20rem;
+        font-size: 3rem;
+    }
+    @media (orientation: landscape){
         align-items: center;
     }
 
