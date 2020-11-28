@@ -106,14 +106,36 @@ const offerIconScrollAnimation = () => {
 window.addEventListener('scroll', offerIconScrollAnimation)
 
 // button click animation
-const buttons = [...document.querySelectorAll('button')];
-const buttonClickAnimation = () => {
+// const buttons = [...document.querySelectorAll('button')];
+// const buttonClickAnimation = () => {
   
-}
+// }
 
-buttons.forEach(btn => {
-  btn.addEventListener('click', buttonClickAnimation)
-});
+// buttons.forEach(btn => {
+//   btn.addEventListener('click', buttonClickAnimation)
+// });
+
+
+
+// menu icon animation
+  
+// bars 
+const one = document.querySelector('.one');
+const two = document.querySelector('.two');
+const three = document.querySelector('.three');
+// wrap
+const menuIconWrap = document.querySelector('.wrap');
+
+const MenuIconAnimation = () => {
+  one.classList.toggle('active-menu')
+  two.classList.toggle('active-menu')
+  three.classList.toggle('active-menu')
+  menuIconWrap.classList.toggle('active-menu')
+}
+menuIconWrap.addEventListener('click', MenuIconAnimation);
+
+
+
 
 
 
