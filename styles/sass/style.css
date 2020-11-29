@@ -440,6 +440,7 @@ body {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   color: black;
+  outline: 0;
 }
 
 @media (min-width: 320px) and (orientation: portrait) {
@@ -488,6 +489,41 @@ body {
   font-weight: 300;
   color: white;
   cursor: pointer;
+}
+
+.main-header .components .about-intro .about-btn:focus {
+  -webkit-animation: click 0.3s ease both;
+          animation: click 0.3s ease both;
+}
+
+@-webkit-keyframes click {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes click {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -869,6 +905,7 @@ body {
 .offer .types .type {
   text-transform: uppercase;
   margin-top: 3rem;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -884,6 +921,8 @@ body {
 }
 
 .offer .types .type img {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   width: 20%;
 }
 
@@ -1365,6 +1404,7 @@ body {
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   min-height: 8rem;
+  outline: none;
 }
 
 .contact .mail-form form .form-text {
@@ -1375,6 +1415,7 @@ body {
   max-height: 30rem;
   resize: none;
   font-family: "Oswald";
+  outline: none;
 }
 
 .contact .mail-form form ::-webkit-input-placeholder {
@@ -1409,6 +1450,7 @@ body {
   margin-top: 1rem;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  outline: none;
 }
 
 @media (min-width: 320px) and (orientation: portrait) {
@@ -1465,6 +1507,38 @@ body {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
     cursor: pointer;
+  }
+  .contact .mail-form form .form-submit:focus {
+    -webkit-animation: click 0.4s ease both;
+            animation: click 0.4s ease both;
+  }
+  @-webkit-keyframes click {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes click {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
   }
 }
 

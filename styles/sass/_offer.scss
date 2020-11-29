@@ -13,22 +13,20 @@
         @include flex(column, center, center);
         text-align: center;
         width: 100%;
-
         & .type {
             text-transform: uppercase;
             margin-top: 3rem;
-
+            cursor: pointer;
             @media (min-width: 768px) {
                 font-size: 2rem;
             }
-
             @media (min-width: 1240px) {
                 font-size: 3rem;
             }
-
+            
             & img {
+                transition: 0.3s;
                 width: 20%;
-
                 @media(orientation: landscape) {
                     width: 30%;
                 }
@@ -41,6 +39,7 @@
                     width: 40%;
                 }
             }
+
         }
     }
 

@@ -111,7 +111,7 @@ const moveToAboutMe = (e) => {
   e.preventDefault();
   $('body, html').animate({
     scrollTop: $('.about-me').offset().top
-  }, 10)
+  }, 400)
 }
 
 AboutMeButton.click(moveToAboutMe);
@@ -131,6 +131,9 @@ const MenuIconAnimation = () => {
   menuIconWrap.classList.toggle('active-menu')
 }
 menuIconWrap.addEventListener('click', MenuIconAnimation);
+
+
+
 
 
 
