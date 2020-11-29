@@ -423,7 +423,7 @@ body {
 }
 
 .main-header .components .about-intro .about-btn {
-  background-color: rgba(0, 0, 0, 0.59);
+  background-color: rgba(0, 0, 0, 0.583);
   width: 14rem;
   min-width: 14rem;
   height: 3.6rem;
@@ -433,6 +433,8 @@ body {
   border-radius: 2.5rem;
   text-transform: uppercase;
   font-size: 2rem;
+  font-family: "Oswald";
+  line-height: 1rem;
   margin-top: 2rem;
   opacity: 0;
   -webkit-transition: 0.4s;
@@ -477,13 +479,13 @@ body {
   .main-header .components .about-intro .about-btn {
     font-size: 6rem;
     width: 29rem;
-    height: 8.5rem;
+    height: 8rem;
   }
 }
 
 .main-header .components .about-intro .about-btn.visible {
   opacity: 1;
-  font-weight: 500;
+  font-weight: 300;
   color: white;
   cursor: pointer;
 }
@@ -494,10 +496,9 @@ body {
   }
   .main-header .components .about-intro .about-btn:hover {
     color: black;
-    border: 1px solid black;
     background-color: white;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
 }
 
@@ -515,6 +516,12 @@ body {
 @media (min-width: 1024px) and (orientation: landscape) {
   .main-header .icons {
     bottom: 3vh;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .main-header .icons {
+    bottom: 7vh;
   }
 }
 
@@ -1387,7 +1394,7 @@ body {
 }
 
 .contact .mail-form form .form-submit {
-  background-color: rgba(0, 0, 0, 0.59);
+  background-color: rgba(0, 0, 0, 0.583);
   width: 14rem;
   min-width: 14rem;
   height: 3.6rem;
@@ -1397,6 +1404,8 @@ body {
   border-radius: 2.5rem;
   text-transform: uppercase;
   font-size: 2rem;
+  font-family: "Oswald";
+  line-height: 1rem;
   margin-top: 1rem;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -1439,7 +1448,7 @@ body {
   .contact .mail-form form .form-submit {
     font-size: 6rem;
     width: 29rem;
-    height: 8.5rem;
+    height: 8rem;
   }
 }
 
@@ -1452,10 +1461,9 @@ body {
   }
   .contact .mail-form form .form-submit:hover {
     color: black;
-    border: 1px solid black;
     background-color: white;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
     cursor: pointer;
   }
 }

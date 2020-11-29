@@ -162,9 +162,8 @@
                     // for bigger devices
                     &:hover {
                         color: black;
-                        border: 1px solid black;
                         background-color: $mainFontColor;
-                        transform: scale(1.1);
+                        transform: scale(.9);
                         cursor: pointer;
                     }
 

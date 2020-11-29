@@ -168,7 +168,7 @@
 
                 &.visible {
                     opacity: 1;
-                    font-weight: 500;
+                    font-weight: 300;
                     color: white;
                     cursor: pointer;
                 }
@@ -178,9 +178,8 @@
                     // for bigger devices
                     &:hover {
                         color: black;
-                        border: 1px solid black;
-                        background-color: $mainFontColor;
-                        transform: scale(1.1);
+                        background-color: rgb(255, 255, 255);
+                        transform: scale(.9);
                     }
                     border-radius: 30px;
                 }
@@ -200,6 +199,9 @@
         @media (min-width: 1024px) and (orientation: landscape) {
             bottom: 3vh;
         }
+        @media (max-width: 1024px) and (orientation: portrait){
+            bottom: 7vh;   
+           }
 
         & li {
             list-style: none;
@@ -234,6 +236,7 @@
             @media (min-width: 1024px) and (orientation: landscape) {
                 width: 7.0rem;
             }
+            
         }
     }
 }
