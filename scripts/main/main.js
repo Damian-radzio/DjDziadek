@@ -42,8 +42,8 @@ let speed = 50;
 
 
 // experience counter
+const experienceNumber = document.querySelector('.experience-number');
 const updateCount = () => {
-  const experienceNumber = document.querySelector('.experience-number');
   let value = 7;
   let i = 0;
   setInterval(() => {
@@ -104,13 +104,20 @@ const offerIconScrollAnimation = () => {
     }
 }
 window.addEventListener('scroll', offerIconScrollAnimation)
+// about Me button scroll animation
 
-// const
+const AboutMeButton = $('.about-btn');
+const moveToAboutMe = (e) => {
+  e.preventDefault();
+  $('body, html').animate({
+    scrollTop: $('.about-me').offset().top
+  }, 10)
+}
 
-
+AboutMeButton.click(moveToAboutMe);
 
 // menu icon animation
-  // dodać usuwanie animacji
+ // dodać usuwanie animacji
 // bars 
 const one = document.querySelector('.one');
 const two = document.querySelector('.two');
