@@ -105,20 +105,12 @@ const offerIconScrollAnimation = () => {
 }
 window.addEventListener('scroll', offerIconScrollAnimation)
 
-// button click animation
-// const buttons = [...document.querySelectorAll('button')];
-// const buttonClickAnimation = () => {
-  
-// }
-
-// buttons.forEach(btn => {
-//   btn.addEventListener('click', buttonClickAnimation)
-// });
+// const
 
 
 
 // menu icon animation
-  
+  // dodać usuwanie animacji
 // bars 
 const one = document.querySelector('.one');
 const two = document.querySelector('.two');
