@@ -134,7 +134,27 @@ menuIconWrap.addEventListener('click', MenuIconAnimation);
 
 
 
+// arrow visible func
 
+const arrow = document.querySelector('.arrow');
+const HeaderName = document.querySelector('.name')
+const arrowVisibility = () => {
+  if(window.scrollY >= window.innerHeight){
+    arrow.classList.add('active')
+  } else{
+    arrow.classList.remove('active')
+  }
+}
+window.addEventListener('scroll', arrowVisibility)
+
+// back to top
+const backToTop = () => {
+  $('body, html').animate({
+    scrollTop: $('.main-header').offset().top
+  }, 50)
+}
+arrow.addEventListener('click', backToTop)
+HeaderName.addEventListener('click', backToTop)
 
 
 

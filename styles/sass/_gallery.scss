@@ -59,5 +59,52 @@
             opacity: 0.6;
         }
     }
+// .show-more-gallery{
+//     margin-top: 1vh;
+//     display: block;
+//     text-align: center;
+//     text-transform: uppercase;
+//     color: $mainFontColor;
+//     font-size: 2rem;
+//     text-decoration: none;
 
+//     .gallery-insta{
+//         margin: 0.5rem auto;
+//         display: block;
+//         width: 3rem;
+//     }
+// }
+.show-more{
+    margin-top: 1vh;
+    text-align: center;
+   font-family: $mainFont;
+   font-size: 2rem;
+   & a{
+       display: block;
+       letter-spacing: 1px;
+       color: $mainFontColor;
+       transition: 0.3s;
+       @media (min-width: 1024px){
+        opacity: 0.8;
+        &:hover{
+            opacity: 1;
+            transform: scale(1.1);
+        }
+       }
+   }
+   
+   @media(min-width: 375px){
+       font-size: 2.7rem;
+   }
+   @media(min-width: 768px){
+    font-size: 4rem;
+   }
+   @media(min-width: 1024px){
+    font-size: 5rem;
+   }
+   @media(min-width: 1240px){
+    font-size: 6rem;
+   }
 }
+}
+

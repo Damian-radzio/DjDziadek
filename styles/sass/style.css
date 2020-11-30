@@ -258,6 +258,7 @@ body {
 }
 
 .main-header .components .header .name {
+  display: inline-block;
   text-transform: uppercase;
   font-size: 3rem;
   font-weight: 500;
@@ -266,6 +267,7 @@ body {
   -webkit-transition: 0.5s 0.25s;
   transition: 0.5s 0.25s;
   padding-left: 1rem;
+  cursor: pointer;
 }
 
 .main-header .components .header .name.active {
@@ -608,7 +610,7 @@ body {
 
 @media (min-width: 1024px) and (orientation: portrait) {
   .main-header .icons img {
-    width: 5.0rem;
+    width: 6.0rem;
   }
 }
 
@@ -1147,6 +1149,56 @@ body {
   }
 }
 
+.gallery .show-more {
+  margin-top: 1vh;
+  text-align: center;
+  font-family: "Oswald";
+  font-size: 2rem;
+}
+
+.gallery .show-more a {
+  display: block;
+  letter-spacing: 1px;
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (min-width: 1024px) {
+  .gallery .show-more a {
+    opacity: 0.8;
+  }
+  .gallery .show-more a:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@media (min-width: 375px) {
+  .gallery .show-more {
+    font-size: 2.7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery .show-more {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery .show-more {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1240px) {
+  .gallery .show-more {
+    font-size: 6rem;
+  }
+}
+
 .contact {
   margin-top: 10rem;
   margin-bottom: 10rem;
@@ -1629,4 +1681,82 @@ body {
 
 .footer .authors {
   font-weight: 400;
+}
+
+.arrow {
+  position: fixed;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  bottom: 10%;
+  right: -1rem;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.arrow img {
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .arrow img {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .arrow img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .arrow img {
+    width: 90%;
+  }
+}
+
+.arrow.active {
+  opacity: 1;
+  -webkit-animation: rotate 0.7s ease both;
+          animation: rotate 0.7s ease both;
+}
+
+@media (min-width: 768px) {
+  .arrow {
+    right: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .arrow {
+    right: 1.8rem;
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(70deg) scale(0.6);
+            transform: rotate(70deg) scale(0.6);
+  }
+  to {
+    -webkit-transform: rotate(-90deg) scale(1);
+            transform: rotate(-90deg) scale(1);
+    visibility: visible;
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(70deg) scale(0.6);
+            transform: rotate(70deg) scale(0.6);
+  }
+  to {
+    -webkit-transform: rotate(-90deg) scale(1);
+            transform: rotate(-90deg) scale(1);
+    visibility: visible;
+  }
 }

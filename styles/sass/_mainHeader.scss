@@ -36,6 +36,7 @@
 
 
             .name {
+                display: inline-block;
                 text-transform: uppercase;
                 font-size: 3rem;
                 font-weight: 500;
@@ -43,7 +44,7 @@
                 min-width: 20rem;
                 transition: 0.5s 0.25s;
                 padding-left: 1rem;
-
+                cursor: pointer;
                 &.active {
                     transform: scale(0.7);
                 }
@@ -243,7 +244,7 @@
             }
 
             @media (min-width: 1024px) and (orientation: portrait) {
-                width: 5.0rem;
+                width: 6.0rem;
             }
 
             @media (min-width: 1024px) and (orientation: landscape) {
