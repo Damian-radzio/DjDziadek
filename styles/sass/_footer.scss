@@ -38,6 +38,12 @@
 
     & .list {
         list-style: none;
+        transition: 0.2s;
+        @media (min-width: 1024px){
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
     }
 
     & .link {
@@ -45,6 +51,7 @@
         color: $mainFontColor;
         font-weight: 400;
         cursor: pointer;
+       
     }
 
     & .copyright {

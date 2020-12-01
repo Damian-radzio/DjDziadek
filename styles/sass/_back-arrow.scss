@@ -15,6 +15,12 @@
         }
         @media (min-width: 1024px){
             width: 100%;
+            transition: 0.2s;
+            @media (min-width: 1024px){
+                &:hover{
+                    transform: translateX(7px);
+                }
+            }
         }
         @media (min-width: 1600px) {
             width: 90%;
