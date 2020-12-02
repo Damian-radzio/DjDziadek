@@ -88,4 +88,87 @@
         transform: rotate(0.37turn) translateX(-2px);
         transition: 0.4s 0.1s;
     }
+
+    .menu-content{
+        animation: activeMenu 1s ease both reverse;
+        display: none;
+        position: absolute;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0.652);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 35vh;
+        min-height: 150px;
+        transition: 0.4s;
+
+        @media(min-width: 1024px){
+            width: 60%;
+            left: 40%;
+            border-bottom-left-radius: 40px;
+        }
+        &.active{
+            display: block;
+            animation: activeMenu 0.3s ease both;
+            @media (min-width: 1024px){
+                animation: activeMenuBigDev 0.3s ease both;
+            }
+        }
+        // keyframes for mobiles
+        @keyframes activeMenu {
+            from{
+                opacity: 0;
+                top: -3rem;
+            }
+            to{
+                opacity: 1;
+                top: 0;
+            }
+        }
+        // keyframes for bigger devices
+        @keyframes activeMenuBigDev {
+            from{
+                opacity: 0;
+                left:  45%
+            }
+            to{
+                opacity: 1;
+                left: 40%;
+            }
+        }
+        .wrapper{
+            width: 100%;
+            @include flex(column, center, center);
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            ul{
+                li{
+                    list-style: none;
+                    a{
+                        font-weight: 300;
+                        letter-spacing: -0.05rem;
+                        padding: 0.3rem;
+                        font-size: 16px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: block;
+                        color: $mainFontColor;
+                        text-transform: uppercase;
+                        font-family: $mainFont;
+                        @media(min-width: 1024px){
+                            font-size: 4rem;
+                            padding: 0.6rem;
+                        }
+                    }
+                    
+                }
+            }
+           
+            
+           
+        }
+    }
 }
+
