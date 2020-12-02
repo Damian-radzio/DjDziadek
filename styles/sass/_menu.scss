@@ -6,7 +6,7 @@
         z-index: 3;
         transition: 0.5s 0.25s;
         margin-right: 1.0rem;
-        transition: 0.4s 1s;
+        transition: 0.4s .2s;
         @media (min-width: 320px) and (orientation: portrait) {
             top: 2.1rem;
             margin-right: 2rem;
@@ -49,7 +49,7 @@
         }
     }
     .wrap.active-menu{
-        transition: 0.4s 0.2s;
+        transition: 0.4s .2s;
         @include flex(column, center, center);
     }
     .wrap.active {
@@ -94,7 +94,7 @@
         display: none;
         position: absolute;
         z-index: -1;
-        background-color: rgba(0, 0, 0, 0.652);
+        background-color: rgba(0, 0, 0, 0.4);
         top: 0;
         left: 0;
         width: 100%;
@@ -102,7 +102,17 @@
         min-height: 150px;
         transition: 0.4s;
 
+@media (orientation: landscape){
+    min-height: 200px;
+    left: 60%;
+    width: 40%;
+    border-bottom-left-radius: 40px;
+}
+@media(min-width: 720px){
+    min-height: 250px;
+}
         @media(min-width: 1024px){
+            min-height: 350px;
             width: 60%;
             left: 40%;
             border-bottom-left-radius: 40px;
@@ -110,9 +120,13 @@
         &.active{
             display: block;
             animation: activeMenu 0.3s ease both;
+            transition: 1s;
+            @media (orientation: landscape){
+            }
             @media (min-width: 1024px){
                 animation: activeMenuBigDev 0.3s ease both;
             }
+            
         }
         // keyframes for mobiles
         @keyframes activeMenu {
@@ -157,9 +171,25 @@
                         color: $mainFontColor;
                         text-transform: uppercase;
                         font-family: $mainFont;
+                        @media(min-width: 375px) and (orientation: portrait){
+                            font-size: 1.9rem;
+                            padding: 0.4rem;
+                        }
+                        @media(min-width: 411px) and (orientation: portrait){
+                            font-size: 2rem;
+                            padding: 0.4rem;
+                        }
+                        @media(min-width: 720px){
+                            font-size: 2.4rem;
+                            padding: 0.4rem;
+                        }
+                        @media(min-width: 768px) and (orientation: portrait){
+                            font-size: 3rem;
+                            padding: 1rem;
+                        }
                         @media(min-width: 1024px){
                             font-size: 4rem;
-                            padding: 0.6rem;
+                            padding: 0.8rem;
                         }
                     }
                     

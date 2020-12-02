@@ -26,7 +26,7 @@
             &.active {
                 z-index: 3;
                 height: 7vh;
-                background-color: rgba(0, 0, 0, 0.378);
+                background-color: rgba(0, 0, 0, 0.4);
             }
 
             @media (min-height:280px) and (orientation: landscape) {
@@ -36,6 +36,8 @@
 
 
             .name {
+                position: relative;
+                z-index: 2;
                 display: inline-block;
                 text-transform: uppercase;
                 font-size: 3rem;

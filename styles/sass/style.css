@@ -62,8 +62,8 @@ body {
   -webkit-transition: 0.5s 0.25s;
   transition: 0.5s 0.25s;
   margin-right: 1.0rem;
-  -webkit-transition: 0.4s 1s;
-  transition: 0.4s 1s;
+  -webkit-transition: 0.4s .2s;
+  transition: 0.4s .2s;
 }
 
 @media (min-width: 320px) and (orientation: portrait) {
@@ -121,8 +121,8 @@ body {
 }
 
 .menu .wrap.active-menu {
-  -webkit-transition: 0.4s 0.2s;
-  transition: 0.4s 0.2s;
+  -webkit-transition: 0.4s .2s;
+  transition: 0.4s .2s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -197,7 +197,7 @@ body {
   display: none;
   position: absolute;
   z-index: -1;
-  background-color: rgba(0, 0, 0, 0.652);
+  background-color: rgba(0, 0, 0, 0.4);
   top: 0;
   left: 0;
   width: 100%;
@@ -207,8 +207,24 @@ body {
   transition: 0.4s;
 }
 
+@media (orientation: landscape) {
+  .menu .menu-content {
+    min-height: 200px;
+    left: 60%;
+    width: 40%;
+    border-bottom-left-radius: 40px;
+  }
+}
+
+@media (min-width: 720px) {
+  .menu .menu-content {
+    min-height: 250px;
+  }
+}
+
 @media (min-width: 1024px) {
   .menu .menu-content {
+    min-height: 350px;
     width: 60%;
     left: 40%;
     border-bottom-left-radius: 40px;
@@ -219,6 +235,8 @@ body {
   display: block;
   -webkit-animation: activeMenu 0.3s ease both;
           animation: activeMenu 0.3s ease both;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 @media (min-width: 1024px) {
@@ -311,10 +329,38 @@ body {
   font-family: "Oswald";
 }
 
+@media (min-width: 375px) and (orientation: portrait) {
+  .menu .menu-content .wrapper ul li a {
+    font-size: 1.9rem;
+    padding: 0.4rem;
+  }
+}
+
+@media (min-width: 411px) and (orientation: portrait) {
+  .menu .menu-content .wrapper ul li a {
+    font-size: 2rem;
+    padding: 0.4rem;
+  }
+}
+
+@media (min-width: 720px) {
+  .menu .menu-content .wrapper ul li a {
+    font-size: 2.4rem;
+    padding: 0.4rem;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .menu .menu-content .wrapper ul li a {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .menu .menu-content .wrapper ul li a {
     font-size: 4rem;
-    padding: 0.6rem;
+    padding: 0.8rem;
   }
 }
 
@@ -361,7 +407,7 @@ body {
 .main-header .components .header.active {
   z-index: 3;
   height: 7vh;
-  background-color: rgba(0, 0, 0, 0.378);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 @media (min-height: 280px) and (orientation: landscape) {
@@ -384,6 +430,8 @@ body {
 }
 
 .main-header .components .header .name {
+  position: relative;
+  z-index: 2;
   display: inline-block;
   text-transform: uppercase;
   font-size: 3rem;
