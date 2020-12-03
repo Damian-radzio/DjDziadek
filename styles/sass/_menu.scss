@@ -121,8 +121,7 @@
             display: block;
             animation: activeMenu 0.3s ease both;
             transition: 1s;
-            @media (orientation: landscape){
-            }
+           
             @media (min-width: 1024px){
                 animation: activeMenuBigDev 0.3s ease both;
             }
