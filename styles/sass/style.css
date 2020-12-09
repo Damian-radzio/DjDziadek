@@ -403,8 +403,8 @@ body {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  bottom: 2vh;
-  width: 50%;
+  bottom: 5vh;
+  width: 65%;
   max-width: 60rem;
   min-width: 20rem;
 }
@@ -415,7 +415,7 @@ body {
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (min-width: 1024px) and (orientation: portrait) {
   .main-header .icons {
     bottom: 7vh;
   }

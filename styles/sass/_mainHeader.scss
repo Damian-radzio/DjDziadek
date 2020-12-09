@@ -207,15 +207,15 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 2vh;
-        width: 50%;
+        bottom: 5vh;
+        width: 65%;
         max-width: 60rem;
         min-width: 20rem;
 
         @media (min-width: 1024px) and (orientation: landscape) {
             bottom: 3vh;
         }
-        @media (max-width: 1024px) and (orientation: portrait){
+        @media (min-width: 1024px) and (orientation: portrait){
             bottom: 7vh;   
            }
 
