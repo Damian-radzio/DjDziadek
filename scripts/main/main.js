@@ -2,27 +2,43 @@
 const nameBar = document.querySelector('.name');
 const menuIcon = document.querySelector('.wrap');
 const menuWrap = document.querySelector('.header');
-
+const menuContent = document.querySelector('.menu-content');
+const menuContentUl = document.querySelector('.menu-content .wrapper ul');
+const menuContentText = document.querySelectorAll('.menu-content .wrapper ul li a');
 function MinimalizeMenuBar(){
   if(scrollY > 0){
     menuWrap.classList.add('active');
     nameBar.classList.add('active')
     menuIcon.classList.add('active');
+    if(window.innerWidth >= 1024){
+      menuContent.classList.add('scroll');
+    }
+    if(window.innerWidth < 1024){
+      menuContent.classList.add('scrollMobile');
+      menuContentUl.classList.add('scrollMobile')
+      menuContentText.forEach(a => {
+        a.classList.add('scrollMobile')
+      });
+    }
   }else{
     menuWrap.classList.remove('active');
     nameBar.classList.remove('active');
     menuIcon.classList.remove('active');
+    menuContent.classList.remove('scroll');
+    menuContent.classList.remove('scrollMobile');
+    menuContentUl.classList.remove('scrollMobile')
+    menuContentText.forEach(a => {
+      a.classList.remove('scrollMobile')
+    });
   }
 }
 window.addEventListener('scroll', MinimalizeMenuBar)
 
 // typing effect header 
-
-
 setTimeout(() => {
   const text = "Przy mnie każda impreza będzie niezapomniana! Dj Dziadek"
 let i = 0;
-let speed = 50;
+let speed = 30;
   (function TypeWriter(){
     if(i< text.length){
       const textHeader = document.querySelector('.about-intro .text-intro')
@@ -54,7 +70,7 @@ const updateCount = () => {
         experienceNumber.classList.add('active')
       }
     }
-  }, 200);
+  }, 90);
 }
 
 const checksScrollPos = () => {
@@ -69,18 +85,6 @@ window.addEventListener('scroll', checksScrollPos)
 
 // about me blur animation
 const experienceSection = document.querySelector('.experience');
-
-const aboutMeBlur = () => {
-  const backgroundAboutMe = document.querySelector('.about-me .background');
-  if(window.scrollY > window.innerHeight +  experienceSection.scrollHeight / 2){
-    backgroundAboutMe.classList.add('active');
-  }else if(window.scrollY < window.innerHeight +  experienceSection.scrollHeight / 2 || window.scrollY > window.innerHeight +  experienceSection.scrollHeight){
-    backgroundAboutMe.classList.remove('active');
-  }
-
-}
-
-window.addEventListener('scroll', aboutMeBlur);
 
 
 const evenIconOffer = [...document.querySelectorAll('.types .even')];
@@ -104,17 +108,20 @@ const offerIconScrollAnimation = () => {
     }
 }
 window.addEventListener('scroll', offerIconScrollAnimation)
-// about Me button scroll animation
 
+// about Me button scroll animation
 const AboutMeButton = $('.about-btn');
 const moveToAboutMe = (e) => {
   e.preventDefault();
   $('body, html').animate({
-    scrollTop: $('.about-me').offset().top
+    scrollTop: $('.about-me').offset().top + 100
   }, 400)
 }
 
 AboutMeButton.click(moveToAboutMe);
+const AboutMeMenuBtn = $('.wrapper .about-me');
+AboutMeMenuBtn.click(moveToAboutMe)
+
 
 
 // menu icon animation
@@ -132,33 +139,22 @@ const MenuIconAnimation = (e) => {
   menuIconWrap.classList.toggle('active-menu')
 
   // open menu animation
-  MenuWrap.classList.toggle('active');
+    MenuWrap.classList.toggle('active');
+
 }
 menuIconWrap.addEventListener('click', MenuIconAnimation);
 
-
-
-// arrow visible func
-
-const arrow = document.querySelector('.arrow');
-const HeaderName = document.querySelector('.name')
-const arrowVisibility = () => {
-  if(window.scrollY >= window.innerHeight){
-    arrow.classList.add('active')
-  } else{
-    arrow.classList.remove('active')
-  }
-}
-window.addEventListener('scroll', arrowVisibility)
-
-// back to top
+// back to top Animation
+const heroeName = document.querySelector('.name');
 const backToTop = () => {
-  $('body, html').animate({
-    scrollTop: $('.main-header').offset().top
-  }, 50)
+   $('html, body').animate({
+     scrollTop: $('.main-header').offset().top
+   }, 200)
 }
-arrow.addEventListener('click', backToTop)
-HeaderName.addEventListener('click', backToTop)
+heroeName.addEventListener('click', backToTop)
+
+
+
 
 
 

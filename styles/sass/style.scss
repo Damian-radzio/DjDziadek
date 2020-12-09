@@ -45,19 +45,23 @@ body {
 }
 
 
-// menu with components [styles]
-@import './menu';
-// welcome section [styles]
 @import './mainHeader';
-// section about me [styles]
+// welcome section [styles]
+
+@import './menu';
+// menu with components [styles]
+
 @import './about-me';
-// section with offer  [styles]
+// section about me [styles]
+
 @import './offer';
-// section with photos gallery [styles]
+// section with offer  [styles]
+
 @import './gallery';
-// section with e-mail, phone number,and social media [styles]
+// section with photos gallery [styles]
+
 @import './contact';
-// footer [styles]
+// section with e-mail, phone number,and social media [styles]
+
 @import './footer';
-// back arrow [styles]
-@import './back-arrow';
+// footer [styles]

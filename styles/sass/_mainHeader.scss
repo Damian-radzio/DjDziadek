@@ -13,7 +13,6 @@
     .components {
         position: relative;
         font-family: $mainFont, sans-serif;
-
         .header {
             position: fixed;
             @include flex(row, space-between, center);
@@ -21,12 +20,15 @@
             height: 10vh;
             min-height: 5rem;
             transition: 1s;
-
-            // testowe
+            left: 0;
+            top: 0;
             &.active {
                 z-index: 3;
                 height: 7vh;
                 background-color: rgba(0, 0, 0, 0.4);
+                @media(min-width: 1024px) and (orientation: landscape){
+                    min-height: 9rem;
+                }
             }
 
             @media (min-height:280px) and (orientation: landscape) {
@@ -40,7 +42,7 @@
                 z-index: 2;
                 display: inline-block;
                 text-transform: uppercase;
-                font-size: 3rem;
+                font-size: 3.5rem;
                 font-weight: 500;
                 color: $mainFontColor;
                 min-width: 20rem;
@@ -53,32 +55,23 @@
 
                 // portrait
                 @media (min-width: 320px) and (orientation: portrait) {
-                    font-size: 3.5rem;
                     padding-left: 2.5rem;
                 }
-
-                @media (max-width: 360px) and (orientation: portrait) {
-                    left: 2rem;
-                }
-
 
                 @media (min-width: 411px) and (orientation: portrait) {
                     font-size: 4.5rem;
                     padding-left: 3rem;
-                    left: 3rem;
                 }
 
                 @media (min-width: 768px) and (orientation: portrait) {
                     font-size: 7.5rem;
                     left: 5rem;
-                    top: 2.5rem;
                     padding-left: 5rem;
                 }
 
                 @media (min-width: 1024px) and (orientation: portrait) {
                     font-size: 9.5rem;
                     left: 7rem;
-                    top: 3rem;
                     padding-left: 7rem;
                 }
 
@@ -89,6 +82,12 @@
 
                 @media (min-width: 1024px) and (orientation: landscape) {
                     font-size: 8rem;
+                    
+                }
+                @media(min-width: 1024px){
+                    &:hover{
+                        opacity: 0.8
+                    }
                 }
 
 

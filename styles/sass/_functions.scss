@@ -10,6 +10,7 @@
     width: 14rem;
     min-width: 14rem;
     height: 3.6rem;
+    padding: 1rem;
     border: 1px solid $mainFontColor;
     color: $mainFontColor;
     font-weight: 300;
@@ -26,6 +27,8 @@
         font-size: 2.3rem;
         width: 13rem;
         height: 3.5rem;
+        padding: 1.2rem;
+
     }
 
     @media (min-width: 375px) and (orientation: portrait) {
@@ -76,20 +79,20 @@
 
 @mixin mediaQueriesH1 {
     @media (min-width: 375px) and (orientation: portrait) {
-        font-size: 4.5rem;
+        font-size: 4.7rem;
     }
 
     @media (min-width: 411px) and (orientation: portrait) {
-        font-size: 4.8rem;
+        font-size: 4.9rem;
     }
 
     // large mobile
     @media (min-width: 768px) and (orientation: portrait) {
-        font-size: 6rem;
+        font-size: 7rem;
     }
 
     @media (min-width: 1024px) {
-        font-size: 8rem;
+        font-size: 9rem;
     }
 }
 
@@ -106,20 +109,23 @@
 
 @mixin mediaQueriesText {
     @media (min-width: 375px) and (orientation: portrait) {
-        font-size: 2.3rem;
+        font-size: 2.8rem;
     }
 
     @media (min-width: 411px) and (orientation: portrait) {
-        font-size: 2.4rem;
+        font-size: 3rem;
     }
 
     // large mobile
     @media (min-width: 768px) and (orientation: portrait) {
-        font-size: 2.7rem;
+        font-size: 3.3rem;
     }
 
     @media (min-width: 1024px) {
-        font-size: 3rem;
+        font-size: 4rem;
+    }
+    @media (min-width: 1240px){
+        font-size: 5rem;
     }
 }
 

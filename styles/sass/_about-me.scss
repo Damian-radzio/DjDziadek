@@ -77,7 +77,6 @@
     width: 100%;
     @include flex(column, center, center);
     height: 120vh;
-
     .background {
         position: absolute;
         z-index: -1;
@@ -88,17 +87,11 @@
         background-position: center center;
         background-size: cover;
         background-attachment: fixed;
-        filter: blur(10px) contrast(1.1);
-        transition: 0.8s;
     }
-
-    .active {
-        filter: blur(0px) contrast(1);
-    }
-
     & .h1 {
         @include h1Prop();
         @include mediaQueriesH1();
+        margin-bottom: 10rem;
     }
 
     & .text {
