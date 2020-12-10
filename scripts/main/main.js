@@ -10,16 +10,20 @@ function MinimalizeMenuBar(){
     menuWrap.classList.add('active');
     nameBar.classList.add('active')
     menuIcon.classList.add('active');
+
     if(window.innerWidth >= 1024){
       menuContent.classList.add('scroll');
     }
+
     if(window.innerWidth < 1024){
       menuContent.classList.add('scrollMobile');
       menuContentUl.classList.add('scrollMobile')
+
       menuContentText.forEach(a => {
         a.classList.add('scrollMobile')
       });
     }
+
   }else{
     menuWrap.classList.remove('active');
     nameBar.classList.remove('active');
@@ -83,7 +87,6 @@ const checksScrollPos = () => {
 window.addEventListener('scroll', checksScrollPos)
 
 
-// about me blur animation
 const experienceSection = document.querySelector('.experience');
 
 
@@ -115,15 +118,43 @@ const moveToAboutMe = (e) => {
   e.preventDefault();
   $('body, html').animate({
     scrollTop: $('.about-me').offset().top + 100
-  }, 400)
+  }, 100)
 }
-
 AboutMeButton.click(moveToAboutMe);
-const AboutMeMenuBtn = $('.wrapper .about-me');
+// menu after click
+// about me
+const AboutMeMenuBtn = $('.menu-about-me');
 AboutMeMenuBtn.click(moveToAboutMe)
 
+// offer
+const OfferMenuBtn = $('.menu-offer');
+const moveToOffer = (e) => {
+  e.preventDefault();
+  $('body,html').animate({
+    scrollTop: $('.offer').offset().top - 50
+  })
+}
+OfferMenuBtn.click(moveToOffer);
+// gallery
+const moveToGallery = (e) => {
+  e.preventDefault();
+  $('body, html').animate({
+    scrollTop: $('.gallery').offset().top - 100
+  }, 100)
+}
+const galleryMenuBtn =  $('.menu-gallery');
+galleryMenuBtn.click(moveToGallery);
+// contact (menu btn & icon)
+const contactMenuBtn = $('.menu-contact');
+const contactIcon = $('.contact-icon');
 
-
+const moveToContact = () => {
+  $('html, body').animate({
+    scrollTop: $('.contact').offset().top
+  }, 100)
+}
+contactMenuBtn.click(moveToContact);
+contactIcon.click(moveToContact);
 // menu icon animation
 const one = document.querySelector('.one');
 const two = document.querySelector('.two');
@@ -143,7 +174,9 @@ const MenuIconAnimation = (e) => {
 
 }
 menuIconWrap.addEventListener('click', MenuIconAnimation);
-
+if(window.innerWidth >= 1024){
+  MenuWrap.classList.add('active');
+}
 // back to top Animation
 const heroeName = document.querySelector('.name');
 const backToTop = () => {

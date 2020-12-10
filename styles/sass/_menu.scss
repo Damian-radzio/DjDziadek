@@ -44,8 +44,7 @@
         }
         
         @media (min-width: 1024px) and(orientation: landscape) {
-            width: 7.6rem;
-            height: 6.7rem;
+            display: none;
         }
         @media(min-width: 1024px){
                     &:hover{
