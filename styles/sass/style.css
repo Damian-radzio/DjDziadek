@@ -26,7 +26,6 @@ body {
   position: relative;
   z-index: -1;
   letter-spacing: 0.8px;
-  backface-visibility: hidden;
 }
 
 .main {
@@ -1049,18 +1048,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.about-me::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  z-index: -1;
-  height: 100%;
-  background: url("./../../html&components/img/aboutMe.jpg") no-repeat center center/cover transparent fixed;
-
+  background: url("./../../html&components/img/aboutMe.jpg");
+  background-attachment: fixed;
 }
 
 .about-me .h1 {
