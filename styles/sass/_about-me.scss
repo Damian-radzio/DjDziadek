@@ -78,16 +78,22 @@
     height: 120vh;
     @include flex(column, center, center);
     background: url('./../../html&components/img/aboutMe.jpg');
-    background-attachment: fixed;
+    -webkit-background-attachment: fixed;
+    -moz-background-attachment: fixed;
+    -o-background-attachment: fixed;
+    background-attachment: fixed;  
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;   
     & .h1 {
         @include h1Prop();
         @include mediaQueriesH1();
         margin-bottom: 10rem;
-
-        @media(orientation: landscape){
+        @media(orientation: landscape) and (max-width: 1023px){
             margin-bottom: 0rem;
         }
     }

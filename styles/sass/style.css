@@ -1048,10 +1048,14 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background: url("./../../html&components/img/aboutMe.jpg");
+  -webkit-background-attachment: fixed;
+  -moz-background-attachment: fixed;
+  -o-background-attachment: fixed;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+  background-size: cover;
 }
 
 .about-me .h1 {
@@ -1090,7 +1094,7 @@ body {
   }
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (max-width: 1023px) {
   .about-me .h1 {
     margin-bottom: 0rem;
   }
