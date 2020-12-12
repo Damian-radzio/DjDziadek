@@ -75,7 +75,6 @@
     font-family: $mainFont;
     color: $mainFontColor;
     width: 100%;
-    @include flex(column, center, center);
     height: 120vh;
     .background {
         position: absolute;
@@ -87,6 +86,7 @@
         background-position: center center;
         background-size: cover;
         background-attachment: fixed;
+        @include flex(column, center, center);
     }
     & .h1 {
         @include h1Prop();
