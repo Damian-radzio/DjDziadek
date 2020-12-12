@@ -1034,7 +1034,6 @@ body {
   color: white;
   width: 100%;
   height: 120vh;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1050,6 +1049,9 @@ body {
           align-items: center;
   background: url("./../../html&components/img/aboutMe.jpg");
   background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .about-me .h1 {
