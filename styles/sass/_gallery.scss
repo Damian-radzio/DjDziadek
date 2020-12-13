@@ -36,7 +36,7 @@
         }
 
         @media (min-width: 768px) and (orientation: portrait) {
-            width: 38rem;
+            width: 45rem;
         }
 
         @media (min-width: 1024px) {
@@ -50,29 +50,15 @@
         }
 
         @media (min-width: 1100px) {
-            width: 73rem;
+            width: 59rem;
             opacity: 0.6;
         }
         @media (min-width: 1310px) {
-            width: 54rem;
+            width: 50rem;
             opacity: 0.6;
         }
     }
-// .show-more-gallery{
-//     margin-top: 1vh;
-//     display: block;
-//     text-align: center;
-//     text-transform: uppercase;
-//     color: $mainFontColor;
-//     font-size: 2rem;
-//     text-decoration: none;
 
-//     .gallery-insta{
-//         margin: 0.5rem auto;
-//         display: block;
-//         width: 3rem;
-//     }
-// }
 .show-more{
     margin-top: 1vh;
     text-align: center;
@@ -80,15 +66,22 @@
    font-size: 2rem;
    & a{
        display: block;
-       letter-spacing: 1px;
+       text-decoration: none;
        color: $mainFontColor;
+       width: 30%;
+       margin: 0 auto;
+       letter-spacing: 1px;
        transition: 0.3s;
+       @include focus();
+       @include focusAnimation();
        @media (min-width: 1024px){
-        opacity: 0.8;
-        &:hover{
+           opacity: 0.7;
+
+           &:hover{
             opacity: 1;
             transform: scale(1.1);
         }
+
        }
    }
    

@@ -52,7 +52,6 @@
                 &.active {
                     transform: scale(0.7);
                 }
-
                 // portrait
                 @media (min-width: 320px) and (orientation: portrait) {
                     padding-left: 2.5rem;
@@ -175,20 +174,9 @@
                     cursor: pointer;
                 }
                 // class for each button
-                &:focus{
-                   animation: click 0.3s ease both;
-                }   
-                @keyframes click{
-                    0%{
-                        transform: scale(1);
-                    }
-                    50%{
-                        transform: scale(.9);
-                    }
-                    100%{
-                        transform: scale(1);
-                    }
-                }            
+                @include focus();
+                @include focusAnimation();
+
                 @media (min-width: 1024px) {
 
                     // for bigger devices
@@ -211,7 +199,6 @@
         width: 65%;
         max-width: 60rem;
         min-width: 20rem;
-
         @media (min-width: 1024px) and (orientation: landscape) {
             bottom: 3vh;
         }
@@ -222,6 +209,7 @@
         & li {
             list-style: none;
             @include flex(row, space-between, center);
+            
         }
 
         & img {
@@ -256,6 +244,7 @@
                     transform: scale(1.3);
                 }
             }
+            
         }
     }
 }

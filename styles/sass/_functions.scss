@@ -147,3 +147,21 @@
         width: 45rem;
     }
 }
+@mixin focus{
+    &:focus{
+        animation: click 0.3s ease both;
+     }    
+}
+@mixin focusAnimation{
+    @keyframes click{
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(.9);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }  
+}

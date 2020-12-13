@@ -1,8 +1,9 @@
 .contact {
     @include sectionProp();
+    margin-bottom: 0;
     font-family: $mainFont;
     @include flex(column, center, center);
-
+  background-color: #250531;
     @media (min-width: 1024px) {
         @include flex(row, center, center);
     }
@@ -50,9 +51,9 @@
 
 
         .icons {
+            
             img {
-                margin: 3%;
-                width: 3rem;
+                margin: 2rem;
                 transition: 0.3s;
                 @media (min-width: 319px) and (orientation: portrait) {
                     width: 2.2rem;

@@ -146,21 +146,6 @@
             height: 120%;  
             width: 80%         
         }
-        // @media(min-width: 1280px) and (orientation: landscape){
-        //     @include flex(row, center, flex-end);
-        //     line-height: 7vh;
-        // }
-        // @media(min-width: 1280px) and (min-height: 768px){
-        //     line-height: 5vh;
-        // }
-        // @media(min-width: 1440px) and (orientation: landscape){
-        //     @include flex(row, center, flex-end);
-        //     line-height: 5vh;
-        // }
-        // @media(min-width: 1600px) and (orientation: landscape){
-        //     @include flex(row, center, flex-end);
-        //     line-height: 3vh;
-        // }
         ul{
             transition: 0.5s;
             @media(max-width: 1023px) and(orientation: landscape){
@@ -181,6 +166,8 @@
                     text-decoration: none;
                     text-transform: uppercase;
                     transition: 0.4s;
+                    @include focus();
+                    @include focusAnimation();
                     @media(min-width: 375px) and (orientation: portrait){
                         font-size: 2.1rem;
                     }
