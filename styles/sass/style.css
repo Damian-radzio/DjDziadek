@@ -588,6 +588,12 @@ body {
           align-items: center;
 }
 
+@media (min-width: 1024px) and (orientation: landscape) {
+  .menu .wrap.active-menu {
+    display: none;
+  }
+}
+
 .menu .wrap.active {
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
