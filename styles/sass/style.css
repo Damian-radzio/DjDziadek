@@ -148,7 +148,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .main-header .components .header .name {
     font-size: 7.5rem;
     left: 5rem;
@@ -214,7 +214,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .main-header .components .about-intro {
     margin-left: 5.5rem;
   }
@@ -259,7 +259,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .main-header .components .about-intro .text-intro {
     font-size: 4rem;
     width: 50rem;
@@ -299,7 +299,7 @@ body {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   color: black;
-  outline: 0;
+  outline: none;
 }
 
 @media (min-width: 320px) and (orientation: portrait) {
@@ -534,7 +534,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .menu .wrap {
     margin-right: 5.0rem;
     top: 5.3rem;
@@ -611,7 +611,7 @@ body {
   transition: 0.4s;
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .menu .one,
   .menu .two,
   .menu .three {
@@ -664,9 +664,9 @@ body {
   transition: 0.5s;
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .menu-content {
-    min-height: 30rem;
+    min-height: 33rem;
     max-height: 38rem;
   }
 }
@@ -785,6 +785,12 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  .menu-content .wrapper ul li {
+    font-size: 2.5rem;
+  }
+}
+
 .menu-content .wrapper ul li a {
   position: relative;
   z-index: 10;
@@ -823,9 +829,9 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .menu-content .wrapper ul li a {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -993,7 +999,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .experience .experience-number {
     font-size: 25rem;
   }
@@ -1036,7 +1042,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .experience .experience-h1 {
     font-size: 4rem;
   }
@@ -1105,7 +1111,13 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 800px) and (orientation: landscape) {
+  .about-me .h1 {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
   .about-me .h1 {
     font-size: 7rem;
   }
@@ -1146,7 +1158,13 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 800px) and (orientation: landscape) {
+  .about-me .text {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 768px) {
   .about-me .text {
     font-size: 3.3rem;
   }
@@ -1210,7 +1228,13 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 800px) and (orientation: landscape) {
+  .offer .h1 {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
   .offer .h1 {
     font-size: 7rem;
   }
@@ -1383,7 +1407,13 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 800px) and (orientation: landscape) {
+  .gallery .h1 {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
   .gallery .h1 {
     font-size: 7rem;
   }
@@ -1446,15 +1476,16 @@ body {
   opacity: 1;
 }
 
-@media (min-width: 768px) {
-  .gallery .photos .glightbox img {
-    width: 38rem;
-  }
-}
-
 @media (min-width: 768px) and (orientation: portrait) {
   .gallery .photos .glightbox img {
     width: 45rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery .photos .glightbox img {
+    min-width: 45rem;
+    max-width: 50rem;
   }
 }
 
@@ -1563,7 +1594,6 @@ body {
   width: 100%;
   color: white;
   font-family: "Oswald";
-  margin-bottom: 0;
   font-family: "Oswald";
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1578,7 +1608,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #250531;
 }
 
 @media (min-width: 1024px) {
@@ -1622,7 +1651,13 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 800px) and (orientation: landscape) {
+  .contact .heading {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
   .contact .heading {
     font-size: 7rem;
   }
@@ -1673,7 +1708,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .contact .info .number,
   .contact .info .email {
     font-size: 4rem;
@@ -1693,25 +1728,25 @@ body {
   transition: 0.3s;
 }
 
-@media (min-width: 319px) and (orientation: portrait) {
+@media (min-width: 319px) {
   .contact .info .icons img {
     width: 2.2rem;
   }
 }
 
-@media (min-width: 375px) and (orientation: portrait) {
+@media (min-width: 375px) {
   .contact .info .icons img {
     width: 3rem;
   }
 }
 
-@media (min-width: 411px) and (orientation: portrait) {
+@media (min-width: 411px) {
   .contact .info .icons img {
     width: 3.2rem;
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .contact .info .icons img {
     width: 6rem;
   }
@@ -1769,7 +1804,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .mail-form .question {
     font-size: 4rem;
   }
@@ -1832,7 +1867,7 @@ body {
   max-height: 30rem;
   resize: none;
   font-family: "Oswald";
-  outline: none;
+  outline: 0;
 }
 
 .mail-form form ::-webkit-input-placeholder {
@@ -1997,7 +2032,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .footer {
     height: 10rem;
     font-size: 1.8rem;

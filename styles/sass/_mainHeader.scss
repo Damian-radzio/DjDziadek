@@ -62,7 +62,7 @@
                     padding-left: 3rem;
                 }
 
-                @media (min-width: 768px) and (orientation: portrait) {
+                @media (min-width: 768px) {
                     font-size: 7.5rem;
                     left: 5rem;
                     padding-left: 5rem;
@@ -109,7 +109,7 @@
             }
             
             // large mobile
-            @media (min-width: 768px) and (orientation: portrait) {
+            @media (min-width: 768px) {
                 margin-left: 5.5rem;
             }
             
@@ -144,7 +144,7 @@
                 }
                 
                 // large mobile
-                @media (min-width: 768px) and (orientation: portrait) {
+                @media (min-width: 768px){
                     font-size: 4rem;
                     width: 50rem;
                 }
@@ -166,7 +166,7 @@
                 opacity: 0;
                 transition: 0.4s;
                 color: black;
-                outline: 0;
+                outline: none;
                 &.visible {
                     opacity: 1;
                     font-weight: 300;

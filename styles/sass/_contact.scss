@@ -1,9 +1,7 @@
 .contact {
     @include sectionProp();
-    margin-bottom: 0;
     font-family: $mainFont;
     @include flex(column, center, center);
-  background-color: #250531;
     @media (min-width: 1024px) {
         @include flex(row, center, center);
     }
@@ -39,7 +37,7 @@
                 font-size: 2.6rem;
             }
 
-            @media (min-width: 768px) and (orientation: portrait) {
+            @media (min-width: 768px){
                 font-size: 4rem;
             }
 
@@ -55,19 +53,19 @@
             img {
                 margin: 2rem;
                 transition: 0.3s;
-                @media (min-width: 319px) and (orientation: portrait) {
+                @media (min-width: 319px) {
                     width: 2.2rem;
                 }
 
-                @media (min-width: 375px) and (orientation: portrait) {
+                @media (min-width: 375px) {
                     width: 3rem;
                 }
 
-                @media (min-width: 411px) and (orientation: portrait) {
+                @media (min-width: 411px) {
                     width: 3.2rem;
                 }
 
-                @media (min-width: 768px) and (orientation: portrait) {
+                @media (min-width: 768px) {
                     width: 6rem;
                 }
 

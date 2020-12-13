@@ -21,7 +21,7 @@
         }
 
         // large mobile
-        @media (min-width: 768px) and (orientation: portrait) {
+        @media (min-width: 768px) {
             font-size: 4rem;
         }
 
@@ -54,7 +54,7 @@
             border-top-left-radius: 2rem;
             border-top-right-radius: 2rem;
             min-height: 8rem;
-            outline: none;
+           outline: none;       
         }
 
         .form-text {
@@ -65,7 +65,7 @@
             max-height: 30rem;
             resize: none;
             font-family: $mainFont;
-           outline: none;
+           outline: 0;
         }
 
         ::placeholder {

@@ -85,9 +85,11 @@
     @media (min-width: 411px) and (orientation: portrait) {
         font-size: 4.9rem;
     }
-
+    @media(min-width: 800px) and(orientation: landscape){
+        font-size: 7rem;
+    }
     // large mobile
-    @media (min-width: 768px) and (orientation: portrait) {
+    @media (min-width: 768px) {
         font-size: 7rem;
     }
 
@@ -115,9 +117,11 @@
     @media (min-width: 411px) and (orientation: portrait) {
         font-size: 3rem;
     }
-
+    @media(min-width: 800px) and(orientation: landscape){
+        font-size: 5rem;
+    }
     // large mobile
-    @media (min-width: 768px) and (orientation: portrait) {
+    @media (min-width: 768px){
         font-size: 3.3rem;
     }
 
@@ -139,7 +143,7 @@
     }
 
     // large mobile
-    @media (min-width: 768px) and (orientation: portrait) {
+    @media (min-width: 768px) {
         width: 35rem;
     }
 
@@ -150,7 +154,7 @@
 @mixin focus{
     &:focus{
         animation: click 0.3s ease both;
-     }    
+     }          
 }
 @mixin focusAnimation{
     @keyframes click{
