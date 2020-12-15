@@ -1,11 +1,15 @@
 // menubar with animations on scroll 
-const nameBar = document.querySelector('.name');
-const menuIcon = document.querySelector('.wrap');
-const menuWrap = document.querySelector('.header');
-const menuContent = document.querySelector('.menu-content');
-const menuContentUl = document.querySelector('.menu-content .wrapper ul');
-const menuContentText = document.querySelectorAll('.menu-content .wrapper ul li a');
-function MinimalizeMenuBar(){
+
+
+function MinimalizeMenuBar(menuContent,  menuContentUl, menuContentText, menuWrap, menuIcon, nameBar){
+
+ menuContent = document.querySelector('.menu-content');
+ menuContentUl = document.querySelector('.menu-content .wrapper ul');
+ menuContentText = document.querySelectorAll('.menu-content .wrapper ul li a');
+ menuWrap = document.querySelector('.header');
+ menuIcon = document.querySelector('.wrap');
+ nameBar = document.querySelector('.name');
+
   if(scrollY > 0){
     menuWrap.classList.add('active');
     nameBar.classList.add('active')

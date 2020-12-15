@@ -146,8 +146,8 @@
         @media(min-width: 1024px) and (orientation: landscape){
             @include flex(row, flex-end, center);
             position: absolute;
-            height: 120%;  
-            width: 80%         
+            height: 120%;
+            width: 90%         
         }
         ul{
             transition: 0.5s;
