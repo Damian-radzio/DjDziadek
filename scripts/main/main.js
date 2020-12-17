@@ -172,15 +172,18 @@ const MenuIconAnimation = (e) => {
   two.classList.toggle('active-menu')
   three.classList.toggle('active-menu')
   menuIconWrap.classList.toggle('active-menu')
-
+  
   // open menu animation
-    MenuWrap.classList.toggle('active');
-
+  MenuWrap.classList.toggle('active');
+  
 }
 menuIconWrap.addEventListener('click', MenuIconAnimation);
-if(window.innerWidth >= 1024){
+if(window.innerWidth >= 1024 && window.innerWidth >= window.innerHeight){
   MenuWrap.classList.add('active');
+}else{
+  MenuWrap.classList.remove('active');
 }
+
 // back to top Animation
 const heroeName = document.querySelector('.name');
 const backToTop = () => {

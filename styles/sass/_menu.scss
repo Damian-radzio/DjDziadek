@@ -25,7 +25,7 @@
         }
         
         // large mobile
-        @media (min-width: 768px) {
+        @media (min-width: 768px) and(orientation: portrait) {
             margin-right: 5.0rem;
             top: 5.3rem;
             width: 6.3rem;
@@ -38,13 +38,17 @@
             width: 7.3rem;
             height: 6.7rem;
         }
-        
+        @media (min-width: 768px) and (orientation: landscape) {
+            margin-top: 3rem;
+            width: 6.3rem;
+            height: 5.0rem;
+        }
         @media (orientation: landscape) {
             margin-right: 4.0rem;
         }
         
         @media (min-width: 1024px) and(orientation: landscape) {
-            display: none;
+            visibility: hidden;
         }
         @media(min-width: 1024px){
                     &:hover{
@@ -55,12 +59,16 @@
             .wrap.active-menu{
                 transition: 0.4s .2s;
                 @include flex(column, center, center);
-                @media (min-width: 1024px) and(orientation: landscape) {
-                    display: none;
-                }
+                // @media (min-width: 1024px) and(orientation: landscape) {
+                //     display: none;
+                // }
             }
             .wrap.active {
                 transform: scale(.7);
+                @media (min-width: 768px) and (orientation: landscape) {
+                   margin-top: 1rem;
+                }
+
                 @media(min-width: 1024px){
                     
                     .wrap:hover .one {
@@ -116,6 +124,7 @@
     background-color: rgba(0, 0, 0, 0.638);
     z-index: -1;
     transition: 0.5s;
+
     @media(min-width: 768px){
         min-height: 33rem;
         max-height: 38rem;
@@ -218,6 +227,7 @@
         animation: mobilePortrait 0.3s ease both;
         @media(min-width: 1024px) and(orientation: landscape){
          animation: Desktop 0.4s ease both;
+         opacity: 1;
         }
     }
     &.scroll{
