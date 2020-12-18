@@ -44,9 +44,11 @@ window.addEventListener('scroll', MinimalizeMenuBar)
 
 // typing effect header 
 setTimeout(() => {
-  const text = "Przy mnie każda impreza będzie niezapomniana! Dj Dziadek"
+  const text = `Przy mnie każda impreza będzie niezapomniana! 
+
+  Dj Dziadek`
 let i = 0;
-let speed = 30;
+let speed = 10;
   (function TypeWriter(){
     if(i< text.length){
       const textHeader = document.querySelector('.about-intro .text-intro')
@@ -59,7 +61,7 @@ let speed = 30;
       }
     }
   })();
-}, 500);
+}, 300);
 
 
 
@@ -97,9 +99,9 @@ const experienceSection = document.querySelector('.experience');
 const evenIconOffer = [...document.querySelectorAll('.types .even')];
 const oddIconOffer = [...document.querySelectorAll('.types .odd')];
 const sectionOffer = document.querySelector('.offer')
-let time = 300;
+let time = 100;
 const offerIconScrollAnimation = () => {
-  if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight / 1.2){
+  if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight / 2){
     setInterval(() => {
       oddIconOffer[0].classList.add('active');
       setInterval(() => {

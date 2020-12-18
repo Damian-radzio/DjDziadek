@@ -57,7 +57,7 @@
                 }
             }
             .wrap.active-menu{
-                transition: 0.4s .2s;
+                transition: 0.4s;
                 @include flex(column, center, center);
                 // @media (min-width: 1024px) and(orientation: landscape) {
                 //     display: none;
