@@ -93,6 +93,10 @@
     background-size: 100%;
     background-size: cover; 
     overflow: hidden;
+    @supports (-webkit-touch-callout: none) {
+        background-attachment: scroll;
+        background-size: cover;
+      }
     @media(min-width: 1024px){
         min-height: 80rem;
         height: 70vh;
