@@ -130,8 +130,8 @@ body {
   font-weight: 500;
   color: white;
   min-width: 20rem;
-  -webkit-transition: 0.5s 0.25s;
-  transition: 0.5s 0.25s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   padding-left: 1rem;
   cursor: pointer;
 }
@@ -517,11 +517,11 @@ body {
   width: 3.5rem;
   height: 3.0rem;
   z-index: 3;
-  -webkit-transition: 0.5s 0.25s;
-  transition: 0.5s 0.25s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   margin-right: 1.0rem;
-  -webkit-transition: 0.4s .2s;
-  transition: 0.4s .2s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 @media (min-width: 320px) and (orientation: portrait) {
@@ -1248,6 +1248,7 @@ body {
 @supports (-webkit-touch-callout: none) {
   .about-me .text .about-me-name {
     text-align: center;
+    margin: 0 auto;
   }
 }
 

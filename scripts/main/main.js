@@ -121,7 +121,7 @@ const AboutMeButton = $('.about-btn');
 const moveToAboutMe = (e) => {
   e.preventDefault();
   $('body, html').animate({
-    scrollTop: $('.about-me').offset().top + 100
+    scrollTop: $('.about-me').offset().top
   }, 100)
 }
 AboutMeButton.click(moveToAboutMe);
