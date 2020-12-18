@@ -87,16 +87,17 @@
     height: 100vh;
     @include flex(column, center, center);
     background: url('./../../html&components/img/aboutMe.jpeg');
-    background-attachment: fixed;  
     background-position: right;
     background-repeat: no-repeat;
     background-size: 100%;
     background-size: cover; 
     overflow: hidden;
+    background-attachment: fixed;  
     @supports (-webkit-touch-callout: none) {
         background-attachment: scroll;
         background-size: cover;
       }
+
     @media(min-width: 1024px){
         min-height: 80rem;
         height: 70vh;
