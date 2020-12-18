@@ -1,8 +1,17 @@
 .experience {
     text-align: center;
-    margin-bottom: 25vh;
-    margin-top: 25vh;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
 
+    @media (min-width: 768px) {
+        margin-top: 20rem;
+        margin-bottom: 20vh;
+    }
+
+    @media (min-width: 1024px) {
+        margin-bottom: 20vh;
+        margin-top: 20vh;
+    }
     .experience-number {
         display: block;
         width: 100%;
@@ -77,13 +86,15 @@
     width: 100%;
     height: 100vh;
     @include flex(column, center, center);
-    background: url('./../../html&components/img/aboutMe.jpg');
+    background: url('./../../html&components/img/aboutMe.jpeg');
     background-attachment: fixed;  
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: 100%;
     background-size: cover; 
+    overflow: hidden;
     @media(min-width: 1024px){
+        min-height: 80rem;
         height: 70vh;
     }
     & .h1 {
@@ -98,5 +109,14 @@
     & .text {
         @include textProp();
         @include mediaQueriesText();
+        .about-me-name{
+            margin-top: 2rem;
+            font-weight: 400;
+            display: block;
+            font-size: 1.5em;
+            @media (min-width: 768px){
+                font-size: 2em;
+            }
+        }
     }
 }
