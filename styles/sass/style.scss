@@ -38,6 +38,7 @@ body {
     background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.5578606442577031) 0%, rgba(19, 0, 0, 1) 18%, rgb(66, 15, 85) 51%, rgb(0, 0, 0) 100%);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 98vh, rgb(66, 9, 87) 41%, rgb(0, 0, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#1a1c61", GradientType=1);
+    box-shadow: 0px 0px 100px 10px black inset;
     width: 100%;
     height: auto;
     z-index: -10;

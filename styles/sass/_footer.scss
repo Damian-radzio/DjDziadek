@@ -6,23 +6,24 @@
     background-color: #250531;
     padding: 0.5rem 0.5rem 0.5rem 2rem;
     font-size: 1.3rem;
-    min-width: 25rem;
+    min-height: 10rem;
     margin-top: 0;
+    
     @media (min-width: 320px) and (orientation: portrait) {
         height: 9rem;
     }
-
+    
     @media (min-width: 411px) and (orientation: portrait) {
         height: 8rem;
     }
-
+    
     // large mobile
     @media (min-width: 768px) {
         height: 10rem;
         font-size: 1.8rem;
         align-items: center;
     }
-
+    
     @media (min-width: 1024px) {
         height: 15rem;
         font-size: 2.2rem;

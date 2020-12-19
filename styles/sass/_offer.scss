@@ -3,19 +3,23 @@
     @include flex(column, center, center);
     width: 100%;
     margin-top: 5rem;
-
+    
     & .h1 {
         @include h1Prop;
         @include mediaQueriesH1;
+       
     }
-
+    
     & .types {
+
         @include flex(column, center, center);
         text-align: center;
         width: 100%;
         & .type {
-            text-transform: uppercase;
-            margin-top: 3rem;
+            & h1{
+                margin-top: 3rem;
+                text-transform: uppercase;
+            }
             @media (min-width: 768px) {
                 font-size: 2rem;
             }
@@ -29,74 +33,74 @@
                 @media(orientation: landscape) {
                     width: 30%;
                 }
-
+                
                 @media (min-width: 768px) {
                     width: 40%;
                 }
-
+                
                 @media (min-width: 1240px) {
                     width: 40%;
                 }
             }
-
+            
         }
     }
-
+    
     & .even {
         transition: 1s 0.5s;
         opacity: 0.1;
-
+        
         &.active {
             opacity: 1
         }
-
+        
         @media (orientation: landscape) {
             transition: 1s;
             margin-left: 15%;
-
+            
             &.active {
                 transform: translateX(50%);
             }
         }
-
+        
         @media (min-width: 768px) {
             transition: 1s;
             margin-left: 15%;
-
+            
             &.active {
                 transform: translateX(50%);
             }
         }
-
-
-
+        
+        
+        
     }
-
+    
     & .odd {
         transition: 1s 0.5s;
         opacity: 0.1;
-
+        
         &.active {
             opacity: 1
         }
-
+        
         @media(orientation: landscape) {
             transition: 1s;
             margin-right: 15%;
-
+            
             &.active {
                 transform: translateX(-50%);
             }
         }
-
+        
         @media (min-width: 768px) {
             transition: 1s;
             margin-right: 15%;
-
+            
             &.active {
                 transform: translateX(-50%);
             }
         }
-
+        
     }
 }
