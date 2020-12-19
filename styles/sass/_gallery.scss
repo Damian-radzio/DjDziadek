@@ -30,8 +30,9 @@
         width: 80%;
         display: block;
         margin: 0 auto;
-        transition: 0.5s;
+        transition: 0.8s;
         opacity: 1;
+
         // large mobile
         @media(max-width: 1023px){
             margin-top: 2rem;
@@ -64,6 +65,20 @@
         @media (min-width: 1360px) {
             width: 45rem;
             opacity: 0.6;
+        }
+    }
+    @media(max-width: 767px){
+        .photos .glightbox .one,
+        .photos .glightbox .three{
+            transform: translateX(-10rem) skewY(-3deg) skewX(-3deg);
+        }
+        .photos .glightbox .two,
+        .photos .glightbox .four{
+            transform: translateX(10rem) skewY(3deg) skewX(3deg);
+            
+        }
+        .photos .glightbox img.active{
+            transform: translateX(0rem);
         }
     }
 

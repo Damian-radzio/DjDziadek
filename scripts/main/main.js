@@ -112,10 +112,11 @@ const offerIconScrollAnimation = () => {
         }, time);
       }, time);
     }, time);
-    }
+  } 
 }
-window.addEventListener('scroll', offerIconScrollAnimation)
 
+
+window.addEventListener('scroll', offerIconScrollAnimation)
 // about Me button scroll animation
 const AboutMeButton = $('.about-btn');
 const moveToAboutMe = (e) => {
@@ -159,6 +160,23 @@ const moveToContact = () => {
 }
 contactMenuBtn.click(moveToContact);
 contactIcon.click(moveToContact);
+
+// photos in gallery animation
+const imageAnimation = (gallerySection, images) => {
+   gallerySection = document.querySelector('.gallery')
+    images = document.querySelectorAll('.photos .glightbox img');
+    if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + gallerySection.scrollHeight / 1.2){
+      images.forEach(image => {
+        image.classList.add('active')
+      });
+    }else{
+      images.forEach(image => {
+        image.classList.remove('active')
+      });
+    }
+}
+
+window.addEventListener('scroll', imageAnimation)
 // menu icon animation
 const one = document.querySelector('.one');
 const two = document.querySelector('.two');
@@ -180,7 +198,6 @@ const MenuIconAnimation = (e) => {
 menuIconWrap.addEventListener('click', MenuIconAnimation);
 
 const checkOrientation = () => {
-  console.log('dwad')
   if(window.innerWidth >= 1024 && window.screen.orientation.type === "landscape-primary"){
     MenuWrap.classList.add('active');
     menuIconWrap.classList.add('active');
