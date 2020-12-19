@@ -1219,24 +1219,34 @@ body {
 @media (min-width: 800px) and (orientation: landscape) {
   .about-me .text {
     font-size: 5rem;
+    line-height: 4.5rem;
   }
 }
 
 @media (min-width: 768px) {
   .about-me .text {
     font-size: 3.3rem;
+    line-height: 5.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .about-me .text {
     font-size: 4rem;
+    line-height: 6.5rem;
   }
 }
 
 @media (min-width: 1240px) {
   .about-me .text {
     font-size: 5rem;
+    line-height: 10rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-me .text {
+    text-align: center;
   }
 }
 
