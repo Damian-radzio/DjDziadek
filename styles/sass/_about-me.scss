@@ -118,18 +118,16 @@
     & .h1 {
         @include h1Prop();
         @include mediaQueriesH1();
-        margin-bottom: 10rem;
-        @media(orientation: landscape) and (max-width: 1023px){
-            margin-bottom: 0rem;
-        }
+        margin-bottom: 2rem;
     }
     
     & .text {
         @include textProp();
         @include mediaQueriesText();
-        text-align: justify;
+        text-align: left;
         text-align-last: initial;
         word-break: initial;
+        line-height: 4rem;
         .about-me-name{
             font-weight: 400;
             display: block;

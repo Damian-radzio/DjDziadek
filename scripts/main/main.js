@@ -44,9 +44,7 @@ window.addEventListener('scroll', MinimalizeMenuBar)
 
 // typing effect header 
 setTimeout(() => {
-  const text = `Przy mnie każda impreza będzie niezapomniana! 
-
-  Dj Dziadek`
+  const text = `Przy mnie każda impreza będzie niezapomniana! Dj-Dziadek`
 let i = 0;
 let speed = 10;
   (function TypeWriter(){
@@ -180,11 +178,22 @@ const MenuIconAnimation = (e) => {
   
 }
 menuIconWrap.addEventListener('click', MenuIconAnimation);
-if(window.innerWidth >= 1024 && window.innerWidth >= window.innerHeight){
-  MenuWrap.classList.add('active');
-}else{
-  MenuWrap.classList.remove('active');
+
+const checkOrientation = () => {
+  console.log('dwad')
+  if(window.innerWidth >= 1024 && window.screen.orientation.type === "landscape-primary"){
+    MenuWrap.classList.add('active');
+    menuIconWrap.classList.add('active');
+    
+  }else{
+    MenuWrap.classList.remove('active');
+    one.classList.remove('active-menu')
+    two.classList.remove('active-menu')
+    three.classList.remove('active-menu')
+    menuIconWrap.classList.remove('active-menu')
+  }
 }
+window.addEventListener('orientationchange', checkOrientation)
 
 // back to top Animation
 const heroeName = document.querySelector('.name');

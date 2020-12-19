@@ -3,7 +3,7 @@
         @include flex(column, space-between, center);
         width: 3.5rem;
         height: 3.0rem;
-        z-index: 3;
+        z-index: 10;
         transition: 0.5s;
         margin-right: 1.0rem;
         transition: 0.4s;
@@ -50,18 +50,11 @@
         @media (min-width: 1024px) and(orientation: landscape) {
             visibility: hidden;
         }
-        @media(min-width: 1024px){
-                    &:hover{
-                        opacity: 0.8;
-                    }
-                }
             }
             .wrap.active-menu{
                 transition: 0.4s;
                 @include flex(column, center, center);
-                // @media (min-width: 1024px) and(orientation: landscape) {
-                //     display: none;
-                // }
+
             }
             .wrap.active {
                 transform: scale(.7);
@@ -70,11 +63,9 @@
                 }
 
                 @media(min-width: 1024px){
-                    
                     .wrap:hover .one {
                         transform: scale(0.4);
                     }
-                    
                 }
             }
             
@@ -144,6 +135,7 @@
         left: 0px;
         top: 0;
         background-color: transparent;
+        animation: Desktop 0.4s ease both;
     }
     .wrapper{
         height: 100%;
@@ -225,9 +217,9 @@
     }
     &.active{
         animation: mobilePortrait 0.3s ease both;
-        @media(min-width: 1024px) and(orientation: landscape){
+        @media(min-width: 1024px) and (orientation: landscape){
          animation: Desktop 0.4s ease both;
-         opacity: 1;
+        opacity: 1;
         }
     }
     &.scroll{
