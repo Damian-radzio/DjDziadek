@@ -83,7 +83,8 @@
 
   // Loop through anchors and areamaps looking for either data-lightbox attributes or rel attributes
   // that contain 'lightbox'. When these are clicked, start lightbox.
-  Lightbox.prototype.enable = function() {
+  Lightbox.prototype.enable = function(e) {
+    e.preventDefalut();
     var self = this;
     $('body').on('click', 'a[rel^=lightbox], area[rel^=lightbox], a[data-lightbox], area[data-lightbox]', function(event) {
       self.start($(event.currentTarget));

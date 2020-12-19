@@ -1354,8 +1354,11 @@ body {
   width: 100%;
 }
 
-.offer .types .type h1 {
+.offer .types .type {
   margin-top: 3rem;
+}
+
+.offer .types .type h1 {
   text-transform: uppercase;
 }
 

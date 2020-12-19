@@ -16,8 +16,8 @@
         text-align: center;
         width: 100%;
         & .type {
+            margin-top: 3rem;
             & h1{
-                margin-top: 3rem;
                 text-transform: uppercase;
             }
             @media (min-width: 768px) {
