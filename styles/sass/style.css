@@ -1622,23 +1622,6 @@ body {
   }
 }
 
-@media (max-width: 767px) {
-  .gallery .photos .glightbox .one,
-  .gallery .photos .glightbox .three {
-    -webkit-transform: translateX(-5rem);
-            transform: translateX(-5rem);
-  }
-  .gallery .photos .glightbox .two,
-  .gallery .photos .glightbox .four {
-    -webkit-transform: translateX(5rem);
-            transform: translateX(5rem);
-  }
-  .gallery .photos .glightbox img.active {
-    -webkit-transform: translateX(0rem);
-            transform: translateX(0rem);
-  }
-}
-
 .gallery .show-more {
   margin-top: 1vh;
   text-align: center;
