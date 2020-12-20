@@ -176,7 +176,7 @@ contactIcon.click(moveToContact);
 //     }
 // }
 
-window.addEventListener('scroll', imageAnimation)
+// window.addEventListener('scroll', imageAnimation)
 // menu icon animation
 const one = document.querySelector('.one');
 const two = document.querySelector('.two');
