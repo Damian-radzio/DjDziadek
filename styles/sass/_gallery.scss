@@ -67,20 +67,20 @@
             opacity: 0.6;
         }
     }
-    @media(max-width: 767px){
-        .photos .glightbox .one,
-        .photos .glightbox .three{
-            transform: translateX(-10rem) skewY(-3deg) skewX(-3deg);
-        }
-        .photos .glightbox .two,
-        .photos .glightbox .four{
-            transform: translateX(10rem) skewY(3deg) skewX(3deg);
+    // @media(max-width: 767px){
+    //     .photos .glightbox .one,
+    //     .photos .glightbox .three{
+    //         transform: translateX(-10rem) skewY(-3deg) skewX(-3deg);
+    //     }
+    //     .photos .glightbox .two,
+    //     .photos .glightbox .four{
+    //         transform: translateX(10rem) skewY(3deg) skewX(3deg);
             
-        }
-        .photos .glightbox img.active{
-            transform: translateX(0rem);
-        }
-    }
+    //     }
+    //     .photos .glightbox img.active{
+    //         transform: translateX(0rem);
+    //     }
+    // }
 
 .show-more{
     margin-top: 1vh;
