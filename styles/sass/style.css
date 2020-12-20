@@ -51,7 +51,7 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-image: url("../../html&components/img/heroe.jpg");
+  background-image: url("../../html&components/img/heroe_Easy-Resize.com (3).jpg");
   background-position: center, bottom;
   background-repeat: repeat;
   background-size: cover;
@@ -1114,7 +1114,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("./../../html&components/img/aboutMe.jpeg");
+  background: url("./../../html&components/img/aboutMe_Easy-Resize.com (2).jpg");
   background-position: right;
   background-repeat: no-repeat;
   background-size: 100%;
