@@ -1,23 +1,29 @@
+const orientationTypes = [
+  window.screen.orientation.type === "portrait-primary",
+  window.screen.orientation.type === "landscape-primary"
+]
+
 const experienceSection = document.querySelector('.experience');
 const evenIconOffer = [...document.querySelectorAll('.types .even')];
 const oddIconOffer = [...document.querySelectorAll('.types .odd')];
 const sectionOffer = document.querySelector('.offer')
 
 // menubar with animations on scroll 
-function MinimalizeMenuBar(menuContent,  menuContentUl, menuContentText, menuHeader, menuIcon, nameBar){
+function MinimalizeMenuBar(menuContent,  menuContentUl, menuContentText, menuHeader, menuIcon, headerName){
+
 const items = [
   menuContent = document.querySelector('.menu-content'),
   menuContentUl = document.querySelector('.menu-content .wrapper ul'),
   menuContentText = document.querySelectorAll('.menu-content .wrapper ul li a'),
   menuHeader = document.querySelector('.header'),
   menuIcon = document.querySelector('.wrap'),
-  nameBar = document.querySelector('.name'),
+  headerName = document.querySelector('.name'),
 ]
 
 
   if(scrollY > 0){
    items[3].classList.add('active');
-    items[items.length-1].classList.add('active')
+    headerName.classList.add('active');
     items[items.length-2].classList.add('active');
 
     if(window.innerWidth >= 1024){
@@ -34,6 +40,7 @@ const items = [
     }
 
   }else{
+    items[items.length-1].classList.remove('active');
     items[0].classList.remove('active');
     items[0].classList.remove('scroll');
     items[0].classList.remove('scrollMobile');
@@ -52,7 +59,7 @@ window.addEventListener('scroll', MinimalizeMenuBar)
 setTimeout(() => {
   let i = 0;
   const speed = 10;
-  const text = `Przy mnie każda impreza będzie niezapomniana! Dj-Dziadek`;
+  const text = `Przy mnie każda impreza będzie niezapomniana!`;
   
   (function TypeWriter(){
     if(i< text.length){
@@ -122,13 +129,27 @@ const offerIconScrollAnimation = () => {
 window.addEventListener('scroll', offerIconScrollAnimation)
 
 
+const hideMenu = () => {
+  MenuWrap.classList.remove('active');
+  one.classList.remove('active-menu')
+  two.classList.remove('active-menu')
+  three.classList.remove('active-menu')
+  menuIconWrap.classList.remove('active-menu')
+}
+const moveToSection = (place, position) => {
+  $('body, html').animate({
+    scrollTop: place.offset().top + position
+  }, 100)
+}
+
 // about Me button scroll animation
 const AboutMeButton = $('.about-btn');
 const moveToAboutMe = (e) => {
   e.preventDefault();
-  $('body, html').animate({
-    scrollTop: $('.about-me').offset().top
-  }, 100)
+  moveToSection($('.about-me'), - 50)
+    setTimeout(() => {
+    hideMenu();
+  }, 300);
 }
 AboutMeButton.click(moveToAboutMe);
 
@@ -141,9 +162,10 @@ AboutMeMenuBtn.click(moveToAboutMe)
 const OfferMenuBtn = $('.menu-offer');
 const moveToOffer = (e) => {
   e.preventDefault();
-  $('body,html').animate({
-    scrollTop: $('.offer').offset().top - 50
-  })
+  moveToSection($('.offer'), - 100)
+    setTimeout(() => {
+    hideMenu();
+  }, 300);
 }
 OfferMenuBtn.click(moveToOffer);
 
@@ -151,9 +173,11 @@ OfferMenuBtn.click(moveToOffer);
 // gallery
 const moveToGallery = (e) => {
   e.preventDefault();
-  $('body, html').animate({
-    scrollTop: $('.gallery').offset().top - 100
-  }, 100)
+  moveToSection($('.gallery'), - 100)
+
+    setTimeout(() => {
+    hideMenu();
+  }, 300);
 }
 const galleryMenuBtn =  $('.menu-gallery');
 galleryMenuBtn.click(moveToGallery);
@@ -161,10 +185,13 @@ galleryMenuBtn.click(moveToGallery);
 
 // contact (menu btn & icon)
 
-const moveToContact = () => {
-  $('html, body').animate({
-    scrollTop: $('.contact').offset().top
-  }, 100)
+const moveToContact = (e) => {
+  e.preventDefault();
+  moveToSection($('.contact'), - 100);
+    setTimeout(() => {
+    hideMenu();
+  }, 300);
+
 }
 const contactMenuBtn = $('.menu-contact');
 const contactIcon = $('.contact-icon');
@@ -175,22 +202,30 @@ contactIcon.click(moveToContact);
 
 // back to top Animation
 const heroeName = document.querySelector('.name');
-const backToTop = () => {
-   $('html, body').animate({
-     scrollTop: $('.main-header').offset().top
-   }, 200)
+const backToTop = (e) => {
+   e.preventDefault();
+   moveToSection($('.main-header'), - 100);
+  setTimeout(() => {
+    hideMenu();
+  }, 300);
 }
 heroeName.addEventListener('click', backToTop)
-
+const menuHome = document.querySelector('.menu-home');
+menuHome.addEventListener('click', backToTop);
 // photos in gallery animation
 const imageAnimation = (gallerySection, images) => {
    gallerySection = document.querySelector('.gallery')
     images = document.querySelectorAll('.photos .glightbox img');
-    if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + gallerySection.scrollHeight / 1.2){
+
+    if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + gallerySection.scrollHeight / 1.6 && orientationTypes[0]){
       images.forEach(image => {
         image.classList.add('active')
       });
-    }else{
+    }else if(orientationTypes[1] === "landscape-primary" && window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + gallerySection.scrollHeight / 3){
+      images.forEach(image => {
+        image.classList.add('active')
+      });
+    } else{
       images.forEach(image => {
         image.classList.remove('active')
       });
@@ -199,19 +234,22 @@ const imageAnimation = (gallerySection, images) => {
 window.addEventListener('scroll', imageAnimation)
 
 // menu icon animation
-const one = document.querySelector('.one');
-const two = document.querySelector('.two');
-const three = document.querySelector('.three');
+const iconLines = [
+  one = document.querySelector('.one'),
+  two = document.querySelector('.two'),
+  three = document.querySelector('.three'),
+]
+
 // wrap
 const menuIconWrap = document.querySelector('.wrap');
 const MenuWrap = document.querySelector('.menu-content')
 const MenuIconAnimation = (e) => {
   e.preventDefault();
-  one.classList.toggle('active-menu')
-  two.classList.toggle('active-menu')
-  three.classList.toggle('active-menu')
-  menuIconWrap.classList.toggle('active-menu')
+  iconLines[0].classList.toggle('active-menu');
+  iconLines[1].classList.toggle('active-menu');
+  iconLines[2].classList.toggle('active-menu');
   
+  menuIconWrap.classList.toggle('active-menu')
   // open menu animation
   MenuWrap.classList.toggle('active');
   
@@ -219,19 +257,24 @@ const MenuIconAnimation = (e) => {
 menuIconWrap.addEventListener('click', MenuIconAnimation);
 
 const checkOrientation = () => {
-  if(window.innerWidth >= 1024 && window.screen.orientation.type === "landscape-primary"){
+  if(window.innerWidth >= 1024 && orientationTypes[1]){
     MenuWrap.classList.add('active');
     menuIconWrap.classList.add('active');
     
   }else{
-    MenuWrap.classList.remove('active');
-    one.classList.remove('active-menu')
-    two.classList.remove('active-menu')
-    three.classList.remove('active-menu')
-    menuIconWrap.classList.remove('active-menu')
+    hideMenu();
   }
 }
-window.addEventListener('orientationchange', checkOrientation)
+window.addEventListener('orientationchange', checkOrientation);
+
+// for messenger
+// (function(d, s, id) {
+//   var js, fjs = d.getElementsByTagName(s)[0];
+//   if (d.getElementById(id)) return;
+//   js = d.createElement(s); js.id = id;
+//   js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+//   fjs.parentNode.insertBefore(js, fjs);
+// }(document, 'script', 'facebook-jssdk'));
 
 
 

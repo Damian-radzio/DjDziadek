@@ -105,6 +105,7 @@
 }
 .menu-content{
     position: absolute;
+    visibility: hidden;
     opacity: 0;
     width: 100%;
     left: 0;
@@ -115,7 +116,7 @@
     background-color: rgba(0, 0, 0, 0.638);
     z-index: -1;
     transition: 0.5s;
-
+    
     @media(min-width: 768px){
         min-height: 33rem;
         max-height: 38rem;
@@ -216,7 +217,7 @@
         }
     }
     &.active{
-        animation: mobilePortrait 0.3s ease both;
+        animation: mobilePortrait 0.4s ease both;
         @media(min-width: 1024px) and (orientation: landscape){
          animation: Desktop 0.4s ease both;
         opacity: 1;
@@ -235,10 +236,12 @@
 }
 @keyframes mobilePortrait{
     from{
+        visibility: hidden;
         top: -30%;
         opacity: 0;
     }
     to{
+        visibility: visible;
         top: 0;
         opacity: 1;
     }
@@ -247,9 +250,11 @@
     from{
         left: 2%;
         opacity: 0;
+        visibility: hidden;
     }
     to{
         left: 0%;
+        visibility: visible;
         opacity: 1;
     }
 }
