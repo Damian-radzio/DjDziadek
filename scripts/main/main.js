@@ -1,9 +1,7 @@
-
-
 const experienceSection = document.querySelector('.experience');
 const evenIconOffer = [...document.querySelectorAll('.types .even')];
 const oddIconOffer = [...document.querySelectorAll('.types .odd')];
-const sectionOffer = document.querySelector('.offer')
+const sectionOffer = document.querySelector('.offer');
 
 // menubar with animations on scroll 
 function MinimalizeMenuBar(menuContent,  menuContentUl, menuContentText, menuHeader, menuIcon, headerName){
@@ -29,10 +27,10 @@ const items = [
 
     if(window.innerWidth < 1024){
       items[0].classList.add('scrollMobile');
-      items[1].classList.add('scrollMobile')
+      items[1].classList.add('scrollMobile');
 
       items[2].forEach(a => {
-        a.classList.add('scrollMobile')
+        a.classList.add('scrollMobile');
       });
     }
 
@@ -43,13 +41,13 @@ const items = [
     items[0].classList.remove('scrollMobile');
     items[3].classList.remove('active');
     items[items.length-2].classList.remove('active');
-    items[1].classList.remove('scrollMobile')
+    items[1].classList.remove('scrollMobile');
     items[2].forEach(a => {
-      a.classList.remove('scrollMobile')
+      a.classList.remove('scrollMobile');
     });
   }
 }
-window.addEventListener('scroll', MinimalizeMenuBar)
+window.addEventListener('scroll', MinimalizeMenuBar);
 
 // typing effect header 
 
@@ -87,7 +85,7 @@ const updateCount = () => {
     if(i<value){
       i++;
       if(i === 3){
-        experienceNumber.classList.add('active')
+        experienceNumber.classList.add('active');;
       }
     }
   }, 90);
@@ -96,10 +94,10 @@ const updateCount = () => {
 const checksScrollPos = () => {
   if(window.scrollY >= window.innerHeight/3){
     updateCount();
-    window.removeEventListener('scroll', checksScrollPos, false)
+    window.removeEventListener('scroll', checksScrollPos, false);
   }
 }
-window.addEventListener('scroll', checksScrollPos)
+window.addEventListener('scroll', checksScrollPos);
 
 
 
@@ -123,27 +121,27 @@ const offerIconScrollAnimation = () => {
     }, time);
   } 
 }
-window.addEventListener('scroll', offerIconScrollAnimation)
+window.addEventListener('scroll', offerIconScrollAnimation);
 
 
 const hideMenu = () => {
   MenuWrap.classList.remove('active');
-  one.classList.remove('active-menu')
-  two.classList.remove('active-menu')
-  three.classList.remove('active-menu')
-  menuIconWrap.classList.remove('active-menu')
+  one.classList.remove('active-menu');
+  two.classList.remove('active-menu');
+  three.classList.remove('active-menu');
+  menuIconWrap.classList.remove('active-menu');
 }
 const moveToSection = (place, position) => {
   $('body, html').animate({
     scrollTop: place.offset().top + position
-  }, 100)
+  }, 100);
 }
 
 // about Me button scroll animation
 const AboutMeButton = $('.about-btn');
 const moveToAboutMe = (e) => {
   e.preventDefault();
-  moveToSection($('.about-me'), - 50)
+  moveToSection($('.about-me'), - 50);
     setTimeout(() => {
     hideMenu();
   }, 300);
@@ -153,13 +151,13 @@ AboutMeButton.click(moveToAboutMe);
 // menu after click
 // about me
 const AboutMeMenuBtn = $('.menu-about-me');
-AboutMeMenuBtn.click(moveToAboutMe)
+AboutMeMenuBtn.click(moveToAboutMe);
 
 // offer
 const OfferMenuBtn = $('.menu-offer');
 const moveToOffer = (e) => {
   e.preventDefault();
-  moveToSection($('.offer'), - 100)
+  moveToSection($('.offer'), - 100);
     setTimeout(() => {
     hideMenu();
   }, 300);
@@ -170,7 +168,7 @@ OfferMenuBtn.click(moveToOffer);
 // gallery
 const moveToGallery = (e) => {
   e.preventDefault();
-  moveToSection($('.gallery'), - 100)
+  moveToSection($('.gallery'), - 100);
 
     setTimeout(() => {
     hideMenu();
@@ -206,40 +204,40 @@ const backToTop = (e) => {
     hideMenu();
   }, 300);
 }
-heroeName.addEventListener('click', backToTop)
+heroeName.addEventListener('click', backToTop);
 const menuHome = document.querySelector('.menu-home');
 menuHome.addEventListener('click', backToTop);
 // photos in gallery animation
 const imageAnimation = (gallerySection, images) => {
-   gallerySection = document.querySelector('.gallery')
+   gallerySection = document.querySelector('.gallery');
     images = document.querySelectorAll('.photos .glightbox img');
 
     if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + gallerySection.scrollHeight / 1.6 && window.screen.orientation.type === "portrait-primary"){
       images.forEach(image => {
-        image.classList.add('active')
+        image.classList.add('active');
       });
     }else if(window.screen.orientation.type === "landscape-primary" === "landscape-primary" && window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + gallerySection.scrollHeight / 3){
       images.forEach(image => {
-        image.classList.add('active')
+        image.classList.add('active');
       });
     } else{
       images.forEach(image => {
-        image.classList.remove('active')
+        image.classList.remove('active');
       });
     }
 }
-window.addEventListener('scroll', imageAnimation)
+window.addEventListener('scroll', imageAnimation);
 
 // menu icon animation
 const iconLines = [
   one = document.querySelector('.one'),
   two = document.querySelector('.two'),
   three = document.querySelector('.three'),
-]
+];
 
 // wrap
 const menuIconWrap = document.querySelector('.wrap');
-const MenuWrap = document.querySelector('.menu-content')
+const MenuWrap = document.querySelector('.menu-content');
 const MenuIconAnimation = (e) => {
   e.preventDefault();
   iconLines[0].classList.toggle('active-menu');
