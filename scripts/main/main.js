@@ -1,7 +1,3 @@
-const orientationTypes = [
-  `window.screen.orientation.type === "portrait-primary"`,
-  `window.screen.orientation.type === "landscape-primary"`
-]
 
 const experienceSection = document.querySelector('.experience');
 const evenIconOffer = [...document.querySelectorAll('.types .even')];
@@ -217,11 +213,11 @@ const imageAnimation = (gallerySection, images) => {
    gallerySection = document.querySelector('.gallery')
     images = document.querySelectorAll('.photos .glightbox img');
 
-    if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + gallerySection.scrollHeight / 1.6 && orientationTypes[0]){
+    if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + gallerySection.scrollHeight / 1.6 && window.screen.orientation.type === "portrait-primary"){
       images.forEach(image => {
         image.classList.add('active')
       });
-    }else if(orientationTypes[1] === "landscape-primary" && window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + gallerySection.scrollHeight / 3){
+    }else if(window.screen.orientation.type === "landscape-primary" === "landscape-primary" && window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + gallerySection.scrollHeight / 3){
       images.forEach(image => {
         image.classList.add('active')
       });
@@ -257,7 +253,7 @@ const MenuIconAnimation = (e) => {
 menuIconWrap.addEventListener('click', MenuIconAnimation);
 
 const checkOrientation = () => {
-  if(window.innerWidth >= 1024 && orientationTypes[1]){
+  if(window.innerWidth >= 1024 && window.screen.orientation.type === "landscape-primary"){
     MenuWrap.classList.add('active');
     menuIconWrap.classList.add('active');
     
