@@ -182,21 +182,21 @@ const backToTop = () => {
 }
 heroeName.addEventListener('click', backToTop)
 
-// // photos in gallery animation
-// const imageAnimation = (gallerySection, images) => {
-//    gallerySection = document.querySelector('.gallery')
-//     images = document.querySelectorAll('.photos .glightbox img');
-//     if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + gallerySection.scrollHeight / 1.2){
-//       images.forEach(image => {
-//         image.classList.add('active')
-//       });
-//     }else{
-//       images.forEach(image => {
-//         image.classList.remove('active')
-//       });
-//     }
-// }
-// window.addEventListener('scroll', imageAnimation)
+// photos in gallery animation
+const imageAnimation = (gallerySection, images) => {
+   gallerySection = document.querySelector('.gallery')
+    images = document.querySelectorAll('.photos .glightbox img');
+    if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + gallerySection.scrollHeight / 1.2){
+      images.forEach(image => {
+        image.classList.add('active')
+      });
+    }else{
+      images.forEach(image => {
+        image.classList.remove('active')
+      });
+    }
+}
+window.addEventListener('scroll', imageAnimation)
 
 // menu icon animation
 const one = document.querySelector('.one');
