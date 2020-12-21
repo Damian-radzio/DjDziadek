@@ -1,6 +1,6 @@
 const orientationTypes = [
-  window.screen.orientation.type === "portrait-primary",
-  window.screen.orientation.type === "landscape-primary"
+  `window.screen.orientation.type === "portrait-primary"`,
+  `window.screen.orientation.type === "landscape-primary"`
 ]
 
 const experienceSection = document.querySelector('.experience');
