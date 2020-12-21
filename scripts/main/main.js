@@ -1,4 +1,5 @@
 
+
 const experienceSection = document.querySelector('.experience');
 const evenIconOffer = [...document.querySelectorAll('.types .even')];
 const oddIconOffer = [...document.querySelectorAll('.types .odd')];
