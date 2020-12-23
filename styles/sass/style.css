@@ -681,22 +681,15 @@ body {
   top: 0;
   height: 32vh;
   min-height: 28rem;
-  max-height: 31rem;
   background-color: rgba(0, 0, 0, 0.638);
   z-index: -1;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-@media (min-width: 768px) {
-  .menu-content {
-    min-height: 33rem;
-    max-height: 38rem;
-  }
-}
-
 @media (max-width: 1023px) and (orientation: landscape) {
   .menu-content {
+    min-height: 100vh;
     width: 25%;
     left: 75%;
   }
@@ -969,12 +962,12 @@ body {
 
 @-webkit-keyframes Desktop {
   from {
-    left: 2%;
+    left: 8%;
     opacity: 0;
     visibility: hidden;
   }
   to {
-    left: 0%;
+    left: 4%;
     visibility: visible;
     opacity: 1;
   }
@@ -982,12 +975,12 @@ body {
 
 @keyframes Desktop {
   from {
-    left: 2%;
+    left: 8%;
     opacity: 0;
     visibility: hidden;
   }
   to {
-    left: 0%;
+    left: 4%;
     visibility: visible;
     opacity: 1;
   }
@@ -1481,6 +1474,20 @@ body {
   width: 100%;
   color: white;
   font-family: "Oswald";
+  min-height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .equip .equip-header {
@@ -2023,8 +2030,6 @@ body {
   width: 30%;
   margin: 0 auto;
   letter-spacing: 1px;
-  -webkit-animation: insta-move 1s linear both infinite;
-          animation: insta-move 1s linear both infinite;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -2059,36 +2064,6 @@ body {
             transform: scale(1.1);
     -webkit-animation: none;
             animation: none;
-  }
-}
-
-@-webkit-keyframes insta-move {
-  0% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-  }
-  50% {
-    -webkit-transform: rotateX(20deg);
-            transform: rotateX(20deg);
-  }
-  100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-  }
-}
-
-@keyframes insta-move {
-  0% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-  }
-  50% {
-    -webkit-transform: rotateX(20deg);
-            transform: rotateX(20deg);
-  }
-  100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
   }
 }
 

@@ -3,6 +3,12 @@ const evenIconOffer = [...document.querySelectorAll('.types .even')];
 const oddIconOffer = [...document.querySelectorAll('.types .odd')];
 const sectionOffer = document.querySelector('.offer');
 
+const iconLines = [
+  one = document.querySelector('.one'),
+two = document.querySelector('.two'),
+three = document.querySelector('.three'),
+];
+
 // menubar with animations on scroll 
 function MinimalizeMenuBar(menuContent,  menuContentUl, menuContentText, menuHeader, menuIcon, headerName){
 
@@ -41,6 +47,10 @@ const items = [
     items[0].classList.remove('scrollMobile');
     items[3].classList.remove('active');
     items[items.length-2].classList.remove('active');
+    items[items.length-2].classList.remove('active-menu');
+    iconLines[0].classList.remove('active-menu');
+    iconLines[1].classList.remove('active-menu');
+    iconLines[2].classList.remove('active-menu');
     items[1].classList.remove('scrollMobile');
     items[2].forEach(a => {
       a.classList.remove('scrollMobile');
@@ -144,12 +154,10 @@ const moveToAboutMe = (e) => {
     hideMenu();
   }, 300);
 }
-AboutMeButton.click(moveToAboutMe);
 
 // menu after click
 // about me
 const AboutMeMenuBtn = $('.menu-about-me');
-AboutMeMenuBtn.click(moveToAboutMe);
 
 // offer
 const OfferMenuBtn = $('.menu-offer');
@@ -160,7 +168,6 @@ const moveToOffer = (e) => {
     hideMenu();
   }, 300);
 }
-OfferMenuBtn.click(moveToOffer);
 
 
 // gallery
@@ -173,7 +180,6 @@ const moveToGallery = (e) => {
   }, 300);
 }
 const galleryMenuBtn =  $('.menu-gallery');
-galleryMenuBtn.click(moveToGallery);
 
 
 // contact (menu btn & icon)
@@ -189,15 +195,24 @@ const moveToContact = (e) => {
 const contactMenuBtn = $('.menu-contact');
 const contactIcon = $('.contact-icon');
 
-contactMenuBtn.click(moveToContact);
-contactIcon.click(moveToContact);
+
+
+
+const equipMenuButton = $('.menu-equip');
+const moveToEquip = (e) => {
+  e.preventDefault();
+   moveToSection($('.equip'), - 100);
+   setTimeout(() => {
+     hideMenu();
+    }, 300);
+  }
 
 
 // back to top Animation
 const heroeName = document.querySelector('.name');
 const backToTop = (e) => {
   e.preventDefault();
-   moveToSection($('.main-header'), - 100);
+   moveToSection($('.main-header'), - 0);
    setTimeout(() => {
      hideMenu();
     }, 300);
@@ -235,11 +250,7 @@ function checkIcon(){
   }
   
   // menu icon animation
-  const iconLines = [
-    one = document.querySelector('.one'),
-  two = document.querySelector('.two'),
-  three = document.querySelector('.three'),
-];
+
 
 // wrap
 const menuIconWrap = document.querySelector('.wrap');
@@ -269,13 +280,22 @@ const checkOrientation = () => {
   window.addEventListener('scroll', MinimalizeMenuBar);
   window.addEventListener('scroll', checksScrollPos);
   window.addEventListener('scroll', offerIconScrollAnimation);
+  window.addEventListener('scroll', imageAnimation);
+
+  menuIconWrap.addEventListener('click', MenuIconAnimation);
   heroeName.addEventListener('click', backToTop);
   menuHome.addEventListener('click', backToTop);
-  window.addEventListener('scroll', imageAnimation);
-  menuIconWrap.addEventListener('click', MenuIconAnimation);
+  AboutMeButton.click(moveToAboutMe);
+  AboutMeMenuBtn.click(moveToAboutMe);
+  OfferMenuBtn.click(moveToOffer);
+  galleryMenuBtn.click(moveToGallery);
+  contactMenuBtn.click(moveToContact);
+  contactIcon.click(moveToContact);
+  equipMenuButton.click(moveToEquip);
   showMoreIcons.forEach(icon => {
     icon.addEventListener('click', checkIcon);
   })
+ 
   window.addEventListener('orientationchange', checkOrientation);
 
 

@@ -94,7 +94,6 @@
        width: 30%;
        margin: 0 auto;
        letter-spacing: 1px;
-       animation: insta-move 1s linear both infinite;
        transition: 0.3s;
        @include focus();
        @include focusAnimation();
@@ -107,17 +106,6 @@
             animation: none;
         }
 
-       }
-   }
-   @keyframes insta-move{
-       0%{
-         transform: rotateX(0deg);
-       }
-       50%{
-        transform: rotateX(20deg);
-       }
-       100%{
-           transform: rotateX(0deg);
        }
    }
    @media(min-width: 375px){

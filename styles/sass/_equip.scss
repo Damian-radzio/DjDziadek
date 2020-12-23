@@ -1,6 +1,7 @@
 .equip{
 @include sectionProp();
-
+min-height: 40vh;
+@include flex(column, center, center);
 .equip-header{
     @include h1Prop();
     @include mediaQueriesH1();
