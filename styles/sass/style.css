@@ -1638,6 +1638,7 @@ body {
   padding: 1rem;
   -webkit-transition: .7s;
   transition: .7s;
+  cursor: pointer;
 }
 
 .equip .blocks .block .fa-caret-down.active {
@@ -1645,6 +1646,52 @@ body {
           transform: rotateZ(180deg);
   -webkit-transition: .7s;
   transition: .7s;
+}
+
+@media (min-width: 768px) {
+  .equip .blocks .block .fa-caret-down {
+    font-size: 3.3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .equip .blocks .block .fa-caret-down {
+    font-size: 3.5rem;
+  }
+  @-webkit-keyframes click {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes click {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .equip .blocks .block .fa-caret-down {
+    font-size: 3.8rem;
+  }
 }
 
 .equip .blocks .block .more {

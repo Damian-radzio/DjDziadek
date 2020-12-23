@@ -211,9 +211,7 @@ function checkIcon(){
     this.parentNode.childNodes[3].classList.toggle('active')
     this.classList.toggle('active');
 }
-showMoreIcons.forEach(icon => {
-  icon.addEventListener('click', checkIcon);
-})
+
 
 
   // photos in gallery animation
@@ -275,6 +273,9 @@ const checkOrientation = () => {
   menuHome.addEventListener('click', backToTop);
   window.addEventListener('scroll', imageAnimation);
   menuIconWrap.addEventListener('click', MenuIconAnimation);
+  showMoreIcons.forEach(icon => {
+    icon.addEventListener('click', checkIcon);
+  })
   window.addEventListener('orientationchange', checkOrientation);
 
 

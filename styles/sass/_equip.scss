@@ -56,9 +56,20 @@
                 font-size: 3rem;
                 padding: 1rem;
                 transition: .7s;
+                cursor: pointer;
                 &.active{
                     transform: rotateZ(180deg);
                     transition: .7s;
+                }
+                @media (min-width: 768px){
+                    font-size: 3.3rem;
+                }
+                @media (min-width: 1024px){
+                    font-size: 3.5rem;
+                    @include focusAnimation();
+                }
+                @media (min-width: 1300px){
+                    font-size: 3.8rem;
                 }
             }
 
