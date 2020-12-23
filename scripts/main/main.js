@@ -203,6 +203,19 @@ const backToTop = (e) => {
     }, 300);
   }
   const menuHome = document.querySelector('.menu-home');
+
+// equipment section
+const showMoreIcons = [...document.querySelectorAll('.fa-caret-down')];
+function checkIcon(){
+  this.parentNode.classList.toggle('active');
+    this.parentNode.childNodes[3].classList.toggle('active')
+    this.classList.toggle('active');
+}
+showMoreIcons.forEach(icon => {
+  icon.addEventListener('click', checkIcon);
+})
+
+
   // photos in gallery animation
   const imageAnimation = (gallerySection, images) => {
     gallerySection = document.querySelector('.gallery');
@@ -255,15 +268,6 @@ const checkOrientation = () => {
   }
 }
 
-// for messenger
-// (function(d, s, id) {
-  //   var js, fjs = d.getElementsByTagName(s)[0];
-  //   if (d.getElementById(id)) return;
-  //   js = d.createElement(s); js.id = id;
-  //   js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-  //   fjs.parentNode.insertBefore(js, fjs);
-  // }(document, 'script', 'facebook-jssdk'));
-  
   window.addEventListener('scroll', MinimalizeMenuBar);
   window.addEventListener('scroll', checksScrollPos);
   window.addEventListener('scroll', offerIconScrollAnimation);
