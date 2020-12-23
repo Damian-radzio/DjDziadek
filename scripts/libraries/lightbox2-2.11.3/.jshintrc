@@ -21,7 +21,6 @@
   "undef":true,
   "unused":"vars",
   "immed":true,
-  "browser": true,
   "jquery":true,
   "predef": [
     "alert",
