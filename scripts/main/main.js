@@ -47,7 +47,6 @@ const items = [
     });
   }
 }
-window.addEventListener('scroll', MinimalizeMenuBar);
 
 // typing effect header 
 
@@ -61,11 +60,11 @@ setTimeout(() => {
       const textHeader = document.querySelector('.about-intro .text-intro')
       textHeader.innerHTML += text.charAt(i);
       i++;
-
+      
       setTimeout(TypeWriter, speed);
       if(textHeader.textContent === text){
         const buttonHeader = document.querySelector('.about-btn');
-          buttonHeader.classList.add('visible');
+        buttonHeader.classList.add('visible');
       }
     }
   })();
@@ -97,7 +96,7 @@ const checksScrollPos = () => {
     window.removeEventListener('scroll', checksScrollPos, false);
   }
 }
-window.addEventListener('scroll', checksScrollPos);
+
 
 
 
@@ -121,7 +120,6 @@ const offerIconScrollAnimation = () => {
     }, time);
   } 
 }
-window.addEventListener('scroll', offerIconScrollAnimation);
 
 
 const hideMenu = () => {
@@ -142,7 +140,7 @@ const AboutMeButton = $('.about-btn');
 const moveToAboutMe = (e) => {
   e.preventDefault();
   moveToSection($('.about-me'), - 50);
-    setTimeout(() => {
+  setTimeout(() => {
     hideMenu();
   }, 300);
 }
@@ -158,7 +156,7 @@ const OfferMenuBtn = $('.menu-offer');
 const moveToOffer = (e) => {
   e.preventDefault();
   moveToSection($('.offer'), - 100);
-    setTimeout(() => {
+  setTimeout(() => {
     hideMenu();
   }, 300);
 }
@@ -169,8 +167,8 @@ OfferMenuBtn.click(moveToOffer);
 const moveToGallery = (e) => {
   e.preventDefault();
   moveToSection($('.gallery'), - 100);
-
-    setTimeout(() => {
+  
+  setTimeout(() => {
     hideMenu();
   }, 300);
 }
@@ -183,10 +181,10 @@ galleryMenuBtn.click(moveToGallery);
 const moveToContact = (e) => {
   e.preventDefault();
   moveToSection($('.contact'), - 100);
-    setTimeout(() => {
+  setTimeout(() => {
     hideMenu();
   }, 300);
-
+  
 }
 const contactMenuBtn = $('.menu-contact');
 const contactIcon = $('.contact-icon');
@@ -198,20 +196,18 @@ contactIcon.click(moveToContact);
 // back to top Animation
 const heroeName = document.querySelector('.name');
 const backToTop = (e) => {
-   e.preventDefault();
+  e.preventDefault();
    moveToSection($('.main-header'), - 100);
-  setTimeout(() => {
-    hideMenu();
-  }, 300);
-}
-heroeName.addEventListener('click', backToTop);
-const menuHome = document.querySelector('.menu-home');
-menuHome.addEventListener('click', backToTop);
-// photos in gallery animation
-const imageAnimation = (gallerySection, images) => {
-   gallerySection = document.querySelector('.gallery');
+   setTimeout(() => {
+     hideMenu();
+    }, 300);
+  }
+  const menuHome = document.querySelector('.menu-home');
+  // photos in gallery animation
+  const imageAnimation = (gallerySection, images) => {
+    gallerySection = document.querySelector('.gallery');
     images = document.querySelectorAll('.photos .glightbox img');
-
+    
     if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + gallerySection.scrollHeight / 1.6 && window.screen.orientation.type === "portrait-primary"){
       images.forEach(image => {
         image.classList.add('active');
@@ -225,12 +221,11 @@ const imageAnimation = (gallerySection, images) => {
         image.classList.remove('active');
       });
     }
-}
-window.addEventListener('scroll', imageAnimation);
-
-// menu icon animation
-const iconLines = [
-  one = document.querySelector('.one'),
+  }
+  
+  // menu icon animation
+  const iconLines = [
+    one = document.querySelector('.one'),
   two = document.querySelector('.two'),
   three = document.querySelector('.three'),
 ];
@@ -249,7 +244,6 @@ const MenuIconAnimation = (e) => {
   MenuWrap.classList.toggle('active');
   
 }
-menuIconWrap.addEventListener('click', MenuIconAnimation);
 
 const checkOrientation = () => {
   if(window.innerWidth >= 1024 && window.screen.orientation.type === "landscape-primary"){
@@ -260,24 +254,38 @@ const checkOrientation = () => {
     hideMenu();
   }
 }
-window.addEventListener('orientationchange', checkOrientation);
 
 // for messenger
 // (function(d, s, id) {
-//   var js, fjs = d.getElementsByTagName(s)[0];
-//   if (d.getElementById(id)) return;
-//   js = d.createElement(s); js.id = id;
-//   js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-//   fjs.parentNode.insertBefore(js, fjs);
-// }(document, 'script', 'facebook-jssdk'));
+  //   var js, fjs = d.getElementsByTagName(s)[0];
+  //   if (d.getElementById(id)) return;
+  //   js = d.createElement(s); js.id = id;
+  //   js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+  //   fjs.parentNode.insertBefore(js, fjs);
+  // }(document, 'script', 'facebook-jssdk'));
+  
+  window.addEventListener('scroll', MinimalizeMenuBar);
+  window.addEventListener('scroll', checksScrollPos);
+  window.addEventListener('scroll', offerIconScrollAnimation);
+  heroeName.addEventListener('click', backToTop);
+  menuHome.addEventListener('click', backToTop);
+  window.addEventListener('scroll', imageAnimation);
+  menuIconWrap.addEventListener('click', MenuIconAnimation);
+  window.addEventListener('orientationchange', checkOrientation);
 
 
 
 
 
 
-
-
-
-
-
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
