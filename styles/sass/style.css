@@ -177,7 +177,7 @@ body.active {
   }
   100% {
     display: none;
-    z-index: -1;
+    z-index: -100;
     opacity: 0;
   }
 }
@@ -193,7 +193,7 @@ body.active {
   }
   100% {
     display: none;
-    z-index: -1;
+    z-index: -100;
     opacity: 0;
   }
 }
