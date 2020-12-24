@@ -240,21 +240,22 @@ function checkIcon(){
 }
 
 
-
-  // photos in gallery animation
-  const imageAnimation = (gallerySection, images) => {
-    gallerySection = document.querySelector('.gallery');
-    images = document.querySelectorAll('.photos .glightbox img');
+// photos in gallery animation
+const imageAnimation = (gallerySection, images, equipSection ) => {
+  gallerySection = document.querySelector('.gallery');
+  images = document.querySelectorAll('.photos .glightbox img');
+  equipSection = document.querySelector('.equip');
     
-    if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + gallerySection.scrollHeight / 1.6 && window.screen.orientation.type === "portrait-primary"){
+    if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + equipSection.scrollHeight + gallerySection.scrollHeight / 1.3 && window.screen.orientation.type === "portrait-primary"){
       images.forEach(image => {
         image.classList.add('active');
       });
-    }else if(window.screen.orientation.type === "landscape-primary" === "landscape-primary" && window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + gallerySection.scrollHeight / 3){
+    }else if(window.screen.orientation.type === "landscape-primary" && window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + equipSection.scrollHeight + gallerySection.scrollHeight / 3){
       images.forEach(image => {
         image.classList.add('active');
       });
-    } else{
+    } 
+    else{
       images.forEach(image => {
         image.classList.remove('active');
       });
