@@ -21,11 +21,14 @@ html {
 }
 
 body {
-    position: relative;
     z-index: -1;
     letter-spacing: 0.8px;
+    position: fixed;
+    transition: 0.3s;
 }
-
+body.active{
+    position: relative;
+}
 
 
 // background and height of page
@@ -43,8 +46,12 @@ body {
     height: auto;
     z-index: -10;
     overflow: hidden;
+    opacity: 0;
+    transition: 0.3s;
 }
-
+.main.active{
+    opacity: 1;
+}
 @import './preload';
 
 @import './mainHeader';

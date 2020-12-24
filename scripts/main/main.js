@@ -5,19 +5,48 @@ const sectionOffer = document.querySelector('.offer');
 
 const iconLines = [
   one = document.querySelector('.one'),
-two = document.querySelector('.two'),
-three = document.querySelector('.three'),
+  two = document.querySelector('.two'),
+  three = document.querySelector('.three'),
 ];
 
 // removing preload
-const preloadWrapper = document.querySelector('.loading-wrapper');
-const pulse = document.querySelector('.pulse');
 
-window.onload = function(){
-    setTimeout(() => {
+window.onload = function(preloadWrapper, pulse, body, main){
+  preloadWrapper =  document.querySelector('.loading-wrapper');
+  pulse = document.querySelector('.pulse');
+  body = document.querySelector('body');
+  main = document.querySelector('main');
+  setTimeout(() => {
     preloadWrapper.classList.add('remove');
     pulse.classList.add('remove');
+    body.classList.add('active');
+    main.classList.add('active');
+    
+    // typing effect header 
+    setTimeout(() => {
+      let i = 0;
+        const speed = 10;
+        const text = `Przy mnie każda impreza będzie niezapomniana!`;
+        
+        (function TypeWriter(){
+          if(i< text.length){
+            const textHeader = document.querySelector('.about-intro .text-intro')
+            textHeader.innerHTML += text.charAt(i);
+            i++;
+            
+            setTimeout(TypeWriter, speed);
+            if(textHeader.textContent === text){
+              const buttonHeader = document.querySelector('.about-btn');
+              buttonHeader.classList.add('visible');
+            }
+          }
+        })();
+      }, 300);
+
     }, 2000);
+
+    
+
   }
 
 
@@ -69,30 +98,6 @@ const items = [
     });
   }
 }
-
-// typing effect header 
-
-setTimeout(() => {
-  let i = 0;
-  const speed = 10;
-  const text = `Przy mnie każda impreza będzie niezapomniana!`;
-  
-  (function TypeWriter(){
-    if(i< text.length){
-      const textHeader = document.querySelector('.about-intro .text-intro')
-      textHeader.innerHTML += text.charAt(i);
-      i++;
-      
-      setTimeout(TypeWriter, speed);
-      if(textHeader.textContent === text){
-        const buttonHeader = document.querySelector('.about-btn');
-        buttonHeader.classList.add('visible');
-      }
-    }
-  })();
-}, 300);
-
-
 
 
 
