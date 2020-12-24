@@ -9,6 +9,18 @@ two = document.querySelector('.two'),
 three = document.querySelector('.three'),
 ];
 
+// removing preload
+const preloadWrapper = document.querySelector('.loading-wrapper');
+const pulse = document.querySelector('.pulse');
+
+window.onload = function(){
+    setTimeout(() => {
+    preloadWrapper.classList.add('remove');
+    pulse.classList.add('remove');
+    }, 2000);
+  }
+
+
 // menubar with animations on scroll 
 function MinimalizeMenuBar(menuContent,  menuContentUl, menuContentText, menuHeader, menuIcon, headerName){
 
