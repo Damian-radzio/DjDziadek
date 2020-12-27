@@ -844,7 +844,7 @@ body.active {
   left: 0;
   top: 0;
   height: 32vh;
-  min-height: 28rem;
+  min-height: 30rem;
   background-color: rgba(0, 0, 0, 0.638);
   z-index: -1;
   -webkit-transition: 0.5s;

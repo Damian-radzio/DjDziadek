@@ -111,16 +111,12 @@
     left: 0;
     top: 0;
     height: 32vh;
-    min-height: 28rem;
+    min-height: 30rem;
     // max-height: 31rem;
     background-color: rgba(0, 0, 0, 0.638);
     z-index: -1;
     transition: 0.5s;
     
-    @media(min-width: 768px){
-        // min-height: 33rem;
-        // max-height: 38rem;
-    }
     @media(max-width: 1023px) and (orientation: landscape){
         min-height: 100vh;
         width: 25%;
