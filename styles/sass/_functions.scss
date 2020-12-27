@@ -43,7 +43,7 @@
     }
 
     // large mobile
-    @media (min-width: 768px) and (orientation: portrait) {
+    @media (min-width: 768px) {
         font-size: 4rem;
         width: 27rem;
         height: 7rem;
@@ -52,7 +52,7 @@
     }
 
     @media (min-width: 1024px) {
-        font-size: 6rem;
+        font-size: 5.5rem;
         width: 29rem;
         height: 8rem;
     }
