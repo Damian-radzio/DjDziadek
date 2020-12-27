@@ -617,6 +617,12 @@ body.active {
           align-items: center;
 }
 
+.main-header .icons li .contact-icon,
+.main-header .icons li .facebook-icon,
+.main-header .icons li .insta-icon {
+  list-style: none;
+}
+
 .main-header .icons img {
   width: 2.8rem;
   -webkit-transition: 0.2s;
@@ -974,7 +980,12 @@ body.active {
   }
 }
 
-.menu-content .wrapper ul li a {
+.menu-content .wrapper ul li .menu-home,
+.menu-content .wrapper ul li .menu-about-me,
+.menu-content .wrapper ul li .menu-offer,
+.menu-content .wrapper ul li .menu-equip,
+.menu-content .wrapper ul li .menu-gallery,
+.menu-content .wrapper ul li .menu-contact {
   position: relative;
   z-index: 10;
   padding-bottom: 0.4rem;
@@ -986,7 +997,12 @@ body.active {
   transition: 0.4s;
 }
 
-.menu-content .wrapper ul li a:focus {
+.menu-content .wrapper ul li .menu-home:focus,
+.menu-content .wrapper ul li .menu-about-me:focus,
+.menu-content .wrapper ul li .menu-offer:focus,
+.menu-content .wrapper ul li .menu-equip:focus,
+.menu-content .wrapper ul li .menu-gallery:focus,
+.menu-content .wrapper ul li .menu-contact:focus {
   -webkit-animation: click 0.3s ease both;
           animation: click 0.3s ease both;
 }
@@ -1007,49 +1023,89 @@ body.active {
 }
 
 @media (min-width: 375px) and (orientation: portrait) {
-  .menu-content .wrapper ul li a {
+  .menu-content .wrapper ul li .menu-home,
+  .menu-content .wrapper ul li .menu-about-me,
+  .menu-content .wrapper ul li .menu-offer,
+  .menu-content .wrapper ul li .menu-equip,
+  .menu-content .wrapper ul li .menu-gallery,
+  .menu-content .wrapper ul li .menu-contact {
     font-size: 2.1rem;
   }
 }
 
 @media (min-width: 768px) {
-  .menu-content .wrapper ul li a {
+  .menu-content .wrapper ul li .menu-home,
+  .menu-content .wrapper ul li .menu-about-me,
+  .menu-content .wrapper ul li .menu-offer,
+  .menu-content .wrapper ul li .menu-equip,
+  .menu-content .wrapper ul li .menu-gallery,
+  .menu-content .wrapper ul li .menu-contact {
     font-size: 2.5rem;
   }
 }
 
 @media (max-width: 1023px) and (orientation: landscape) {
-  .menu-content .wrapper ul li a {
+  .menu-content .wrapper ul li .menu-home,
+  .menu-content .wrapper ul li .menu-about-me,
+  .menu-content .wrapper ul li .menu-offer,
+  .menu-content .wrapper ul li .menu-equip,
+  .menu-content .wrapper ul li .menu-gallery,
+  .menu-content .wrapper ul li .menu-contact {
     margin-bottom: 0.6rem;
   }
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
-  .menu-content .wrapper ul li a {
+  .menu-content .wrapper ul li .menu-home,
+  .menu-content .wrapper ul li .menu-about-me,
+  .menu-content .wrapper ul li .menu-offer,
+  .menu-content .wrapper ul li .menu-equip,
+  .menu-content .wrapper ul li .menu-gallery,
+  .menu-content .wrapper ul li .menu-contact {
     margin-right: 5rem;
     font-size: 2.8rem;
   }
-  .menu-content .wrapper ul li a:hover {
+  .menu-content .wrapper ul li .menu-home:hover,
+  .menu-content .wrapper ul li .menu-about-me:hover,
+  .menu-content .wrapper ul li .menu-offer:hover,
+  .menu-content .wrapper ul li .menu-equip:hover,
+  .menu-content .wrapper ul li .menu-gallery:hover,
+  .menu-content .wrapper ul li .menu-contact:hover {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
   }
 }
 
 @media (min-width: 1600px) and (orientation: landscape) {
-  .menu-content .wrapper ul li a {
+  .menu-content .wrapper ul li .menu-home,
+  .menu-content .wrapper ul li .menu-about-me,
+  .menu-content .wrapper ul li .menu-offer,
+  .menu-content .wrapper ul li .menu-equip,
+  .menu-content .wrapper ul li .menu-gallery,
+  .menu-content .wrapper ul li .menu-contact {
     margin-right: 8rem;
     font-size: 3.6rem;
   }
 }
 
 @media (min-width: 1024px) and (orientation: portrait) {
-  .menu-content .wrapper ul li a {
+  .menu-content .wrapper ul li .menu-home,
+  .menu-content .wrapper ul li .menu-about-me,
+  .menu-content .wrapper ul li .menu-offer,
+  .menu-content .wrapper ul li .menu-equip,
+  .menu-content .wrapper ul li .menu-gallery,
+  .menu-content .wrapper ul li .menu-contact {
     font-size: 3.4rem;
   }
 }
 
 @media (max-width: 1023px) and (orientation: landscape) {
-  .menu-content .wrapper ul li a.scrollMobile {
+  .menu-content .wrapper ul li .menu-home.scrollMobile,
+  .menu-content .wrapper ul li .menu-about-me.scrollMobile,
+  .menu-content .wrapper ul li .menu-offer.scrollMobile,
+  .menu-content .wrapper ul li .menu-equip.scrollMobile,
+  .menu-content .wrapper ul li .menu-gallery.scrollMobile,
+  .menu-content .wrapper ul li .menu-contact.scrollMobile {
     margin-bottom: 0.2rem;
   }
 }
@@ -1792,21 +1848,20 @@ body.active {
 
 @media (min-width: 768px) {
   .equip .blocks .block .block-info {
-    margin-top: 4rem;
+    margin-top: 2rem;
     font-size: 2.2rem;
   }
 }
 
 @media (min-width: 1024px) {
   .equip .blocks .block .block-info {
-    margin-top: 2rem;
-    font-size: 2.5rem;
+    margin-top: 2.2rem;
+    font-size: 2.3rem;
   }
 }
 
 .equip .blocks .block .fa-caret-down {
   font-size: 3rem;
-  padding: 1rem;
   -webkit-transition: .7s;
   transition: .7s;
   cursor: pointer;
@@ -2389,6 +2444,11 @@ body.active {
   }
 }
 
+.contact .info .icons .facebook-icon,
+.contact .info .icons .insta-icon {
+  list-style: none;
+}
+
 .contact .info .icons img {
   margin: 2rem;
   -webkit-transition: 0.3s;
@@ -2524,6 +2584,10 @@ body.active {
 
 .footer .copyright {
   font-weight: 300;
+}
+
+.footer .owner {
+  color: white;
 }
 
 .footer .authors {

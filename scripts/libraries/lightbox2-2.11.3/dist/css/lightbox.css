@@ -1,5 +1,8 @@
 body.lb-disable-scrolling {
   overflow: hidden;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
 }
 
 .lightboxOverlay {
@@ -85,7 +88,6 @@ body.lb-disable-scrolling {
   width: 100%;
   z-index: 10;
 }
-
 .lb-container > .nav {
   left: 0;
 }

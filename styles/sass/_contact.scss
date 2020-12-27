@@ -49,7 +49,10 @@
 
 
         .icons {
-            
+            .facebook-icon,
+            .insta-icon{
+                list-style: none;
+            }
             img {
                 margin: 2rem;
                 transition: 0.3s;
