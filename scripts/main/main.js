@@ -250,12 +250,12 @@ const imageAnimation = (gallerySection, images, equipSection ) => {
   gallerySection = document.querySelector('#gallery');
   images = document.querySelectorAll('.photos .glightbox img');
   equipSection = document.querySelector('#equip');
-    
+    let mql = window.matchMedia('(orientation: landscape)')
     if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + equipSection.scrollHeight + gallerySection.scrollHeight / 1.3 && window.screen.orientation.type === "portrait-primary"){
       images.forEach(image => {
         image.classList.add('active');
       });
-    }else if(window.screen.orientation.type === "landscape-primary" && window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + equipSection.scrollHeight + gallerySection.scrollHeight / 3){
+    }else if(mql.matches && window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + equipSection.scrollHeight + gallerySection.scrollHeight / 3){
       images.forEach(image => {
         image.classList.add('active');
       });
