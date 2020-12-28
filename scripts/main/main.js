@@ -251,7 +251,7 @@ const imageAnimation = (gallerySection, images, equipSection ) => {
   images = document.querySelectorAll('.photos .glightbox img');
   equipSection = document.querySelector('#equip');
     let mql = window.matchMedia('(orientation: landscape)')
-    if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + equipSection.scrollHeight + gallerySection.scrollHeight / 1.3 && window.screen.orientation.type === "portrait-primary"){
+    if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + equipSection.scrollHeight + gallerySection.scrollHeight / 1.3 && !mql.matches){
       images.forEach(image => {
         image.classList.add('active');
       });
@@ -286,7 +286,7 @@ const MenuIconAnimation = (e) => {
 }
 
 const checkOrientation = () => {
-  if(window.innerWidth >= 1024 && window.screen.orientation.type === "landscape-primary"){
+  if(window.innerWidth >= 1024 && mql.matches){
     MenuWrap.classList.add('active');
     menuIconWrap.classList.add('active');
     
