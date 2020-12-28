@@ -150,11 +150,13 @@ const offerIconScrollAnimation = () => {
 
 
 const hideMenu = () => {
-  MenuWrap.classList.remove('active');
+  setTimeout(() => {
+    MenuWrap.classList.remove('active');
   one.classList.remove('active-menu');
   two.classList.remove('active-menu');
   three.classList.remove('active-menu');
   menuIconWrap.classList.remove('active-menu');
+  }, 100);
 }
 const moveToSection = (place, position) => {
   $('body, html').animate({
@@ -167,9 +169,7 @@ const AboutMeButton = $('.about-btn');
 const moveToAboutMe = (e) => {
   e.preventDefault();
   moveToSection($('#about-me'), - 50);
-  setTimeout(() => {
     hideMenu();
-  }, 300);
 }
 
 // menu after click
@@ -181,9 +181,7 @@ const OfferMenuBtn = $('.menu-offer');
 const moveToOffer = (e) => {
   e.preventDefault();
   moveToSection($('#offer'), - 100);
-  setTimeout(() => {
     hideMenu();
-  }, 300);
 }
 
 
@@ -191,10 +189,7 @@ const moveToOffer = (e) => {
 const moveToGallery = (e) => {
   e.preventDefault();
   moveToSection($('#gallery'), - 100);
-  
-  setTimeout(() => {
     hideMenu();
-  }, 300);
 }
 const galleryMenuBtn =  $('.menu-gallery');
 
@@ -204,9 +199,7 @@ const galleryMenuBtn =  $('.menu-gallery');
 const moveToContact = (e) => {
   e.preventDefault();
   moveToSection($('#contact'), - 100);
-  setTimeout(() => {
     hideMenu();
-  }, 300);
   
 }
 const contactMenuBtn = $('.menu-contact');
@@ -219,9 +212,7 @@ const equipMenuButton = $('.menu-equip');
 const moveToEquip = (e) => {
   e.preventDefault();
    moveToSection($('#equip'), - 100);
-   setTimeout(() => {
      hideMenu();
-    }, 300);
   }
 
 
@@ -230,9 +221,7 @@ const heroeName = document.querySelector('.name');
 const backToTop = (e) => {
   e.preventDefault();
    moveToSection($('#main-header'), - 0);
-   setTimeout(() => {
      hideMenu();
-    }, 300);
   }
   const menuHome = document.querySelector('.menu-home');
 
@@ -245,12 +234,12 @@ function checkIcon(){
 }
 
 
+let mql = window.matchMedia('(orientation: landscape)');
 // photos in gallery animation
 const imageAnimation = (gallerySection, images, equipSection ) => {
   gallerySection = document.querySelector('#gallery');
   images = document.querySelectorAll('.photos .glightbox img');
   equipSection = document.querySelector('#equip');
-    let mql = window.matchMedia('(orientation: landscape)')
     if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + equipSection.scrollHeight + gallerySection.scrollHeight / 1.3 && !mql.matches){
       images.forEach(image => {
         image.classList.add('active');
@@ -286,10 +275,9 @@ const MenuIconAnimation = (e) => {
 }
 
 const checkOrientation = () => {
-  if(window.innerWidth >= 1024 && mql.matches){
+  if(window.innerWidth >= 1024 && !mql.matches){
     MenuWrap.classList.add('active');
     menuIconWrap.classList.add('active');
-    
   }else{
     hideMenu();
   }
