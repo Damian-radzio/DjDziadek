@@ -300,6 +300,10 @@ body.active {
   transition: 0.5s;
   padding-left: 1rem;
   cursor: pointer;
+  border-style: none;
+  background-color: transparent;
+  font-family: "Oswald";
+  outline: none;
 }
 
 #main-header .components .header .name.active {

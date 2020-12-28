@@ -53,6 +53,11 @@
                 transition: 0.5s;
                 padding-left: 1rem;
                 cursor: pointer;
+                border-style: none;
+                background-color: transparent;
+                font-family: $mainFont;
+                outline: none;
+                
                 &.active {
                     transform: scale(0.7);
                 }
