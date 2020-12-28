@@ -9,7 +9,7 @@
 
     <link rel="preload" as="style" href="./styles/css/style.min.css">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap">
-    <link rel="preload" as="script" href="./scripts/main/main.min.js">
+    <link rel="preload" as="script" href="./scripts/main/main.js">
 
     <link rel="stylesheet" href="./styles/css/style.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
     <div class="pulse"></div>
 </div>
     <main class="main">
-        <section class="main-header">
+        <section id="main-header">
             <div class="components">
                 <div class="header">
                     <h1 class="name">dj dziadek</h1>
@@ -41,12 +41,12 @@
                             <nav class="wrapper">
                                 <ul>
                                     <li>
-                                        <a class="menu-home"     href="#">home</a>
-                                        <a class="menu-about-me" href="#">O mnie</a>
-                                        <a class="menu-offer"    href="#">Oferta</a>
-                                        <a class="menu-equip"    href="#">Wyposażenie</a>
-                                        <a class="menu-gallery"  href="#">Galeria</a>
-                                        <a class="menu-contact"  href="#">Kontakt</a>
+                                        <a class="menu-home"     href="#main-header">home</a>
+                                        <a class="menu-about-me" href="#about-me">O mnie</a>
+                                        <a class="menu-offer"    href="#offer">Oferta</a>
+                                        <a class="menu-equip"    href="#equip">Wyposażenie</a>
+                                        <a class="menu-gallery"  href="#gallery">Galeria</a>
+                                        <a class="menu-contact"  href="#contact">Kontakt</a> 
                                     </li>
                                 </ul>
                             </nav>
@@ -63,19 +63,19 @@
                 <nav>
                     <ul>
                         <li>
-                            <a class="contact-icon" href="#"><img src="./html&components/icons/iconmonstr-phone-8-240.png" alt="ikona telefonu"></a>
-                            <a class="facebook-icon" href="https://www.facebook.com/"><img src="./html&components/icons/iconmonstr-facebook-4-240.png" alt="ikona facebooka"></a>
-                            <a class="insta-icon" href="https://www.instagram.com/"><img src="./html&components/icons/iconmonstr-instagram-14-240.png" alt="ikona instagrama"></a>
+                            <a class="contact-icon" href="#"><img src="./html&components/icons/iconmonstr-phone-8-240.png" alt="przeniesienie do sekcji kontaktu"></a>
+                            <a class="facebook-icon" href="https://www.facebook.com/"><img src="./html&components/icons/iconmonstr-facebook-4-240.png" alt="profil na facebook"></a>
+                            <a class="insta-icon" href="https://www.instagram.com/"><img src="./html&components/icons/iconmonstr-instagram-14-240.png" alt="profil na instagramie"></a>
                         </li>
                     </ul>
                 </nav>
             </section>
         </section>
         <aside class="experience">
-            <h1 class="experience-h1"><span class="experience-number"></span>lat Doświadczenia</h1>
+            <h2 class="experience-h1"><span class="experience-number"></span>lat Doświadczenia</h2>
         </aside>
-        <section class="about-me">
-            <h1 class="h1">o mnie</h1>
+        <section id="about-me">
+            <h2 class="h1">o mnie</h2>
                 <p class="text">Pochodzę z Pawłowic Śląskich,
                     Muzyką interesuję się od zawsze,
                     gram z pasji i przyjemności.
@@ -88,18 +88,18 @@
             </p>
         </section>
 
-        <section class="offer">
-            <h1 class="h1">oferta</h1>
+        <section id="offer">
+            <h2 class="h1">oferta</h2>
             <div class="types">
-                <div class="type odd"><img loading="lazy" src="html&components/icons/iconmonstr-candy-17-240.png" alt="ikona tortu"><h1>imprezy urodzinowe</h1></div>
-                <div class="type even"><img loading="lazy" src="html&components/icons/iconmonstr-school-21-240.png" alt="ikona szkoły"><h1>imprezy szkolne</h1></div>
-                <div class="type odd"><img loading="lazy" src="html&components/icons/iconmonstr-favorite-3-240.png" alt="ikona ślubu"><h1>imprezy weselne</h1></div>
-                <div class="type even"><img loading="lazy" src="html&components/icons/iconmonstr-party-9-240.png" alt="ikona dysku Dj"><h1>i wiele więcej!</h1></div>
+                <div class="type odd"><img loading="lazy" src="html&components/icons/iconmonstr-candy-17-240.png" alt=""><h1>imprezy urodzinowe</h1></div>
+                <div class="type even"><img loading="lazy" src="html&components/icons/iconmonstr-school-21-240.png" alt=""><h1>imprezy szkolne</h1></div>
+                <div class="type odd"><img loading="lazy" src="html&components/icons/iconmonstr-favorite-3-240.png" alt=""><h1>imprezy weselne</h1></div>
+                <div class="type even"><img loading="lazy" src="html&components/icons/iconmonstr-party-9-240.png" alt=""><h1>i wiele więcej!</h1></div>
             </div>
         </div>
         </section>
-<section class="equip">
-    <h1 class="equip-header">wyposażenie</h1>
+<section id="equip">
+    <h2 class="equip-header">wyposażenie</h2>
     <div class="blocks">
         <div class="block">
             <p class="block-info">Profesjonalne nagłośnienie firmy "mackie"</p>
@@ -144,8 +144,8 @@
         <div class="block"><p class="block-info">Dymnica / Ciężki dym</p></div>
     </div>
 </section>
-        <section class="gallery">
-            <h1 class="h1">Galeria</h1>
+        <section id="gallery">
+            <h2 class="h1">Galeria</h2>
             <div class="photos">
                 <a href="html&components/img/gallery/wedding_Easy-Resize.com (4).jpg" class="glightbox lb-disable-scrolling" data-lightbox="roadtrip"><img  class="one" src="html&components/img/gallery/wedding_Easy-Resize.com (4).jpg" alt="zdięcie zabawy u DjDziadka" loading="lazy"></a>
                 
@@ -158,10 +158,10 @@
             <p class="show-more">Po więcej odwiedź mój profil na <a href="https://www.instagram.com">instagramie</a></p>
         </section>
 
-        <section class="contact">
+        <section id="contact">
             
             <div class="info">
-                <h1 class="heading">Kontakt</h1>
+                <h2 class="heading">Kontakt</h2>
                 <p class="number">tel. +48 514 209 538</p>
             <p class="email">e-mail: slawekdjdziadek@gmail.com</p>
 
@@ -173,7 +173,7 @@
            </div>
         </section>
 
-        <footer class="footer">
+        <footer id="footer">
             <p class="copyright">&copy;2020 djdziadek.pl - All rights reserved</p>
             <p class="owner">Właściciel strony: Sławomir Dziadek</p>
             <p class="authors">Projekt i wykonanie: Aleksandra Ziebura, Damian Radecki</p>
@@ -183,7 +183,7 @@
 
     <script src="./scripts/libraries/jquery-3.5.1.min.js"></script>
     <script src="./scripts/libraries/lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
-    <script src="./scripts/main/main.min.js"></script>
+    <script src="./scripts/main/main.js"></script>
 </body>
 
 </html>

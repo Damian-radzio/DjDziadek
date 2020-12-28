@@ -208,7 +208,7 @@ body.active {
   }
 }
 
-.main-header {
+#main-header {
   position: relative;
   top: 0;
   left: 0;
@@ -221,12 +221,12 @@ body.active {
   background-size: cover;
 }
 
-.main-header .components {
+#main-header .components {
   position: relative;
   font-family: "Oswald", sans-serif;
 }
 
-.main-header .components .header {
+#main-header .components .header {
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -250,26 +250,26 @@ body.active {
   top: 0;
 }
 
-.main-header .components .header.active {
+#main-header .components .header.active {
   z-index: 3;
   height: 7vh;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
 @media (min-width: 768px) and (orientation: landscape) {
-  .main-header .components .header.active {
+  #main-header .components .header.active {
     min-height: 8rem;
   }
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
-  .main-header .components .header.active {
+  #main-header .components .header.active {
     min-height: 9rem;
   }
 }
 
 @media (min-height: 280px) and (orientation: landscape) {
-  .main-header .components .header {
+  #main-header .components .header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -287,7 +287,7 @@ body.active {
   }
 }
 
-.main-header .components .header .name {
+#main-header .components .header .name {
   position: relative;
   z-index: 2;
   display: inline-block;
@@ -302,26 +302,26 @@ body.active {
   cursor: pointer;
 }
 
-.main-header .components .header .name.active {
+#main-header .components .header .name.active {
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
 }
 
 @media (min-width: 320px) and (orientation: portrait) {
-  .main-header .components .header .name {
+  #main-header .components .header .name {
     padding-left: 2.5rem;
   }
 }
 
 @media (min-width: 411px) and (orientation: portrait) {
-  .main-header .components .header .name {
+  #main-header .components .header .name {
     font-size: 4.5rem;
     padding-left: 3rem;
   }
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
-  .main-header .components .header .name {
+  #main-header .components .header .name {
     font-size: 7.5rem;
     left: 5rem;
     padding-left: 5rem;
@@ -329,7 +329,7 @@ body.active {
 }
 
 @media (min-width: 1024px) and (orientation: portrait) {
-  .main-header .components .header .name {
+  #main-header .components .header .name {
     font-size: 9.5rem;
     left: 7rem;
     padding-left: 7rem;
@@ -337,31 +337,31 @@ body.active {
 }
 
 @media (orientation: landscape) {
-  .main-header .components .header .name {
+  #main-header .components .header .name {
     padding-left: 6rem;
   }
 }
 
 @media (min-width: 768px) and (orientation: landscape) {
-  .main-header .components .header .name {
+  #main-header .components .header .name {
     font-size: 6.5rem;
     padding-top: 2rem;
   }
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
-  .main-header .components .header .name {
+  #main-header .components .header .name {
     font-size: 8rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .main-header .components .header .name:hover {
+  #main-header .components .header .name:hover {
     opacity: 0.8;
   }
 }
 
-.main-header .components .about-intro {
+#main-header .components .about-intro {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -382,38 +382,38 @@ body.active {
 }
 
 @media (min-width: 320px) and (orientation: portrait) {
-  .main-header .components .about-intro {
+  #main-header .components .about-intro {
     margin-left: 2.5rem;
   }
 }
 
 @media (min-width: 411px) and (orientation: portrait) {
-  .main-header .components .about-intro {
+  #main-header .components .about-intro {
     margin-left: 3.5rem;
   }
 }
 
 @media (min-width: 768px) {
-  .main-header .components .about-intro {
+  #main-header .components .about-intro {
     margin-left: 5.5rem;
   }
 }
 
 @media (min-width: 1024px) and (orientation: portrait) {
-  .main-header .components .about-intro {
+  #main-header .components .about-intro {
     margin-left: 8rem;
     width: 50%;
   }
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
-  .main-header .components .about-intro {
+  #main-header .components .about-intro {
     margin-left: 10rem;
     width: 50%;
   }
 }
 
-.main-header .components .about-intro .text-intro {
+#main-header .components .about-intro .text-intro {
   width: 50%;
   color: white;
   font-weight: 500;
@@ -421,45 +421,45 @@ body.active {
 }
 
 @media (min-width: 320px) and (orientation: portrait) {
-  .main-header .components .about-intro .text-intro {
+  #main-header .components .about-intro .text-intro {
     font-size: 2.4rem;
   }
 }
 
 @media (min-width: 375px) and (orientation: portrait) {
-  .main-header .components .about-intro .text-intro {
+  #main-header .components .about-intro .text-intro {
     font-size: 2.7rem;
   }
 }
 
 @media (min-width: 411px) and (min-height: 720px) {
-  .main-header .components .about-intro .text-intro {
+  #main-header .components .about-intro .text-intro {
     font-size: 3rem;
   }
 }
 
 @media (min-width: 768px) {
-  .main-header .components .about-intro .text-intro {
+  #main-header .components .about-intro .text-intro {
     font-size: 4rem;
     width: 50rem;
   }
 }
 
 @media (min-width: 1024px) and (orientation: portrait) {
-  .main-header .components .about-intro .text-intro {
+  #main-header .components .about-intro .text-intro {
     width: 80%;
     font-size: 7rem;
   }
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
-  .main-header .components .about-intro .text-intro {
+  #main-header .components .about-intro .text-intro {
     width: 100%;
     font-size: 6.5rem;
   }
 }
 
-.main-header .components .about-intro .about-btn {
+#main-header .components .about-intro .about-btn {
   background-color: rgba(0, 0, 0, 0.583);
   width: 14rem;
   min-width: 14rem;
@@ -482,7 +482,7 @@ body.active {
 }
 
 @media (min-width: 320px) and (orientation: portrait) {
-  .main-header .components .about-intro .about-btn {
+  #main-header .components .about-intro .about-btn {
     font-size: 2.3rem;
     width: 13rem;
     height: 3.5rem;
@@ -491,14 +491,14 @@ body.active {
 }
 
 @media (min-width: 375px) and (orientation: portrait) {
-  .main-header .components .about-intro .about-btn {
+  #main-header .components .about-intro .about-btn {
     width: 15rem;
     height: 4rem;
   }
 }
 
 @media (min-width: 411px) and (min-height: 720px) {
-  .main-header .components .about-intro .about-btn {
+  #main-header .components .about-intro .about-btn {
     font-size: 3rem;
     width: 16.5rem;
     height: 4.4rem;
@@ -506,7 +506,7 @@ body.active {
 }
 
 @media (min-width: 768px) {
-  .main-header .components .about-intro .about-btn {
+  #main-header .components .about-intro .about-btn {
     font-size: 4rem;
     width: 27rem;
     height: 7rem;
@@ -516,21 +516,21 @@ body.active {
 }
 
 @media (min-width: 1024px) {
-  .main-header .components .about-intro .about-btn {
+  #main-header .components .about-intro .about-btn {
     font-size: 5.5rem;
     width: 29rem;
     height: 8rem;
   }
 }
 
-.main-header .components .about-intro .about-btn.visible {
+#main-header .components .about-intro .about-btn.visible {
   opacity: 1;
   font-weight: 300;
   color: white;
   cursor: pointer;
 }
 
-.main-header .components .about-intro .about-btn:focus {
+#main-header .components .about-intro .about-btn:focus {
   -webkit-animation: click 0.3s ease both;
           animation: click 0.3s ease both;
 }
@@ -566,10 +566,10 @@ body.active {
 }
 
 @media (min-width: 1024px) {
-  .main-header .components .about-intro .about-btn {
+  #main-header .components .about-intro .about-btn {
     border-radius: 30px;
   }
-  .main-header .components .about-intro .about-btn:hover {
+  #main-header .components .about-intro .about-btn:hover {
     color: black;
     background-color: white;
     -webkit-transform: scale(0.9);
@@ -577,7 +577,7 @@ body.active {
   }
 }
 
-.main-header .icons {
+#main-header .icons {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -589,18 +589,18 @@ body.active {
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
-  .main-header .icons {
+  #main-header .icons {
     bottom: 3vh;
   }
 }
 
 @media (min-width: 1024px) and (orientation: portrait) {
-  .main-header .icons {
+  #main-header .icons {
     bottom: 7vh;
   }
 }
 
-.main-header .icons li {
+#main-header .icons li {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -617,56 +617,56 @@ body.active {
           align-items: center;
 }
 
-.main-header .icons li .contact-icon,
-.main-header .icons li .facebook-icon,
-.main-header .icons li .insta-icon {
+#main-header .icons li .contact-icon,
+#main-header .icons li .facebook-icon,
+#main-header .icons li .insta-icon {
   list-style: none;
 }
 
-.main-header .icons img {
+#main-header .icons img {
   width: 2.8rem;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
 @media (min-width: 320px) and (orientation: portrait) {
-  .main-header .icons img {
+  #main-header .icons img {
     width: 3.2rem;
   }
 }
 
 @media (min-width: 375px) and (orientation: portrait) {
-  .main-header .icons img {
+  #main-header .icons img {
     width: 3.5rem;
   }
 }
 
 @media (min-width: 414px) and (min-height: 720px) {
-  .main-header .icons img {
+  #main-header .icons img {
     width: 3.7rem;
   }
 }
 
 @media (min-width: 768px) {
-  .main-header .icons img {
+  #main-header .icons img {
     width: 4.0rem;
   }
 }
 
 @media (min-width: 1024px) and (orientation: portrait) {
-  .main-header .icons img {
+  #main-header .icons img {
     width: 6.0rem;
   }
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
-  .main-header .icons img {
+  #main-header .icons img {
     width: 7.0rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .main-header .icons img:hover {
+  #main-header .icons img:hover {
     -webkit-transform: scale(1.3);
             transform: scale(1.3);
   }
@@ -1317,7 +1317,7 @@ body.active {
   }
 }
 
-.about-me {
+#about-me {
   position: relative;
   font-family: "Oswald";
   color: white;
@@ -1346,7 +1346,7 @@ body.active {
   background-attachment: fixed;
 }
 
-.about-me::after {
+#about-me::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1358,20 +1358,20 @@ body.active {
 }
 
 @supports (-webkit-touch-callout: none) {
-  .about-me {
+  #about-me {
     background-attachment: scroll;
     background-size: cover;
   }
 }
 
 @media (min-width: 1024px) {
-  .about-me {
+  #about-me {
     min-height: 80rem;
     height: 70vh;
   }
 }
 
-.about-me .h1 {
+#about-me .h1 {
   color: white;
   width: 100%;
   text-align: center;
@@ -1384,36 +1384,36 @@ body.active {
 }
 
 @media (min-width: 375px) and (orientation: portrait) {
-  .about-me .h1 {
+  #about-me .h1 {
     font-size: 4.7rem;
   }
 }
 
 @media (min-width: 411px) and (orientation: portrait) {
-  .about-me .h1 {
+  #about-me .h1 {
     font-size: 4.9rem;
   }
 }
 
 @media (min-width: 800px) and (orientation: landscape) {
-  .about-me .h1 {
+  #about-me .h1 {
     font-size: 7rem;
   }
 }
 
 @media (min-width: 768px) {
-  .about-me .h1 {
+  #about-me .h1 {
     font-size: 7rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .about-me .h1 {
+  #about-me .h1 {
     font-size: 9rem;
   }
 }
 
-.about-me .text {
+#about-me .text {
   text-align: justify;
   text-align-last: center;
   word-break: break-all;
@@ -1429,52 +1429,52 @@ body.active {
 }
 
 @media (min-width: 375px) and (orientation: portrait) {
-  .about-me .text {
+  #about-me .text {
     font-size: 2.8rem;
   }
 }
 
 @media (min-width: 411px) and (orientation: portrait) {
-  .about-me .text {
+  #about-me .text {
     font-size: 3rem;
   }
 }
 
 @media (min-width: 800px) and (orientation: landscape) {
-  .about-me .text {
+  #about-me .text {
     font-size: 5rem;
     line-height: 4.5rem;
   }
 }
 
 @media (min-width: 768px) {
-  .about-me .text {
+  #about-me .text {
     font-size: 3.3rem;
     line-height: 5.5rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .about-me .text {
+  #about-me .text {
     font-size: 4rem;
     line-height: 6.5rem;
   }
 }
 
 @media (min-width: 1240px) {
-  .about-me .text {
+  #about-me .text {
     font-size: 5rem;
     line-height: 10rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .about-me .text {
+  #about-me .text {
     text-align: center;
   }
 }
 
-.about-me .text .about-me-name {
+#about-me .text .about-me-name {
   font-weight: 400;
   display: block;
   font-size: 1.2em;
@@ -1482,19 +1482,19 @@ body.active {
 }
 
 @media (min-width: 768px) {
-  .about-me .text .about-me-name {
+  #about-me .text .about-me-name {
     font-size: 1.7em;
   }
 }
 
 @supports (-webkit-touch-callout: none) {
-  .about-me .text .about-me-name {
+  #about-me .text .about-me-name {
     text-align: center;
     margin: 0 auto;
   }
 }
 
-.offer {
+#offer {
   margin-top: 10rem;
   margin-bottom: 10rem;
   width: 100%;
@@ -1517,7 +1517,7 @@ body.active {
   margin-top: 5rem;
 }
 
-.offer .h1 {
+#offer .h1 {
   color: white;
   width: 100%;
   text-align: center;
@@ -1529,36 +1529,36 @@ body.active {
 }
 
 @media (min-width: 375px) and (orientation: portrait) {
-  .offer .h1 {
+  #offer .h1 {
     font-size: 4.7rem;
   }
 }
 
 @media (min-width: 411px) and (orientation: portrait) {
-  .offer .h1 {
+  #offer .h1 {
     font-size: 4.9rem;
   }
 }
 
 @media (min-width: 800px) and (orientation: landscape) {
-  .offer .h1 {
+  #offer .h1 {
     font-size: 7rem;
   }
 }
 
 @media (min-width: 768px) {
-  .offer .h1 {
+  #offer .h1 {
     font-size: 7rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .offer .h1 {
+  #offer .h1 {
     font-size: 9rem;
   }
 }
 
-.offer .types {
+#offer .types {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1576,119 +1576,119 @@ body.active {
   width: 100%;
 }
 
-.offer .types .type {
+#offer .types .type {
   margin-top: 3rem;
 }
 
-.offer .types .type h1 {
+#offer .types .type h1 {
   text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
-  .offer .types .type {
+  #offer .types .type {
     font-size: 2rem;
   }
 }
 
 @media (min-width: 1240px) {
-  .offer .types .type {
+  #offer .types .type {
     font-size: 3rem;
   }
 }
 
-.offer .types .type img {
+#offer .types .type img {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   width: 20%;
 }
 
 @media (orientation: landscape) {
-  .offer .types .type img {
+  #offer .types .type img {
     width: 30%;
   }
 }
 
 @media (min-width: 768px) {
-  .offer .types .type img {
+  #offer .types .type img {
     width: 40%;
   }
 }
 
 @media (min-width: 1240px) {
-  .offer .types .type img {
+  #offer .types .type img {
     width: 40%;
   }
 }
 
-.offer .even {
+#offer .even {
   -webkit-transition: 1s 0.5s;
   transition: 1s 0.5s;
   opacity: 0.1;
 }
 
-.offer .even.active {
+#offer .even.active {
   opacity: 1;
 }
 
 @media (orientation: landscape) {
-  .offer .even {
+  #offer .even {
     -webkit-transition: 1s;
     transition: 1s;
     margin-left: 15%;
   }
-  .offer .even.active {
+  #offer .even.active {
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
   }
 }
 
 @media (min-width: 768px) {
-  .offer .even {
+  #offer .even {
     -webkit-transition: 1s;
     transition: 1s;
     margin-left: 15%;
   }
-  .offer .even.active {
+  #offer .even.active {
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
   }
 }
 
-.offer .odd {
+#offer .odd {
   -webkit-transition: 1s 0.5s;
   transition: 1s 0.5s;
   opacity: 0.1;
 }
 
-.offer .odd.active {
+#offer .odd.active {
   opacity: 1;
 }
 
 @media (orientation: landscape) {
-  .offer .odd {
+  #offer .odd {
     -webkit-transition: 1s;
     transition: 1s;
     margin-right: 15%;
   }
-  .offer .odd.active {
+  #offer .odd.active {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
 }
 
 @media (min-width: 768px) {
-  .offer .odd {
+  #offer .odd {
     -webkit-transition: 1s;
     transition: 1s;
     margin-right: 15%;
   }
-  .offer .odd.active {
+  #offer .odd.active {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
 }
 
-.equip {
+#equip {
   margin-top: 10rem;
   margin-bottom: 10rem;
   width: 100%;
@@ -1710,7 +1710,7 @@ body.active {
           align-items: center;
 }
 
-.equip .equip-header {
+#equip .equip-header {
   color: white;
   width: 100%;
   text-align: center;
@@ -1722,36 +1722,36 @@ body.active {
 }
 
 @media (min-width: 375px) and (orientation: portrait) {
-  .equip .equip-header {
+  #equip .equip-header {
     font-size: 4.7rem;
   }
 }
 
 @media (min-width: 411px) and (orientation: portrait) {
-  .equip .equip-header {
+  #equip .equip-header {
     font-size: 4.9rem;
   }
 }
 
 @media (min-width: 800px) and (orientation: landscape) {
-  .equip .equip-header {
+  #equip .equip-header {
     font-size: 7rem;
   }
 }
 
 @media (min-width: 768px) {
-  .equip .equip-header {
+  #equip .equip-header {
     font-size: 7rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .equip .equip-header {
+  #equip .equip-header {
     font-size: 9rem;
   }
 }
 
-.equip .blocks {
+#equip .blocks {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1769,7 +1769,7 @@ body.active {
 }
 
 @media (min-width: 768px) {
-  .equip .blocks {
+  #equip .blocks {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1788,7 +1788,7 @@ body.active {
   }
 }
 
-.equip .blocks .block {
+#equip .blocks .block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1816,7 +1816,7 @@ body.active {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#46185c",endColorstr="#000417",GradientType=1);
 }
 
-.equip .blocks .block:nth-last-child(1) {
+#equip .blocks .block:nth-last-child(1) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1833,11 +1833,11 @@ body.active {
   padding: 0rem;
 }
 
-.equip .blocks .block:nth-last-child(1) .block-info {
+#equip .blocks .block:nth-last-child(1) .block-info {
   margin-top: 0rem;
 }
 
-.equip .blocks .block .block-info {
+#equip .blocks .block .block-info {
   display: block;
   text-align: center;
   text-transform: uppercase;
@@ -1847,27 +1847,27 @@ body.active {
 }
 
 @media (min-width: 768px) {
-  .equip .blocks .block .block-info {
+  #equip .blocks .block .block-info {
     margin-top: 2rem;
     font-size: 2.2rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .equip .blocks .block .block-info {
+  #equip .blocks .block .block-info {
     margin-top: 2.2rem;
     font-size: 2.3rem;
   }
 }
 
-.equip .blocks .block .fa-caret-down {
+#equip .blocks .block .fa-caret-down {
   font-size: 3rem;
   -webkit-transition: .7s;
   transition: .7s;
   cursor: pointer;
 }
 
-.equip .blocks .block .fa-caret-down.active {
+#equip .blocks .block .fa-caret-down.active {
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
   -webkit-transition: .7s;
@@ -1875,13 +1875,13 @@ body.active {
 }
 
 @media (min-width: 768px) {
-  .equip .blocks .block .fa-caret-down {
+  #equip .blocks .block .fa-caret-down {
     font-size: 3.3rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .equip .blocks .block .fa-caret-down {
+  #equip .blocks .block .fa-caret-down {
     font-size: 3.5rem;
   }
   @-webkit-keyframes click {
@@ -1915,12 +1915,12 @@ body.active {
 }
 
 @media (min-width: 1300px) {
-  .equip .blocks .block .fa-caret-down {
+  #equip .blocks .block .fa-caret-down {
     font-size: 3.8rem;
   }
 }
 
-.equip .blocks .block .more {
+#equip .blocks .block .more {
   width: 65%;
   margin: 2rem;
   position: absolute;
@@ -1931,55 +1931,55 @@ body.active {
   transition: 0.5s;
 }
 
-.equip .blocks .block .more h2 {
+#equip .blocks .block .more h2 {
   font-size: 1.9rem;
 }
 
 @media (min-width: 768px) {
-  .equip .blocks .block .more h2 {
+  #equip .blocks .block .more h2 {
     font-size: 2rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .equip .blocks .block .more h2 {
+  #equip .blocks .block .more h2 {
     font-size: 2.2rem;
   }
 }
 
 @media (min-width: 1300px) {
-  .equip .blocks .block .more h2 {
+  #equip .blocks .block .more h2 {
     font-size: 2.4rem;
   }
 }
 
-.equip .blocks .block .more ul li {
+#equip .blocks .block .more ul li {
   list-style: none;
 }
 
-.equip .blocks .block .more ul li p {
+#equip .blocks .block .more ul li p {
   font-size: 1.7rem;
 }
 
 @media (min-width: 768px) {
-  .equip .blocks .block .more ul li p {
+  #equip .blocks .block .more ul li p {
     font-size: 1.9rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .equip .blocks .block .more ul li p {
+  #equip .blocks .block .more ul li p {
     font-size: 2.2rem;
   }
 }
 
 @media (min-width: 1300px) {
-  .equip .blocks .block .more ul li p {
+  #equip .blocks .block .more ul li p {
     font-size: 2.5rem;
   }
 }
 
-.equip .blocks .block .more.active {
+#equip .blocks .block .more.active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   -webkit-animation: showMore 0.4s 0.3s ease both;
@@ -2032,37 +2032,37 @@ body.active {
   }
 }
 
-.equip .blocks .block.active {
+#equip .blocks .block.active {
   min-height: 30rem;
 }
 
 @media (min-width: 768px) {
-  .equip .blocks .block.active {
+  #equip .blocks .block.active {
     height: 38rem;
     width: 25%;
   }
 }
 
 @media (min-width: 1024px) {
-  .equip .blocks .block.active {
+  #equip .blocks .block.active {
     height: 40rem;
   }
 }
 
 @media (min-width: 1300px) {
-  .equip .blocks .block.active {
+  #equip .blocks .block.active {
     height: 43rem;
   }
 }
 
 @media (min-width: 768px) {
-  .equip .blocks .block {
+  #equip .blocks .block {
     height: 20rem;
     width: 20%;
   }
 }
 
-.gallery {
+#gallery {
   margin-top: 10rem;
   margin-bottom: 10rem;
   width: 100%;
@@ -2072,7 +2072,7 @@ body.active {
       flex-basis: 25%;
 }
 
-.gallery .h1 {
+#gallery .h1 {
   color: white;
   width: 100%;
   text-align: center;
@@ -2085,36 +2085,36 @@ body.active {
 }
 
 @media (min-width: 375px) and (orientation: portrait) {
-  .gallery .h1 {
+  #gallery .h1 {
     font-size: 4.7rem;
   }
 }
 
 @media (min-width: 411px) and (orientation: portrait) {
-  .gallery .h1 {
+  #gallery .h1 {
     font-size: 4.9rem;
   }
 }
 
 @media (min-width: 800px) and (orientation: landscape) {
-  .gallery .h1 {
+  #gallery .h1 {
     font-size: 7rem;
   }
 }
 
 @media (min-width: 768px) {
-  .gallery .h1 {
+  #gallery .h1 {
     font-size: 7rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .gallery .h1 {
+  #gallery .h1 {
     font-size: 9rem;
   }
 }
 
-.gallery .photos {
+#gallery .photos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2139,7 +2139,7 @@ body.active {
 }
 
 @media (min-width: 768px) {
-  .gallery .photos {
+  #gallery .photos {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2158,7 +2158,7 @@ body.active {
   }
 }
 
-.gallery .photos .glightbox img {
+#gallery .photos .glightbox img {
   width: 80%;
   display: block;
   margin: 0 auto;
@@ -2168,19 +2168,19 @@ body.active {
 }
 
 @media (max-width: 1023px) {
-  .gallery .photos .glightbox img {
+  #gallery .photos .glightbox img {
     margin-top: 2rem;
   }
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
-  .gallery .photos .glightbox img {
+  #gallery .photos .glightbox img {
     width: 45rem;
   }
 }
 
 @media (min-width: 768px) {
-  .gallery .photos .glightbox img {
+  #gallery .photos .glightbox img {
     min-width: 45rem;
     max-width: 50rem;
     margin-top: 2rem;
@@ -2190,12 +2190,12 @@ body.active {
 }
 
 @media (min-width: 1024px) {
-  .gallery .photos .glightbox img {
+  #gallery .photos .glightbox img {
     width: 60rem;
     opacity: 0.6;
     margin-left: 2rem;
   }
-  .gallery .photos .glightbox img:hover {
+  #gallery .photos .glightbox img:hover {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
     opacity: 1;
@@ -2205,44 +2205,44 @@ body.active {
 }
 
 @media (min-width: 1100px) {
-  .gallery .photos .glightbox img {
+  #gallery .photos .glightbox img {
     width: 59rem;
     opacity: 0.6;
   }
 }
 
 @media (min-width: 1360px) {
-  .gallery .photos .glightbox img {
+  #gallery .photos .glightbox img {
     width: 45rem;
     opacity: 0.6;
   }
 }
 
 @media (max-width: 767px) {
-  .gallery .photos .glightbox .one,
-  .gallery .photos .glightbox .three {
+  #gallery .photos .glightbox .one,
+  #gallery .photos .glightbox .three {
     -webkit-transform: translateX(-5rem);
             transform: translateX(-5rem);
   }
-  .gallery .photos .glightbox .two,
-  .gallery .photos .glightbox .four {
+  #gallery .photos .glightbox .two,
+  #gallery .photos .glightbox .four {
     -webkit-transform: translateX(5rem);
             transform: translateX(5rem);
   }
-  .gallery .photos .glightbox img.active {
+  #gallery .photos .glightbox img.active {
     -webkit-transform: translateX(0rem);
             transform: translateX(0rem);
   }
 }
 
-.gallery .show-more {
+#gallery .show-more {
   margin-top: 1vh;
   text-align: center;
   font-family: "Oswald";
   font-size: 2rem;
 }
 
-.gallery .show-more a {
+#gallery .show-more a {
   display: block;
   text-decoration: none;
   color: white;
@@ -2253,7 +2253,7 @@ body.active {
   transition: 0.3s;
 }
 
-.gallery .show-more a:focus {
+#gallery .show-more a:focus {
   -webkit-animation: click 0.3s ease both;
           animation: click 0.3s ease both;
 }
@@ -2274,10 +2274,10 @@ body.active {
 }
 
 @media (min-width: 1024px) {
-  .gallery .show-more a {
+  #gallery .show-more a {
     opacity: 0.7;
   }
-  .gallery .show-more a:hover {
+  #gallery .show-more a:hover {
     opacity: 1;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
@@ -2287,30 +2287,30 @@ body.active {
 }
 
 @media (min-width: 375px) {
-  .gallery .show-more {
+  #gallery .show-more {
     font-size: 2.2rem;
   }
 }
 
 @media (min-width: 768px) {
-  .gallery .show-more {
+  #gallery .show-more {
     font-size: 3rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .gallery .show-more {
+  #gallery .show-more {
     font-size: 3.5rem;
   }
 }
 
 @media (min-width: 1240px) {
-  .gallery .show-more {
+  #gallery .show-more {
     font-size: 4rem;
   }
 }
 
-.contact {
+#contact {
   margin-top: 10rem;
   margin-bottom: 10rem;
   width: 100%;
@@ -2333,7 +2333,7 @@ body.active {
 }
 
 @media (min-width: 1024px) {
-  .contact {
+  #contact {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2350,7 +2350,7 @@ body.active {
   }
 }
 
-.contact .heading {
+#contact .heading {
   color: white;
   width: 100%;
   text-align: center;
@@ -2362,94 +2362,94 @@ body.active {
 }
 
 @media (min-width: 375px) and (orientation: portrait) {
-  .contact .heading {
+  #contact .heading {
     font-size: 4.7rem;
   }
 }
 
 @media (min-width: 411px) and (orientation: portrait) {
-  .contact .heading {
+  #contact .heading {
     font-size: 4.9rem;
   }
 }
 
 @media (min-width: 800px) and (orientation: landscape) {
-  .contact .heading {
+  #contact .heading {
     font-size: 7rem;
   }
 }
 
 @media (min-width: 768px) {
-  .contact .heading {
+  #contact .heading {
     font-size: 7rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .contact .heading {
+  #contact .heading {
     font-size: 9rem;
   }
 }
 
-.contact .info {
+#contact .info {
   text-align: center;
 }
 
 @media (min-width: 1024px) {
-  .contact .info {
+  #contact .info {
     width: 50%;
     height: 200px;
   }
 }
 
-.contact .info .number,
-.contact .info .email {
+#contact .info .number,
+#contact .info .email {
   position: relative;
   font-size: 1.5rem;
   color: white;
 }
 
 @media (min-width: 319px) and (orientation: portrait) {
-  .contact .info .number,
-  .contact .info .email {
+  #contact .info .number,
+  #contact .info .email {
     font-size: 2.2rem;
   }
 }
 
 @media (min-width: 375px) and (orientation: portrait) {
-  .contact .info .number,
-  .contact .info .email {
+  #contact .info .number,
+  #contact .info .email {
     font-size: 2.4rem;
   }
 }
 
 @media (min-width: 411px) and (orientation: portrait) {
-  .contact .info .number,
-  .contact .info .email {
+  #contact .info .number,
+  #contact .info .email {
     font-size: 2.6rem;
   }
 }
 
 @media (min-width: 768px) {
-  .contact .info .number,
-  .contact .info .email {
+  #contact .info .number,
+  #contact .info .email {
     font-size: 4rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .contact .info .number,
-  .contact .info .email {
+  #contact .info .number,
+  #contact .info .email {
     font-size: 4.5rem;
   }
 }
 
-.contact .info .icons .facebook-icon,
-.contact .info .icons .insta-icon {
+#contact .info .icons .facebook-icon,
+#contact .info .icons .insta-icon {
   list-style: none;
 }
 
-.contact .info .icons img {
+#contact .info .icons img {
   margin: 2rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -2457,41 +2457,41 @@ body.active {
 }
 
 @media (min-width: 319px) {
-  .contact .info .icons img {
+  #contact .info .icons img {
     width: 2.2rem;
   }
 }
 
 @media (min-width: 375px) {
-  .contact .info .icons img {
+  #contact .info .icons img {
     width: 3rem;
   }
 }
 
 @media (min-width: 411px) {
-  .contact .info .icons img {
+  #contact .info .icons img {
     width: 3.2rem;
   }
 }
 
 @media (min-width: 768px) {
-  .contact .info .icons img {
+  #contact .info .icons img {
     width: 6rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .contact .info .icons img {
+  #contact .info .icons img {
     width: 5rem;
     letter-spacing: 0.2rem;
   }
-  .contact .info .icons img:hover {
+  #contact .info .icons img:hover {
     -webkit-transform: scale(1.3);
             transform: scale(1.3);
   }
 }
 
-.footer {
+#footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2516,19 +2516,19 @@ body.active {
 }
 
 @media (min-width: 320px) and (orientation: portrait) {
-  .footer {
+  #footer {
     height: 9rem;
   }
 }
 
 @media (min-width: 411px) and (orientation: portrait) {
-  .footer {
+  #footer {
     height: 8rem;
   }
 }
 
 @media (min-width: 768px) {
-  .footer {
+  #footer {
     height: 10rem;
     font-size: 1.8rem;
     -webkit-box-align: center;
@@ -2538,7 +2538,7 @@ body.active {
 }
 
 @media (min-width: 1024px) {
-  .footer {
+  #footer {
     height: 15rem;
     font-size: 2.2rem;
     -webkit-box-align: center;
@@ -2548,48 +2548,48 @@ body.active {
 }
 
 @media (min-width: 1240px) {
-  .footer {
+  #footer {
     height: 20rem;
     font-size: 3rem;
   }
 }
 
 @media (orientation: landscape) {
-  .footer {
+  #footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
 }
 
-.footer .list {
+#footer .list {
   list-style: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
 @media (min-width: 1024px) {
-  .footer .list:hover {
+  #footer .list:hover {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
   }
 }
 
-.footer .link {
+#footer .link {
   text-decoration: none;
   color: white;
   font-weight: 400;
   cursor: pointer;
 }
 
-.footer .copyright {
+#footer .copyright {
   font-weight: 300;
 }
 
-.footer .owner {
+#footer .owner {
   color: white;
 }
 
-.footer .authors {
+#footer .authors {
   font-weight: 400;
 }

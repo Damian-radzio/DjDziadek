@@ -1,7 +1,7 @@
 const experienceSection = document.querySelector('.experience');
 const evenIconOffer = [...document.querySelectorAll('.types .even')];
 const oddIconOffer = [...document.querySelectorAll('.types .odd')];
-const sectionOffer = document.querySelector('.offer');
+const sectionOffer = document.querySelector('#offer');
 
 const iconLines = [
   one = document.querySelector('.one'),
@@ -166,7 +166,7 @@ const moveToSection = (place, position) => {
 const AboutMeButton = $('.about-btn');
 const moveToAboutMe = (e) => {
   e.preventDefault();
-  moveToSection($('.about-me'), - 50);
+  moveToSection($('#about-me'), - 50);
   setTimeout(() => {
     hideMenu();
   }, 300);
@@ -180,7 +180,7 @@ const AboutMeMenuBtn = $('.menu-about-me');
 const OfferMenuBtn = $('.menu-offer');
 const moveToOffer = (e) => {
   e.preventDefault();
-  moveToSection($('.offer'), - 100);
+  moveToSection($('#offer'), - 100);
   setTimeout(() => {
     hideMenu();
   }, 300);
@@ -190,7 +190,7 @@ const moveToOffer = (e) => {
 // gallery
 const moveToGallery = (e) => {
   e.preventDefault();
-  moveToSection($('.gallery'), - 100);
+  moveToSection($('#gallery'), - 100);
   
   setTimeout(() => {
     hideMenu();
@@ -203,7 +203,7 @@ const galleryMenuBtn =  $('.menu-gallery');
 
 const moveToContact = (e) => {
   e.preventDefault();
-  moveToSection($('.contact'), - 100);
+  moveToSection($('#contact'), - 100);
   setTimeout(() => {
     hideMenu();
   }, 300);
@@ -218,7 +218,7 @@ const contactIcon = $('.contact-icon');
 const equipMenuButton = $('.menu-equip');
 const moveToEquip = (e) => {
   e.preventDefault();
-   moveToSection($('.equip'), - 100);
+   moveToSection($('#equip'), - 100);
    setTimeout(() => {
      hideMenu();
     }, 300);
@@ -229,7 +229,7 @@ const moveToEquip = (e) => {
 const heroeName = document.querySelector('.name');
 const backToTop = (e) => {
   e.preventDefault();
-   moveToSection($('.main-header'), - 0);
+   moveToSection($('#main-header'), - 0);
    setTimeout(() => {
      hideMenu();
     }, 300);
@@ -247,9 +247,9 @@ function checkIcon(){
 
 // photos in gallery animation
 const imageAnimation = (gallerySection, images, equipSection ) => {
-  gallerySection = document.querySelector('.gallery');
+  gallerySection = document.querySelector('#gallery');
   images = document.querySelectorAll('.photos .glightbox img');
-  equipSection = document.querySelector('.equip');
+  equipSection = document.querySelector('#equip');
     
     if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + equipSection.scrollHeight + gallerySection.scrollHeight / 1.3 && window.screen.orientation.type === "portrait-primary"){
       images.forEach(image => {

@@ -1,4 +1,4 @@
-.contact {
+#contact {
     @include sectionProp();
     font-family: $mainFont;
     @include flex(column, center, center);
