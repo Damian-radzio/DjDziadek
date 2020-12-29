@@ -287,84 +287,6 @@ body.active {
   }
 }
 
-#main-header .components .header .name {
-  position: relative;
-  z-index: 2;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 3.5rem;
-  font-weight: 500;
-  color: white;
-  min-width: 20rem;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  padding-left: 1rem;
-  cursor: pointer;
-  border-style: none;
-  background-color: transparent;
-  font-family: "Oswald";
-  outline: none;
-}
-
-#main-header .components .header .name.active {
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
-}
-
-@media (min-width: 320px) and (orientation: portrait) {
-  #main-header .components .header .name {
-    padding-left: 2.5rem;
-  }
-}
-
-@media (min-width: 411px) and (orientation: portrait) {
-  #main-header .components .header .name {
-    font-size: 4.5rem;
-    padding-left: 3rem;
-  }
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-  #main-header .components .header .name {
-    font-size: 7.5rem;
-    left: 5rem;
-    padding-left: 5rem;
-  }
-}
-
-@media (min-width: 1024px) and (orientation: portrait) {
-  #main-header .components .header .name {
-    font-size: 9.5rem;
-    left: 7rem;
-    padding-left: 7rem;
-  }
-}
-
-@media (orientation: landscape) {
-  #main-header .components .header .name {
-    padding-left: 6rem;
-  }
-}
-
-@media (min-width: 768px) and (orientation: landscape) {
-  #main-header .components .header .name {
-    font-size: 6.5rem;
-    padding-top: 2rem;
-  }
-}
-
-@media (min-width: 1024px) and (orientation: landscape) {
-  #main-header .components .header .name {
-    font-size: 8rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  #main-header .components .header .name:hover {
-    opacity: 0.8;
-  }
-}
-
 #main-header .components .about-intro {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -844,6 +766,87 @@ body.active {
           transform: rotate(0.37turn) translateX(-2px);
   -webkit-transition: 0.4s 0.1s;
   transition: 0.4s 0.1s;
+}
+
+.menu .name {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 2;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: white;
+  min-width: 20rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-left: 1rem;
+  cursor: pointer;
+  border-style: none;
+  background-color: transparent;
+  font-family: "Oswald";
+  outline: none;
+}
+
+.menu .name.active {
+  -webkit-transform: translateY(-50%) scale(0.7);
+          transform: translateY(-50%) scale(0.7);
+}
+
+@media (min-width: 320px) and (orientation: portrait) {
+  .menu .name {
+    padding-left: 2.5rem;
+  }
+}
+
+@media (min-width: 411px) and (orientation: portrait) {
+  .menu .name {
+    font-size: 4.5rem;
+    padding-left: 3rem;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .menu .name {
+    font-size: 7.5rem;
+    left: 5rem;
+    padding-left: 5rem;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+  .menu .name {
+    font-size: 9.5rem;
+    left: 7rem;
+    padding-left: 7rem;
+  }
+}
+
+@media (orientation: landscape) {
+  .menu .name {
+    padding-left: 6rem;
+  }
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .menu .name {
+    font-size: 6.5rem;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .menu .name {
+    font-size: 8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu .name:hover {
+    opacity: 0.8;
+  }
 }
 
 .menu-content {
