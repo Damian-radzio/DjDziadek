@@ -1999,20 +1999,20 @@ body.active {
     position: absolute;
   }
   60% {
-    position: static;
+    position: initial;
     opacity: 0;
   }
   61% {
-    position: static;
+    position: initial;
     opacity: 0.5;
   }
   80% {
-    position: static;
+    position: initial;
     opacity: 0.8;
   }
   100% {
     opacity: 1;
-    position: static;
+    position: initial;
   }
 }
 
@@ -2022,20 +2022,20 @@ body.active {
     position: absolute;
   }
   60% {
-    position: static;
+    position: initial;
     opacity: 0;
   }
   61% {
-    position: static;
+    position: initial;
     opacity: 0.5;
   }
   80% {
-    position: static;
+    position: initial;
     opacity: 0.8;
   }
   100% {
     opacity: 1;
-    position: static;
+    position: initial;
   }
 }
 
