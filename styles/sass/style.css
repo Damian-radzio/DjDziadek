@@ -2045,43 +2045,19 @@ body.active {
 
 @supports (-webkit-touch-callout: none) {
   @-webkit-keyframes showMore {
-    0% {
+    from {
       opacity: 0;
     }
-    30% {
-      margin-top: 20%;
-      opacity: 0;
-    }
-    61% {
-      margin-top: 25%;
-      opacity: 0.5;
-    }
-    80% {
-      margin-top: 27%;
-      opacity: 0.8;
-    }
-    100% {
+    to {
       opacity: 1;
       margin-top: 35%;
     }
   }
   @keyframes showMore {
-    0% {
+    from {
       opacity: 0;
     }
-    30% {
-      margin-top: 20%;
-      opacity: 0;
-    }
-    61% {
-      margin-top: 25%;
-      opacity: 0.5;
-    }
-    80% {
-      margin-top: 27%;
-      opacity: 0.8;
-    }
-    100% {
+    to {
       opacity: 1;
       margin-top: 35%;
     }
