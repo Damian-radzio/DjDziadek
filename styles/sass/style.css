@@ -2062,7 +2062,7 @@ body.active {
     }
     100% {
       opacity: 1;
-      margin-top: 32%;
+      margin-top: 35%;
     }
   }
   @keyframes showMore {
@@ -2083,7 +2083,7 @@ body.active {
     }
     100% {
       opacity: 1;
-      margin-top: 32%;
+      margin-top: 35%;
     }
   }
 }
