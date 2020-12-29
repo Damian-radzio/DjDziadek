@@ -1964,6 +1964,10 @@ body.active {
   list-style: none;
 }
 
+#equip .blocks .block .more ul li.sound-system {
+  margin-top: 5rem;
+}
+
 #equip .blocks .block .more ul li p {
   font-size: 1.7rem;
 }
@@ -1998,21 +2002,21 @@ body.active {
     opacity: 0;
     position: absolute;
   }
-  60% {
-    position: initial;
+  30% {
+    top: 20%;
     opacity: 0;
   }
   61% {
-    position: initial;
+    top: 25%;
     opacity: 0.5;
   }
   80% {
-    position: initial;
+    top: 27%;
     opacity: 0.8;
   }
   100% {
     opacity: 1;
-    position: initial;
+    top: 30%;
   }
 }
 
@@ -2021,21 +2025,21 @@ body.active {
     opacity: 0;
     position: absolute;
   }
-  60% {
-    position: initial;
+  30% {
+    top: 20%;
     opacity: 0;
   }
   61% {
-    position: initial;
+    top: 25%;
     opacity: 0.5;
   }
   80% {
-    position: initial;
+    top: 27%;
     opacity: 0.8;
   }
   100% {
     opacity: 1;
-    position: initial;
+    top: 30%;
   }
 }
 
