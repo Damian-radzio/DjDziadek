@@ -46,7 +46,7 @@
     }
     
     & .even {
-        transition: 1s 0.5s;
+        transition: 0.4s 0.5s;
         transition-property: opacity transform;
         opacity: 0.1;
         
@@ -76,7 +76,7 @@
     }
     
     & .odd {
-        transition: 1s 0.5s;
+        transition: 0.4s 0.5s;
         transition-property: opacity transform;
         opacity: 0.1;
         

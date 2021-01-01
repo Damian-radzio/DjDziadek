@@ -1511,8 +1511,8 @@ body.active {
 }
 
 #offer .even {
-  -webkit-transition: 1s 0.5s;
-  transition: 1s 0.5s;
+  -webkit-transition: 0.4s 0.5s;
+  transition: 0.4s 0.5s;
   -webkit-transition-property: opacity transform;
   transition-property: opacity transform;
   opacity: 0.1;
@@ -1547,8 +1547,8 @@ body.active {
 }
 
 #offer .odd {
-  -webkit-transition: 1s 0.5s;
-  transition: 1s 0.5s;
+  -webkit-transition: 0.4s 0.5s;
+  transition: 0.4s 0.5s;
   -webkit-transition-property: opacity transform;
   transition-property: opacity transform;
   opacity: 0.1;
