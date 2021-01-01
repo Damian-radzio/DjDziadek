@@ -6,47 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Strona wizytówkowa wodzireja i Dj'a - Sławomira Dziadka. Znajdziesz tutaj informacje na mój temat, jak i mojej działalności podczas zabaw różnego rodzaju">
     <title>Dj Dziadek - Sławomir Dziadek</title>
-
-     <link rel="preload" as="image" href="./html&components/img/heroe.jpg">
-    <link rel="preload" as="style" href="./styles/css/style.min.css">
-    <link rel="preload" as="script" href="./scripts/main/main.min.js">
-
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/css/style.min.css">
-
-    <link rel="stylesheet" href="./scripts/libraries/lightbox2-2.11.3/dist/css/lightbox.min.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="./html&components/img/favicon.png">
     
+    <link rel="preload" as="style" href="./styles/css/style.min.css">
+    <link rel="preload" as="image" href="./html&components/img/heroe.jpg">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./styles/css/style.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="./html&components/img/favicon.png">
+    <link rel="stylesheet" href="./scripts/libraries/lightbox2-2.11.3/dist/css/lightbox.min.css">
+    
+    <link rel="preload" as="script" href="./scripts/main/main.min.js">
 </head>
 
 <body>
 
  <!-- Load Facebook SDK for JavaScript -->
  <div id="fb-root"></div>
- <script>
-   window.fbAsyncInit = function() {
-     FB.init({
-       xfbml            : true,
-       version          : 'v9.0'
-     });
-   };
-
-   (function(d, s, id) {
-   var js, fjs = d.getElementsByTagName(s)[0];
-   if (d.getElementById(id)) return;
-   js = d.createElement(s); js.id = id;
-   js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
-   fjs.parentNode.insertBefore(js, fjs);
- }(document, 'script', 'facebook-jssdk'));
- </script>
-
  <!-- Your Chat Plugin code -->
  <div class=fb-customerchat
-   attribution=setup_tool
-   page_id="106330881397763"
-logged_in_greeting="Witaj, w czym mogę ci pomóc?"
-logged_out_greeting="Witaj, w czym mogę ci pomóc?">
+         attribution=setup_tool
+        page_id="106330881397763"
+        logged_in_greeting="Witaj, w czym mogę ci pomóc?"
+        logged_out_greeting="Witaj, w czym mogę ci pomóc?">
  </div>
 
 </div>
@@ -212,9 +195,9 @@ logged_out_greeting="Witaj, w czym mogę ci pomóc?">
    
     </main>
 
-    <script loading="lazy" src="./scripts/libraries/jquery-3.5.1.min.js"></script>
-    <script loading="lazy" src="./scripts/libraries/lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
-    <script loading="lazy" src="./scripts/main/main.min.js"></script>
+    <script src="./scripts/libraries/jquery-3.5.1.min.js"></script>
+    <script  src="./scripts/libraries/lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+    <script src="./scripts/main/main.min.js"></script>
     
 </body>
 
