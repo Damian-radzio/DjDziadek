@@ -24,12 +24,14 @@ min-height: 40vh;
             min-height: 15rem;
             box-shadow: 0 0 20px 2px black;
             transition: 0.5s;
+            transition-property: height width;
             max-width: 40rem;
             background: rgb(70,24,92);
             background: -moz-radial-gradient(circle, rgba(70,24,92,1) 0%, rgba(0,4,23,0) 100%);
             background: -webkit-radial-gradient(circle, rgba(70,24,92,1) 0%, rgba(0,4,23,0) 100%);
             background: radial-gradient(circle, rgba(70,24,92,1) 0%, rgba(0,4,23,0) 100%);
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#46185c",endColorstr="#000417",GradientType=1);
+            
             &:nth-last-child(1){
                 @include flex(column, center, center);
                 padding: 0rem;
@@ -55,11 +57,11 @@ min-height: 40vh;
             }
             .fa-caret-down{
                 font-size: 3rem;
-                transition: .7s;
+                transition: .7s transform;
                 cursor: pointer;
                 &.active{
                     transform: rotateZ(180deg);
-                    transition: .7s;
+                    transition: .7s transform;
                 }
                 @media (min-width: 768px){
                     font-size: 3.3rem;
@@ -81,6 +83,7 @@ min-height: 40vh;
                 transform: translateX(-100%);
                 opacity: 0;
                 transition: 0.5s;
+                transition-property: transform;
                 h2{
                     font-size: 1.9rem;
                     @media (min-width: 768px){

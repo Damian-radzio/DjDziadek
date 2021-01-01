@@ -36,17 +36,6 @@
     @media (orientation: landscape){
         align-items: center;
     }
-
-    & .list {
-        list-style: none;
-        transition: 0.2s;
-        @media (min-width: 1024px){
-            &:hover{
-                transform: scale(1.2);
-            }
-        }
-    }
-
     & .link {
         text-decoration: none;
         color: $mainFontColor;

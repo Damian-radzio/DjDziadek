@@ -15,7 +15,6 @@
         align-items: center;
         @include flex(column, center, center);
         margin: 0 auto;
-        transition: 0.5s;
 
         @media(min-width: 768px) {
             @include flex(row, center, center);
@@ -31,6 +30,7 @@
         display: block;
         margin: 0 auto;
         transition: 0.4s;
+        transition-property: transform box-shadow;
         opacity: 1;
 
         // large mobile
@@ -95,6 +95,7 @@
        margin: 0 auto;
        letter-spacing: 1px;
        transition: 0.3s;
+       transition-property: transform opacity;
        @include focus();
        @include focusAnimation();
        @media (min-width: 1024px){

@@ -4,9 +4,9 @@
         width: 3.5rem;
         height: 3.0rem;
         z-index: 10;
-        transition: 0.5s;
         margin-right: 1.0rem;
         transition: 0.4s;
+        transition-property: transform height;
         @media (min-width: 320px) and (orientation: portrait) {
             top: 2.1rem;
             margin-right: 2rem;
@@ -53,6 +53,7 @@
             }
             .wrap.active-menu{
                 transition: 0.4s;
+                transition-property: transform height;
                 @include flex(column, center, center);
 
             }
@@ -78,7 +79,7 @@
         border-radius: 10rem;
         background-color: rgba(255, 255, 255, 0.864);
         transition: 0.4s;
-        
+        transition-property: transform opacity;
         @media (min-width: 768px) {
             height: 0.3rem;
             border-radius: 15rem;
@@ -93,14 +94,17 @@
     .one.active-menu{
         opacity: 0;
         transition: 0.4s;
+        transition-property: transform opacity;
     }
     .two.active-menu{
         transform: rotate(-0.37turn) translateX(-2px);
         transition: 0.4s .2s;
+        transition-property: transform opacity;
     }
     .three.active-menu{
         transform: rotate(0.37turn) translateX(-2px);
         transition: 0.4s 0.1s;
+        transition-property: transform opacity;
     }
     .name {
         position: absolute;
@@ -114,7 +118,7 @@
         font-weight: 500;
         color: $mainFontColor;
         min-width: 20rem;
-        transition: 0.5s;
+        transition: 0.5s transform;
         padding-left: 1rem;
         cursor: pointer;
         border-style: none;
@@ -171,10 +175,9 @@
     top: 0;
     height: 32vh;
     min-height: 30rem;
-    // max-height: 31rem;
     background-color: rgba(0, 0, 0, 0.638);
     z-index: -1;
-    transition: 0.5s;
+    transition: 0.5s transform;
     
     @media(max-width: 1023px) and (orientation: landscape){
         min-height: 100vh;
@@ -287,7 +290,7 @@
     }
     &.scroll{
         transform: translateY(-15%);
-        transition: 0.5s .25s;
+        transition: 0.5s transform;
     }
     &.scrollMobile{
         transform: translateY(-8%);

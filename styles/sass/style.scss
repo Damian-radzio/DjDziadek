@@ -24,7 +24,7 @@ body {
     z-index: -1;
     letter-spacing: 0.8px;
     position: fixed;
-    transition: 0.3s;
+    transition: 0.3s position;
 }
 body.active{
     position: relative;
@@ -47,7 +47,7 @@ body.active{
     z-index: -10;
     overflow: hidden;
     opacity: 0;
-    transition: 0.3s;
+    transition: 0.3s opacity;
 }
 .main.active{
     opacity: 1;
