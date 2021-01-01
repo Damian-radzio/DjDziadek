@@ -11,43 +11,40 @@ const iconLines = [
 
 // removing preload
 
-window.onload = function(preloadWrapper, pulse, body, main){
-  preloadWrapper =  document.querySelector('.loading-wrapper');
-  pulse = document.querySelector('.pulse');
-  body = document.querySelector('body');
-  main = document.querySelector('main');
-  setTimeout(() => {
-    preloadWrapper.classList.add('remove');
-    pulse.classList.add('remove');
-    body.classList.add('active');
-    main.classList.add('active');
+// window.onload = function(preloadWrapper, pulse, body, main){
+//   preloadWrapper =  document.querySelector('.loading-wrapper');
+//   pulse = document.querySelector('.pulse');
+//   body = document.querySelector('body');
+//   main = document.querySelector('main');
+//   setTimeout(() => {
+//     preloadWrapper.classList.add('remove');
+//     pulse.classList.add('remove');
+//     body.classList.add('active');
+//     main.classList.add('active');
     
-    // typing effect header 
-    setTimeout(() => {
-      let i = 0;
-        const speed = 10;
-        const text = `Przy mnie każda impreza będzie niezapomniana!`;
+//     // typing effect header 
+//     setTimeout(() => {
+//       let i = 0;
+//         const speed = 10;
+//         const text = `Przy mnie każda impreza będzie niezapomniana!`;
         
-        (function TypeWriter(){
-          if(i< text.length){
-            const textHeader = document.querySelector('.about-intro .text-intro')
-            textHeader.innerHTML += text.charAt(i);
-            i++;
+//         (function TypeWriter(){
+//           if(i< text.length){
+//             const textHeader = document.querySelector('.about-intro .text-intro')
+//             textHeader.innerHTML += text.charAt(i);
+//             i++;
             
-            setTimeout(TypeWriter, speed);
-            if(textHeader.textContent === text){
-              const buttonHeader = document.querySelector('.about-btn');
-              buttonHeader.classList.add('visible');
-            }
-          }
-        })();
-      }, 300);
+//             setTimeout(TypeWriter, speed);
+//             if(textHeader.textContent === text){
+//               const buttonHeader = document.querySelector('.about-btn');
+//               buttonHeader.classList.add('visible');
+//             }
+//           }
+//         })();
+//       }, 300);
 
-    }, 2000);
-
-    
-
-  }
+//     }, 2000);
+//   }
 
 
 // menubar with animations on scroll 
