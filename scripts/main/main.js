@@ -22,31 +22,31 @@ const iconLines = [
 //     body.classList.add('active');
 //     main.classList.add('active');
     
-//     // typing effect header 
-//     setTimeout(() => {
-//       let i = 0;
-//         const speed = 10;
-//         const text = `Przy mnie każda impreza będzie niezapomniana!`;
-        
-//         (function TypeWriter(){
-//           if(i< text.length){
-//             const textHeader = document.querySelector('.about-intro .text-intro')
-//             textHeader.innerHTML += text.charAt(i);
-//             i++;
-            
-//             setTimeout(TypeWriter, speed);
-//             if(textHeader.textContent === text){
-//               const buttonHeader = document.querySelector('.about-btn');
-//               buttonHeader.classList.add('visible');
-//             }
-//           }
-//         })();
-//       }, 300);
+
 
 //     }, 2000);
 //   }
 
-
+    // typing effect header 
+    setTimeout(() => {
+      let i = 0;
+        const speed = 10;
+        const text = `Przy mnie każda impreza będzie niezapomniana!`;
+        
+        (function TypeWriter(){
+          if(i< text.length){
+            const textHeader = document.querySelector('.about-intro .text-intro')
+            textHeader.innerHTML += text.charAt(i);
+            i++;
+            
+            setTimeout(TypeWriter, speed);
+            if(textHeader.textContent === text){
+              const buttonHeader = document.querySelector('.about-btn');
+              buttonHeader.classList.add('visible');
+            }
+          }
+        })();
+      }, 300);
 // menubar with animations on scroll 
 function MinimalizeMenuBar(menuContent,  menuContentUl, menuContentText, menuHeader, menuIcon, headerName){
 
