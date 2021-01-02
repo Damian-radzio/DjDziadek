@@ -11,24 +11,24 @@ const iconLines = [
 
 // removing preload
 
-// window.onload = function(preloadWrapper, pulse, body, main){
-//   preloadWrapper =  document.querySelector('.loading-wrapper');
-//   pulse = document.querySelector('.pulse');
-//   body = document.querySelector('body');
-//   main = document.querySelector('main');
-//   setTimeout(() => {
-//     preloadWrapper.classList.add('remove');
-//     pulse.classList.add('remove');
-//     body.classList.add('active');
-//     main.classList.add('active');
+window.onload = function(preloadWrapper, pulse, body, main){
+  preloadWrapper =  document.querySelector('.loading-wrapper');
+  pulse = document.querySelector('.pulse');
+  body = document.querySelector('body');
+  main = document.querySelector('main');
+  setTimeout(() => {
+    preloadWrapper.classList.add('remove');
+    pulse.classList.add('remove');
+    body.classList.add('active');
+    main.classList.add('active');
     
 
 
-//     }, 2000);
-//   }
+    }, 2000);
+  }
 
     // typing effect header 
-    setTimeout(() => {
+   setTimeout(() => {
       let i = 0;
         const speed = 10;
         const text = `Przy mnie każda impreza będzie niezapomniana!`;
