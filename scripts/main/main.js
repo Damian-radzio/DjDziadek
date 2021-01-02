@@ -83,6 +83,7 @@ const items = [
     items[3].classList.remove('active');
     items[items.length-2].classList.remove('active');
     items[items.length-2].classList.remove('active-menu');
+
     iconLines[0].classList.remove('active-menu');
     iconLines[1].classList.remove('active-menu');
     iconLines[2].classList.remove('active-menu');
@@ -108,7 +109,7 @@ const updateCount = () => {
         experienceNumber.classList.add('active');;
       }
     }
-  }, 50);
+  }, 60);
 }
 
 const checksScrollPos = () => {
@@ -135,17 +136,18 @@ const offerIconScrollAnimation = () => {
       }, time);
     }, time);
   } 
+   if (window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight + 500){
+    window.removeEventListener('scroll', offerIconScrollAnimation, false);
+  }
 }
 
 
 const hideMenu = () => {
-  setTimeout(() => {
     MenuWrap.classList.remove('active');
   one.classList.remove('active-menu');
   two.classList.remove('active-menu');
   three.classList.remove('active-menu');
   menuIconWrap.classList.remove('active-menu');
-  }, 10);
 }
 const menuLinks = [...document.querySelectorAll('.wrapper ul li a')];
 menuLinks.forEach(a => {
@@ -208,19 +210,6 @@ const checkOrientation = () => {
     hideMenu();
   }
 }
-
-  window.addEventListener('scroll', MinimalizeMenuBar);
-  window.addEventListener('scroll', checksScrollPos);
-  window.addEventListener('scroll', offerIconScrollAnimation);
-  window.addEventListener('scroll', imageAnimation);
-  menuIconWrap.addEventListener('click', MenuIconAnimation);
- window.addEventListener('orientationchange', checkOrientation);
- showMoreIcons.forEach(icon => {
-  icon.addEventListener('click', checkIcon);
-})
-
-
-
   window.fbAsyncInit = function() {
     FB.init({
       xfbml            : true,
@@ -235,6 +224,21 @@ const checkOrientation = () => {
   js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+
+
+window.addEventListener('scroll', MinimalizeMenuBar);
+window.addEventListener('scroll', checksScrollPos);
+window.addEventListener('scroll', offerIconScrollAnimation);
+window.addEventListener('scroll', imageAnimation);
+
+menuIconWrap.addEventListener('click', MenuIconAnimation);
+
+window.addEventListener('orientationchange', checkOrientation);
+
+showMoreIcons.forEach(icon => {
+icon.addEventListener('click', checkIcon);
+})
 
   
 

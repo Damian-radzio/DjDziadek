@@ -85,6 +85,7 @@ min-height: 40vh;
                 transition: 0.5s;
                 transition-property: transform;
                 h2{
+                    font-weight: 300;
                     font-size: 1.9rem;
                     @media (min-width: 768px){
                         font-size: 2rem;

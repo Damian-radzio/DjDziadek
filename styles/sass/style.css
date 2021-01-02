@@ -28,6 +28,7 @@ body {
   position: relative;
   -webkit-transition: 0.3s position;
   transition: 0.3s position;
+  background-color: #42086b;
 }
 
 .main {
@@ -1828,6 +1829,7 @@ body {
 }
 
 #equip .blocks .block .more h2 {
+  font-weight: 300;
   font-size: 1.9rem;
 }
 
