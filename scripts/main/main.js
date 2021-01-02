@@ -108,7 +108,7 @@ const updateCount = () => {
         experienceNumber.classList.add('active');;
       }
     }
-  }, 90);
+  }, 50);
 }
 
 const checksScrollPos = () => {

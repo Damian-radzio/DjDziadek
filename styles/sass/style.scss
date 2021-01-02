@@ -26,10 +26,6 @@ body {
     position: relative;
     transition: 0.3s position;
 }
-// body.active{
-//     position: relative;
-// }
-
 
 // background and height of page
 .main {
@@ -49,12 +45,6 @@ body {
     opacity: 1;
     transition: 0.3s opacity;
 }
-// .main.active{
-//     opacity: 1;
-// }
-
-
-// @import './preload';
 
 @import './mainHeader';
 // welcome section [styles]
