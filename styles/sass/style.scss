@@ -23,12 +23,12 @@ html {
 body {
     z-index: -1;
     letter-spacing: 0.8px;
-    position: fixed;
+    position: relative;
     transition: 0.3s position;
 }
-body.active{
-    position: relative;
-}
+// body.active{
+//     position: relative;
+// }
 
 
 // background and height of page
@@ -46,15 +46,15 @@ body.active{
     height: auto;
     z-index: -10;
     overflow: hidden;
-    opacity: 0;
+    opacity: 1;
     transition: 0.3s opacity;
 }
-.main.active{
-    opacity: 1;
-}
+// .main.active{
+//     opacity: 1;
+// }
 
 
-@import './preload';
+// @import './preload';
 
 @import './mainHeader';
 // welcome section [styles]

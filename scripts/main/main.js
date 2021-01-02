@@ -11,21 +11,18 @@ const iconLines = [
 
 // removing preload
 
-window.onload = function(preloadWrapper, pulse, body, main){
-  preloadWrapper =  document.querySelector('.loading-wrapper');
-  pulse = document.querySelector('.pulse');
-  body = document.querySelector('body');
-  main = document.querySelector('main');
-  setTimeout(() => {
-    preloadWrapper.classList.add('remove');
-    pulse.classList.add('remove');
-    body.classList.add('active');
-    main.classList.add('active');
-    
-
-
-    }, 2000);
-  }
+// window.onload = function(preloadWrapper, pulse, body, main){
+//   preloadWrapper =  document.querySelector('.loading-wrapper');
+//   pulse = document.querySelector('.pulse');
+//   body = document.querySelector('body');
+//   main = document.querySelector('main');
+//   setTimeout(() => {
+//     preloadWrapper.classList.add('remove');
+//     pulse.classList.add('remove');
+//     body.classList.add('active');
+//     main.classList.add('active');
+//     }, 2000);
+//   }
 
     // typing effect header 
    setTimeout(() => {
@@ -122,11 +119,6 @@ const checksScrollPos = () => {
 }
 
 
-
-
-
-
-
 let time = 100;
 const offerIconScrollAnimation = () => {
   if(window.scrollY > window.innerHeight + experienceSection.scrollHeight + sectionOffer.scrollHeight / 2){
@@ -153,75 +145,12 @@ const hideMenu = () => {
   two.classList.remove('active-menu');
   three.classList.remove('active-menu');
   menuIconWrap.classList.remove('active-menu');
-  }, 100);
+  }, 10);
 }
-const moveToSection = (place, position) => {
-  $('body, html').animate({
-    scrollTop: place.offset().top + position
-  }, 100);
-}
-
-// about Me button scroll animation
-const AboutMeButton = $('.about-btn');
-const moveToAboutMe = (e) => {
-  e.preventDefault();
-  moveToSection($('#about-me'), - 50);
-    hideMenu();
-}
-
-// menu after click
-// about me
-const AboutMeMenuBtn = $('.menu-about-me');
-
-// offer
-const OfferMenuBtn = $('.menu-offer');
-const moveToOffer = (e) => {
-  e.preventDefault();
-  moveToSection($('#offer'), - 100);
-    hideMenu();
-}
-
-
-// gallery
-const moveToGallery = (e) => {
-  e.preventDefault();
-  moveToSection($('#gallery'), - 100);
-    hideMenu();
-}
-const galleryMenuBtn =  $('.menu-gallery');
-
-
-// contact (menu btn & icon)
-
-const moveToContact = (e) => {
-  e.preventDefault();
-  moveToSection($('#contact'), - 100);
-    hideMenu();
-  
-}
-const contactMenuBtn = $('.menu-contact');
-const contactIcon = $('.contact-icon');
-
-
-
-
-const equipMenuButton = $('.menu-equip');
-const moveToEquip = (e) => {
-  e.preventDefault();
-   moveToSection($('#equip'), - 100);
-     hideMenu();
-  }
-
-
-// back to top Animation
-const heroeName = document.querySelector('.name');
-const backToTop = (e) => {
-  e.preventDefault();
-   moveToSection($('#main-header'), - 0);
-     hideMenu();
-  }
-  const menuHome = document.querySelector('.menu-home');
-
+const menuLinks = [...document.querySelectorAll('.wrapper ul li a')];
+menuLinks.forEach(a => {
+  a.addEventListener('click', hideMenu);
+});
 // equipment section
 const showMoreIcons = [...document.querySelectorAll('.fa-caret-down')];
 function checkIcon(){
@@ -284,22 +213,13 @@ const checkOrientation = () => {
   window.addEventListener('scroll', checksScrollPos);
   window.addEventListener('scroll', offerIconScrollAnimation);
   window.addEventListener('scroll', imageAnimation);
-
   menuIconWrap.addEventListener('click', MenuIconAnimation);
-  heroeName.addEventListener('click', backToTop);
-  menuHome.addEventListener('click', backToTop);
-  AboutMeButton.click(moveToAboutMe);
-  AboutMeMenuBtn.click(moveToAboutMe);
-  OfferMenuBtn.click(moveToOffer);
-  galleryMenuBtn.click(moveToGallery);
-  contactMenuBtn.click(moveToContact);
-  contactIcon.click(moveToContact);
-  equipMenuButton.click(moveToEquip);
-  showMoreIcons.forEach(icon => {
-    icon.addEventListener('click', checkIcon);
-  })
- 
-  window.addEventListener('orientationchange', checkOrientation);
+ window.addEventListener('orientationchange', checkOrientation);
+ showMoreIcons.forEach(icon => {
+  icon.addEventListener('click', checkIcon);
+})
+
+
 
   window.fbAsyncInit = function() {
     FB.init({
