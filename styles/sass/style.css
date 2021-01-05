@@ -1708,6 +1708,7 @@ body {
   background: #46185c;
   background: radial-gradient(circle, #46185c 0%, rgba(0, 4, 23, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#46185c",endColorstr="#000417",GradientType=1);
+  overflow: hidden;
 }
 
 #equip .blocks .block:nth-last-child(1) {

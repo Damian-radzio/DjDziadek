@@ -31,6 +31,7 @@ min-height: 40vh;
             background: -webkit-radial-gradient(circle, rgba(70,24,92,1) 0%, rgba(0,4,23,0) 100%);
             background: radial-gradient(circle, rgba(70,24,92,1) 0%, rgba(0,4,23,0) 100%);
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#46185c",endColorstr="#000417",GradientType=1);
+            overflow: hidden;
             
             &:nth-last-child(1){
                 @include flex(column, center, center);
