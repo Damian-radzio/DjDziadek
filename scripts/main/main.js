@@ -142,7 +142,6 @@ menuLinks.forEach(a => {
 // equipment section
 const showMoreIcons = [...document.querySelectorAll('.fa-caret-down')];
 function checkIcon(){
-  this.parentNode.childNodes[3].childNodes[1].classList.toggle('active');
   this.parentNode.classList.toggle('active');
     this.parentNode.childNodes[3].classList.toggle('active')
     this.classList.toggle('active');
