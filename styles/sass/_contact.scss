@@ -23,20 +23,22 @@
         .email {
             position: relative;
             font-size: 1.5rem;
+            font-weight: 300;
             color: $mainFontColor;
-
             @media (min-width: 319px) and (orientation: portrait) {
-                font-size: 2.2rem;
-            }
-
-            @media (min-width: 375px) and (orientation: portrait) {
                 font-size: 2.4rem;
             }
 
-            @media (min-width: 411px) and (orientation: portrait) {
+            @media (min-width: 375px) and (orientation: portrait) {
                 font-size: 2.6rem;
             }
 
+            @media (min-width: 411px) and (orientation: portrait) {
+                font-size: 2.8rem;
+            }
+            @media(max-width: 1023px) and(orientation: landscape){
+                font-size: 3.5rem;
+            }
             @media (min-width: 768px){
                 font-size: 4rem;
             }
@@ -56,25 +58,25 @@
             img {
                 margin: 2rem;
                 transition: 0.3s transform;
-                width: 2.3rem;
+                width: 3rem;
                 @media (min-width: 319px) {
-                    width: 2.2rem;
-                }
-
-                @media (min-width: 375px) {
                     width: 3rem;
                 }
 
-                @media (min-width: 411px) {
+                @media (min-width: 375px) {
                     width: 3.2rem;
                 }
 
+                @media (min-width: 411px) {
+                    width: 3.4rem;
+                }
+
                 @media (min-width: 768px) {
-                    width: 6rem;
+                    width: 5rem;
                 }
 
                 @media (min-width: 1024px) {
-                    width: 5rem;
+                    width: 5.5rem;
                     letter-spacing: 0.2rem;
                         &:hover{
                             transform: scale(1.3);

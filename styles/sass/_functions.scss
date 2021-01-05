@@ -85,8 +85,8 @@
     @media (min-width: 411px) and (orientation: portrait) {
         font-size: 4.9rem;
     }
-    @media(min-width: 800px) and(orientation: landscape){
-        font-size: 7rem;
+    @media(max-width: 1023px) and(orientation: landscape){
+        font-size: 5rem;
     }
     // large mobile
     @media (min-width: 768px) {

@@ -1280,9 +1280,9 @@ body {
   }
 }
 
-@media (min-width: 800px) and (orientation: landscape) {
+@media (max-width: 1023px) and (orientation: landscape) {
   #about-me .h1 {
-    font-size: 7rem;
+    font-size: 5rem;
   }
 }
 
@@ -1425,9 +1425,9 @@ body {
   }
 }
 
-@media (min-width: 800px) and (orientation: landscape) {
+@media (max-width: 1023px) and (orientation: landscape) {
   #offer .h1 {
-    font-size: 7rem;
+    font-size: 5rem;
   }
 }
 
@@ -1624,9 +1624,9 @@ body {
   }
 }
 
-@media (min-width: 800px) and (orientation: landscape) {
+@media (max-width: 1023px) and (orientation: landscape) {
   #equip .equip-header {
-    font-size: 7rem;
+    font-size: 5rem;
   }
 }
 
@@ -2019,9 +2019,9 @@ body {
   }
 }
 
-@media (min-width: 800px) and (orientation: landscape) {
+@media (max-width: 1023px) and (orientation: landscape) {
   #gallery .h1 {
-    font-size: 7rem;
+    font-size: 5rem;
   }
 }
 
@@ -2302,9 +2302,9 @@ body {
   }
 }
 
-@media (min-width: 800px) and (orientation: landscape) {
+@media (max-width: 1023px) and (orientation: landscape) {
   #contact .heading {
-    font-size: 7rem;
+    font-size: 5rem;
   }
 }
 
@@ -2335,27 +2335,35 @@ body {
 #contact .info .email {
   position: relative;
   font-size: 1.5rem;
+  font-weight: 300;
   color: white;
 }
 
 @media (min-width: 319px) and (orientation: portrait) {
   #contact .info .number,
   #contact .info .email {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 }
 
 @media (min-width: 375px) and (orientation: portrait) {
   #contact .info .number,
   #contact .info .email {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
   }
 }
 
 @media (min-width: 411px) and (orientation: portrait) {
   #contact .info .number,
   #contact .info .email {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 1023px) and (orientation: landscape) {
+  #contact .info .number,
+  #contact .info .email {
+    font-size: 3.5rem;
   }
 }
 
@@ -2384,36 +2392,36 @@ body {
   transition: 0.3s -webkit-transform;
   transition: 0.3s transform;
   transition: 0.3s transform, 0.3s -webkit-transform;
-  width: 2.3rem;
+  width: 3rem;
 }
 
 @media (min-width: 319px) {
-  #contact .info .icons img {
-    width: 2.2rem;
-  }
-}
-
-@media (min-width: 375px) {
   #contact .info .icons img {
     width: 3rem;
   }
 }
 
-@media (min-width: 411px) {
+@media (min-width: 375px) {
   #contact .info .icons img {
     width: 3.2rem;
   }
 }
 
+@media (min-width: 411px) {
+  #contact .info .icons img {
+    width: 3.4rem;
+  }
+}
+
 @media (min-width: 768px) {
   #contact .info .icons img {
-    width: 6rem;
+    width: 5rem;
   }
 }
 
 @media (min-width: 1024px) {
   #contact .info .icons img {
-    width: 5rem;
+    width: 5.5rem;
     letter-spacing: 0.2rem;
   }
   #contact .info .icons img:hover {
