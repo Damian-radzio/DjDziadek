@@ -9,21 +9,6 @@ const iconLines = [
   three = document.querySelector('.three'),
 ];
 
-// removing preload
-
-// window.onload = function(preloadWrapper, pulse, body, main){
-//   preloadWrapper =  document.querySelector('.loading-wrapper');
-//   pulse = document.querySelector('.pulse');
-//   body = document.querySelector('body');
-//   main = document.querySelector('main');
-//   setTimeout(() => {
-//     preloadWrapper.classList.add('remove');
-//     pulse.classList.add('remove');
-//     body.classList.add('active');
-//     main.classList.add('active');
-//     }, 2000);
-//   }
-
     // typing effect header 
    setTimeout(() => {
       let i = 0;
@@ -153,14 +138,15 @@ const menuLinks = [...document.querySelectorAll('.wrapper ul li a')];
 menuLinks.forEach(a => {
   a.addEventListener('click', hideMenu);
 });
+
 // equipment section
 const showMoreIcons = [...document.querySelectorAll('.fa-caret-down')];
 function checkIcon(){
+  this.parentNode.childNodes[3].childNodes[1].classList.toggle('active');
   this.parentNode.classList.toggle('active');
     this.parentNode.childNodes[3].classList.toggle('active')
     this.classList.toggle('active');
 }
-
 
 let mql = window.matchMedia('(orientation: landscape)');
 // photos in gallery animation

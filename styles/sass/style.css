@@ -1697,13 +1697,14 @@ body {
   margin-top: 2rem;
   width: 80%;
   min-height: 15rem;
+  max-height: 15rem;
   -webkit-box-shadow: 0 0 20px 2px black;
           box-shadow: 0 0 20px 2px black;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   -webkit-transition-property: height width;
   transition-property: height width;
   max-width: 40rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   background: #46185c;
   background: radial-gradient(circle, #46185c 0%, rgba(0, 4, 23, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#46185c",endColorstr="#000417",GradientType=1);
@@ -1735,8 +1736,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 2rem;
-  margin-top: 0.5rem;
-  padding: 2rem;
+  padding: 2rem 0.5rem;
   font-weight: 500;
 }
 
@@ -1744,6 +1744,7 @@ body {
   #equip .blocks .block .block-info {
     margin-top: 1.5rem;
     font-size: 2.2rem;
+    padding: 2rem .7rem;
   }
 }
 
@@ -1756,16 +1757,30 @@ body {
 
 #equip .blocks .block .fa-caret-down {
   font-size: 3rem;
-  -webkit-transition: .7s transform;
-  transition: .7s transform;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transition-property: -webkit-transform position;
+  transition-property: -webkit-transform position;
+  transition-property: transform position;
+  transition-property: transform position, -webkit-transform position;
+  position: absolute;
+  bottom: 0.2rem;
   cursor: pointer;
+  padding: 1rem;
 }
 
 #equip .blocks .block .fa-caret-down.active {
+  -webkit-animation: hideShow 1.5s linear both;
+          animation: hideShow 1.5s linear both;
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
-  -webkit-transition: .7s transform;
-  transition: .7s transform;
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-transition-property: -webkit-transform position;
+  transition-property: -webkit-transform position;
+  transition-property: transform position;
+  transition-property: transform position, -webkit-transform position;
+  position: static;
 }
 
 @media (min-width: 768px) {
@@ -1814,19 +1829,36 @@ body {
   }
 }
 
+@-webkit-keyframes hideShow {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hideShow {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #equip .blocks .block .more {
+  -webkit-transform: scale(0) skewY(20deg);
+          transform: scale(0) skewY(20deg);
   width: 75%;
-  margin-top: 2.2rem;
-  position: absolute;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
 }
 
 #equip .blocks .block .more h2 {
@@ -1851,6 +1883,10 @@ body {
   #equip .blocks .block .more h2 {
     font-size: 2.4rem;
   }
+}
+
+#equip .blocks .block .more ul {
+  padding: 0.2rem 0;
 }
 
 #equip .blocks .block .more ul li {
@@ -1882,56 +1918,8 @@ body {
 }
 
 #equip .blocks .block .more.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-animation: showMore 0.4s 0.3s ease both;
-          animation: showMore 0.4s 0.3s ease both;
-}
-
-@-webkit-keyframes showMore {
-  0% {
-    opacity: 0;
-    position: absolute;
-  }
-  30% {
-    opacity: 0;
-    top: 20%;
-  }
-  61% {
-    opacity: 0.5;
-    top: 25%;
-  }
-  80% {
-    opacity: 0.8;
-    top: 27%;
-  }
-  100% {
-    opacity: 1;
-    top: 30%;
-  }
-}
-
-@keyframes showMore {
-  0% {
-    opacity: 0;
-    position: absolute;
-  }
-  30% {
-    opacity: 0;
-    top: 20%;
-  }
-  61% {
-    opacity: 0.5;
-    top: 25%;
-  }
-  80% {
-    opacity: 0.8;
-    top: 27%;
-  }
-  100% {
-    opacity: 1;
-    top: 30%;
-  }
+  -webkit-transform: scaleY(1) skewY(0deg);
+          transform: scaleY(1) skewY(0deg);
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -1955,34 +1943,16 @@ body {
   }
 }
 
-#equip .blocks .block.active {
-  min-height: 30rem;
-}
-
-@media (min-width: 768px) {
-  #equip .blocks .block.active {
-    height: 38rem;
-    width: 25%;
-  }
-}
-
-@media (min-width: 1024px) {
-  #equip .blocks .block.active {
-    height: 40rem;
-  }
-}
-
-@media (min-width: 1300px) {
-  #equip .blocks .block.active {
-    height: 43rem;
-  }
-}
-
 @media (min-width: 768px) {
   #equip .blocks .block {
-    height: 20rem;
-    width: 20%;
+    min-height: 20rem;
+    width: 22%;
   }
+}
+
+#equip .blocks .block.active {
+  min-height: 20rem;
+  max-height: 50rem;
 }
 
 #gallery {
