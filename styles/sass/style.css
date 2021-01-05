@@ -1735,20 +1735,21 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 2rem;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   padding: 2rem;
+  font-weight: 500;
 }
 
 @media (min-width: 768px) {
   #equip .blocks .block .block-info {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     font-size: 2.2rem;
   }
 }
 
 @media (min-width: 1024px) {
   #equip .blocks .block .block-info {
-    margin-top: 2.2rem;
+    margin-top: 2rem;
     font-size: 2.3rem;
   }
 }
@@ -1814,8 +1815,8 @@ body {
 }
 
 #equip .blocks .block .more {
-  width: 65%;
-  margin: 2rem;
+  width: 75%;
+  margin-top: 2.2rem;
   position: absolute;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -1829,8 +1830,9 @@ body {
 }
 
 #equip .blocks .block .more h2 {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.9rem;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -1855,12 +1857,10 @@ body {
   list-style: none;
 }
 
-#equip .blocks .block .more ul li.sound-system {
-  margin-top: 5rem;
-}
-
 #equip .blocks .block .more ul li p {
+  font-weight: 300;
   font-size: 1.7rem;
+  padding: 0.4rem 0rem;
 }
 
 @media (min-width: 768px) {
